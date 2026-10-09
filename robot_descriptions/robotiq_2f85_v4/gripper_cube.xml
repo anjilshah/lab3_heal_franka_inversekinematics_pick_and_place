@@ -1,0 +1,4 @@
+<mujoco model="robotiq_2f85_scene_alias">
+    <!-- Compatibility filename for the maintained standalone gripper scene. -->
+    <include file="scene.xml" />
+</mujoco>

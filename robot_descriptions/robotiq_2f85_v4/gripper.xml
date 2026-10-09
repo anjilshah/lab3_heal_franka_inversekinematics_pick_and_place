@@ -1,0 +1,4 @@
+<mujoco model="robotiq_2f85_alias">
+    <!-- Compatibility filename for projects that included gripper.xml. -->
+    <include file="2f85.xml" />
+</mujoco>

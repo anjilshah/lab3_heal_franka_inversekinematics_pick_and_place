@@ -1,0 +1,4 @@
+<mujoco model="heal_with_robotiq_alias">
+    <!-- Kept as a compatibility filename; the maintained combined model is arm_gripper.xml. -->
+    <include file="arm_gripper.xml" />
+</mujoco>
