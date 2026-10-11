@@ -17,25 +17,40 @@
     "success": true,
     "failure_reason": null,
     "episode_status": "completed_success",
+    "seed": 7,
     "initial_cube_xyz": [
       0.35,
       0.0,
       0.165
     ],
-    "initial_cube_yaw_rad": 0.0,
+    "initial_cube_yaw_rad": 0.05513713804903872,
+    "pick_target_xyz_m": [
+      0.35,
+      0.0,
+      0.165
+    ],
     "place_target_xyz": [
       0.35,
       0.18,
       0.165
     ],
     "final_cube_xyz": [
-      0.3521443312575459,
-      0.17794576260430686,
-      0.1599447135794016
+      0.35444183821820824,
+      0.1747828565717873,
+      0.15994471357940157
     ],
-    "lift_peak_z_m": 0.3097477559199674,
+    "lift_peak_z_m": 0.3092510556428978,
     "sim_time_s": 15.200000000001745,
-    "episode_wall_time_s": 3.7062404990001596,
+    "executed_phase_count": 8,
+    "ik_solve_time_total_s": 0.053930426998704206,
+    "ik_iterations_total": 519,
+    "max_position_residual_m": 0.006211243586756592,
+    "max_orientation_residual_rad": 0.034858409573903786,
+    "max_joint_position_limit_violation_rad": 0.0,
+    "velocity_limit_rad_s": null,
+    "velocity_limit_enforcement": "not_enforced",
+    "max_velocity_limit_violation_rad_s": null,
+    "episode_wall_time_s": 3.672121943996899,
     "sim_time_scope": "MuJoCo simulation clock; excludes wall-clock rendering and planning interpretation",
     "episode_wall_time_scope": "wall-clock duration for the full episode, including IK solves and simulation steps",
     "waypoints": [
@@ -55,13 +70,20 @@
         "ik_iterations": 13,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.0014822090001871402,
+        "solve_time_s": 0.0015168509999057278,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "approach",
+        "target_xyz_m": [
+          0.35,
+          0.0,
+          0.41500000000000004
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
@@ -79,13 +101,20 @@
         "ik_iterations": 180,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.01757578100000501,
+        "solve_time_s": 0.017013591997965705,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "descend",
+        "target_xyz_m": [
+          0.35,
+          0.0,
+          0.29500000000000004
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
@@ -103,133 +132,175 @@
         "ik_iterations": 180,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.017470757999944908,
+        "solve_time_s": 0.016799714001535904,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "close_gripper",
+        "target_xyz_m": [
+          0.35,
+          0.0,
+          0.29500000000000004
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
         "q": [
-          0.002473977673275433,
-          -0.09474697031742482,
-          -0.15978623411121518,
-          -0.15370993279790476,
-          0.16320872464754377,
-          -0.008231676806223581
+          0.0024746979051990083,
+          -0.09474741783241108,
+          -0.1597871620732828,
+          -0.1537482233115912,
+          0.16321289416143944,
+          -0.008232426470835861
         ],
         "status": "converged",
-        "position_error_m": 0.0025731328615114205,
-        "orientation_error_rad": 0.01802942684194201,
+        "position_error_m": 0.0025744881062843288,
+        "orientation_error_rad": 0.01805175688096821,
         "ik_iterations": 40,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.00422698399984256,
+        "solve_time_s": 0.004034962999867275,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "lift",
+        "target_xyz_m": [
+          0.35,
+          0.0,
+          0.47500000000000003
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
         "q": [
-          0.47481715843665295,
-          0.05546214194059598,
-          -0.005441598225838143,
-          -0.10839468643783984,
-          0.12475374719408006,
-          -0.4779054872798253
+          0.4748167423505766,
+          0.05546183430108762,
+          -0.005441948935623291,
+          -0.10839463383181858,
+          0.1247539914338819,
+          -0.4779050736344877
         ],
         "status": "converged",
-        "position_error_m": 0.0003478903464713166,
-        "orientation_error_rad": 0.0007536233889218957,
+        "position_error_m": 0.0003480453712411764,
+        "orientation_error_rad": 0.0007538895142168315,
         "ik_iterations": 15,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.0016690889999608771,
+        "solve_time_s": 0.0016755830001784489,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "transfer",
+        "target_xyz_m": [
+          0.35,
+          0.18,
+          0.47500000000000003
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
         "q": [
-          0.4751944971834215,
-          0.2415101654174104,
-          -0.2887116073410926,
-          -1.4215641566965946,
-          1.4418924611878778,
-          -0.9118502995624257
+          0.4751944967520127,
+          0.2415101663460268,
+          -0.28871160427931,
+          -1.4215640564626006,
+          1.4418923742437437,
+          -0.9118502503246112
         ],
         "status": "converged",
-        "position_error_m": 0.0039656808870501305,
-        "orientation_error_rad": 0.02468277828998723,
+        "position_error_m": 0.003965681549978183,
+        "orientation_error_rad": 0.024682782472243137,
         "ik_iterations": 48,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.006828164999888031,
+        "solve_time_s": 0.006674570999166463,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "lower_place",
+        "target_xyz_m": [
+          0.35,
+          0.18,
+          0.29500000000000004
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
         "q": [
-          0.47518320536259706,
-          0.24153455552020195,
-          -0.2886312116494225,
-          -1.4189550107136997,
-          1.4396291925815794,
-          -0.910568691058993
+          0.4751830315928629,
+          0.24153493215027186,
+          -0.28862997053049105,
+          -1.4189150825685746,
+          1.4395945564341328,
+          -0.9105490796477845
         ],
         "status": "converged",
-        "position_error_m": 0.003983086557841864,
-        "orientation_error_rad": 0.02479259517814676,
+        "position_error_m": 0.003983355238736459,
+        "orientation_error_rad": 0.024794290491083625,
         "ik_iterations": 17,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.003552433000095334,
+        "solve_time_s": 0.0036818730004597455,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "release",
+        "target_xyz_m": [
+          0.35,
+          0.18,
+          0.29500000000000004
+        ],
+        "execution_decision": "executed"
       },
       {
         "method": "dls",
         "q": [
-          0.4772634682109606,
-          0.07916550417503364,
-          -0.14697800101233338,
-          -0.45839194724081755,
-          0.5070369891204533,
-          -0.5336040703167366
+          0.47726428083861544,
+          0.07916535843479158,
+          -0.14697877192766473,
+          -0.45845170044807393,
+          0.5070444751720562,
+          -0.5336065157496663
         ],
         "status": "converged",
-        "position_error_m": 0.002178203555241504,
-        "orientation_error_rad": 0.015004800322818425,
+        "position_error_m": 0.0021790682398816646,
+        "orientation_error_rad": 0.015030844440801057,
         "ik_iterations": 26,
         "ik_iteration_definition": "DLS Jacobian update iterations",
         "backend_iterations": null,
-        "solve_time_s": 0.0028069619997950213,
+        "solve_time_s": 0.0025332799996249378,
         "joint_position_limit_violation_rad": 0.0,
         "velocity_limit_violation_rad_s": null,
         "velocity_limit_rad_s": null,
         "velocity_limit_enforcement": "not_enforced",
         "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-        "message": ""
+        "message": "",
+        "phase": "retreat",
+        "target_xyz_m": [
+          0.35,
+          0.18,
+          0.41500000000000004
+        ],
+        "execution_decision": "executed"
       }
     ],
     "collision_audit": {
@@ -278,14 +349,14 @@
       "tray_geom": null,
       "monitored_pair_count": 65,
       "min_signed_distance_by_role_pair_m": {
-        "arm-table": 0.03778024646139987,
+        "arm-table": 0.03778024647017932,
         "arm-floor": 0.1709999973341671,
-        "arm-cube": 0.12273626692711248,
-        "gripper-table": 0.002421552548440481,
-        "floor-gripper": 0.14242155254844047,
-        "cube-gripper": -0.0016622274558332605,
-        "cube-table": -0.0020103944034298156,
-        "cube-floor": 0.13798960559657017
+        "arm-cube": 0.1230319419379995,
+        "gripper-table": 0.0024870883550836276,
+        "floor-gripper": 0.1424870883550836,
+        "cube-gripper": -0.0016330088243589511,
+        "cube-table": -0.0020660450035680784,
+        "cube-floor": 0.1379339549964319
       },
       "minimum_pairs_m": [
         {
@@ -297,7 +368,7 @@
             "cube",
             "table"
           ],
-          "minimum_signed_distance_m": -0.0020103944034298156,
+          "minimum_signed_distance_m": -0.0020660450035680784,
           "phase_at_minimum": "release"
         },
         {
@@ -309,19 +380,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": -0.0016622274558332605,
-          "phase_at_minimum": "transfer"
-        },
-        {
-          "geom_pair": [
-            "cube_geom",
-            "right_follower_tongue_collision"
-          ],
-          "roles": [
-            "cube",
-            "gripper"
-          ],
-          "minimum_signed_distance_m": -0.001616602196882056,
+          "minimum_signed_distance_m": -0.0016330088243589511,
           "phase_at_minimum": "transfer"
         },
         {
@@ -333,8 +392,20 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": -0.001583441847214237,
+          "minimum_signed_distance_m": -0.0016149400964796258,
           "phase_at_minimum": "release"
+        },
+        {
+          "geom_pair": [
+            "cube_geom",
+            "right_follower_tongue_collision"
+          ],
+          "roles": [
+            "cube",
+            "gripper"
+          ],
+          "minimum_signed_distance_m": -0.0015882533946598464,
+          "phase_at_minimum": "transfer"
         },
         {
           "geom_pair": [
@@ -345,7 +416,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": -0.0015523581105225226,
+          "minimum_signed_distance_m": -0.0015844682610314815,
           "phase_at_minimum": "release"
         },
         {
@@ -357,7 +428,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": -0.001402668011740209,
+          "minimum_signed_distance_m": -0.0013453389918590662,
           "phase_at_minimum": "transfer"
         },
         {
@@ -369,20 +440,8 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": -0.0010018478060475821,
+          "minimum_signed_distance_m": -0.0010392472894822412,
           "phase_at_minimum": "release"
-        },
-        {
-          "geom_pair": [
-            "cube_geom",
-            "left_follower_follower_collision"
-          ],
-          "roles": [
-            "cube",
-            "gripper"
-          ],
-          "minimum_signed_distance_m": 0.00151724470935794,
-          "phase_at_minimum": "lift"
         },
         {
           "geom_pair": [
@@ -393,7 +452,19 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.0015187474004710816,
+          "minimum_signed_distance_m": 0.0015603170558306787,
+          "phase_at_minimum": "lift"
+        },
+        {
+          "geom_pair": [
+            "cube_geom",
+            "left_follower_follower_collision"
+          ],
+          "roles": [
+            "cube",
+            "gripper"
+          ],
+          "minimum_signed_distance_m": 0.001569149836552119,
           "phase_at_minimum": "lift"
         },
         {
@@ -405,7 +476,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.002421552548440481,
+          "minimum_signed_distance_m": 0.0024870883550836276,
           "phase_at_minimum": "lift"
         },
         {
@@ -417,7 +488,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.002582854127531259,
+          "minimum_signed_distance_m": 0.0026474346554009594,
           "phase_at_minimum": "lift"
         },
         {
@@ -429,7 +500,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.0027153272444633,
+          "minimum_signed_distance_m": 0.002780203148245564,
           "phase_at_minimum": "lift"
         },
         {
@@ -441,7 +512,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.0028728929286274962,
+          "minimum_signed_distance_m": 0.0029368628700232324,
           "phase_at_minimum": "lift"
         },
         {
@@ -453,7 +524,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.0042538132497019964,
+          "minimum_signed_distance_m": 0.004308591830361934,
           "phase_at_minimum": "lift"
         },
         {
@@ -465,7 +536,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.004265162822929709,
+          "minimum_signed_distance_m": 0.004318737499248467,
           "phase_at_minimum": "lift"
         },
         {
@@ -477,7 +548,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.021464408311614114,
+          "minimum_signed_distance_m": 0.021529244960497185,
           "phase_at_minimum": "lift"
         },
         {
@@ -489,7 +560,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.021620612144655382,
+          "minimum_signed_distance_m": 0.021684556087406354,
           "phase_at_minimum": "lift"
         },
         {
@@ -501,7 +572,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.021767585956937136,
+          "minimum_signed_distance_m": 0.021804381784415655,
           "phase_at_minimum": "close_gripper"
         },
         {
@@ -513,8 +584,8 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.022347239017199122,
-          "phase_at_minimum": "transfer"
+          "minimum_signed_distance_m": 0.0223916044484111,
+          "phase_at_minimum": "lift"
         },
         {
           "geom_pair": [
@@ -525,7 +596,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.02942678996044066,
+          "minimum_signed_distance_m": 0.02968088456856257,
           "phase_at_minimum": "retreat"
         },
         {
@@ -537,7 +608,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.031555995402467035,
+          "minimum_signed_distance_m": 0.031623388942043834,
           "phase_at_minimum": "lift"
         },
         {
@@ -549,7 +620,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.031788825994493036,
+          "minimum_signed_distance_m": 0.031854481307717925,
           "phase_at_minimum": "lift"
         },
         {
@@ -561,7 +632,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.03778024646139987,
+          "minimum_signed_distance_m": 0.03778024647017932,
           "phase_at_minimum": "transfer"
         },
         {
@@ -573,7 +644,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.04096700012782398,
+          "minimum_signed_distance_m": 0.04103228961560948,
           "phase_at_minimum": "lift"
         },
         {
@@ -585,7 +656,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.04117463021304332,
+          "minimum_signed_distance_m": 0.04123833875304461,
           "phase_at_minimum": "lift"
         },
         {
@@ -597,7 +668,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.046495257139649776,
+          "minimum_signed_distance_m": 0.04656113320086913,
           "phase_at_minimum": "lift"
         },
         {
@@ -609,7 +680,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.046854285704933996,
+          "minimum_signed_distance_m": 0.04691735398414035,
           "phase_at_minimum": "lift"
         },
         {
@@ -621,7 +692,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.05672985904403123,
+          "minimum_signed_distance_m": 0.056795490047296004,
           "phase_at_minimum": "lift"
         },
         {
@@ -633,7 +704,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.05678028215581859,
+          "minimum_signed_distance_m": 0.05684597467023713,
           "phase_at_minimum": "lift"
         },
         {
@@ -645,7 +716,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.06937150353900132,
+          "minimum_signed_distance_m": 0.0696255981464722,
           "phase_at_minimum": "retreat"
         },
         {
@@ -657,7 +728,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.0880102489240112,
+          "minimum_signed_distance_m": 0.08807755786758724,
           "phase_at_minimum": "lift"
         },
         {
@@ -669,7 +740,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.08838876723565547,
+          "minimum_signed_distance_m": 0.08845312014994976,
           "phase_at_minimum": "lift"
         },
         {
@@ -681,7 +752,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.12273626692711248,
+          "minimum_signed_distance_m": 0.1230319419379995,
           "phase_at_minimum": "retreat"
         },
         {
@@ -705,7 +776,7 @@
             "cube",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.13798960559657017,
+          "minimum_signed_distance_m": 0.1379339549964319,
           "phase_at_minimum": "release"
         },
         {
@@ -717,7 +788,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14242155254844047,
+          "minimum_signed_distance_m": 0.1424870883550836,
           "phase_at_minimum": "lift"
         },
         {
@@ -729,7 +800,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14258285412753124,
+          "minimum_signed_distance_m": 0.14264743465540095,
           "phase_at_minimum": "lift"
         },
         {
@@ -741,7 +812,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14271532724446329,
+          "minimum_signed_distance_m": 0.14278020314824555,
           "phase_at_minimum": "lift"
         },
         {
@@ -753,7 +824,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14287289292862748,
+          "minimum_signed_distance_m": 0.14293686287002322,
           "phase_at_minimum": "lift"
         },
         {
@@ -765,7 +836,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.1614644083116141,
+          "minimum_signed_distance_m": 0.16152924496049717,
           "phase_at_minimum": "lift"
         },
         {
@@ -777,7 +848,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.16162061214465537,
+          "minimum_signed_distance_m": 0.16168455608740634,
           "phase_at_minimum": "lift"
         },
         {
@@ -789,7 +860,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.1625201480383923,
+          "minimum_signed_distance_m": 0.1627663860136529,
           "phase_at_minimum": "retreat"
         },
         {
@@ -801,7 +872,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.1684362811704251,
+          "minimum_signed_distance_m": 0.16873196960287745,
           "phase_at_minimum": "retreat"
         },
         {
@@ -825,7 +896,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.17155599540246702,
+          "minimum_signed_distance_m": 0.17162338894204382,
           "phase_at_minimum": "lift"
         },
         {
@@ -837,7 +908,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.17178882599449302,
+          "minimum_signed_distance_m": 0.1718544813077179,
           "phase_at_minimum": "lift"
         },
         {
@@ -849,7 +920,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.18096700012782396,
+          "minimum_signed_distance_m": 0.18103228961560947,
           "phase_at_minimum": "lift"
         },
         {
@@ -861,7 +932,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.1811746302130433,
+          "minimum_signed_distance_m": 0.1812383387530446,
           "phase_at_minimum": "lift"
         },
         {
@@ -873,7 +944,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.18649525713964976,
+          "minimum_signed_distance_m": 0.18656113320086912,
           "phase_at_minimum": "lift"
         },
         {
@@ -885,7 +956,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.18685428570493398,
+          "minimum_signed_distance_m": 0.18691735398414033,
           "phase_at_minimum": "lift"
         },
         {
@@ -897,7 +968,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.20836408110255988,
+          "minimum_signed_distance_m": 0.20861368132440275,
           "phase_at_minimum": "retreat"
         },
         {
@@ -909,7 +980,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.2093715035390013,
+          "minimum_signed_distance_m": 0.2096255981464722,
           "phase_at_minimum": "retreat"
         },
         {
@@ -921,7 +992,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.21245889614743202,
+          "minimum_signed_distance_m": 0.21299432429818102,
           "phase_at_minimum": "retreat"
         },
         {
@@ -933,7 +1004,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.2280102489240112,
+          "minimum_signed_distance_m": 0.22807755786758724,
           "phase_at_minimum": "lift"
         },
         {
@@ -945,7 +1016,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.22838876723565546,
+          "minimum_signed_distance_m": 0.22845312014994976,
           "phase_at_minimum": "lift"
         },
         {
@@ -957,7 +1028,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.24637542331609602,
+          "minimum_signed_distance_m": 0.2465256525949534,
           "phase_at_minimum": "retreat"
         },
         {
@@ -969,7 +1040,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.2526563199839055,
+          "minimum_signed_distance_m": 0.2519064415363846,
           "phase_at_minimum": "lift"
         },
         {
@@ -981,8 +1052,8 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.2598000383814312,
-          "phase_at_minimum": "lift"
+          "minimum_signed_distance_m": 0.25980003838143123,
+          "phase_at_minimum": "approach"
         },
         {
           "geom_pair": [
@@ -993,7 +1064,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.27457179488639905,
+          "minimum_signed_distance_m": 0.2736482706779264,
           "phase_at_minimum": "transfer"
         },
         {
@@ -1005,7 +1076,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.3025201480383923,
+          "minimum_signed_distance_m": 0.3027663860136529,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1017,7 +1088,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.30558989767812444,
+          "minimum_signed_distance_m": 0.3059482058425086,
           "phase_at_minimum": "lower_place"
         },
         {
@@ -1029,7 +1100,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.34836408110255984,
+          "minimum_signed_distance_m": 0.34861368132440274,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1041,7 +1112,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.3612203787927034,
+          "minimum_signed_distance_m": 0.36132209387005637,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1053,7 +1124,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.386375423316096,
+          "minimum_signed_distance_m": 0.3865256525949534,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1065,42 +1136,43 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.5012203787927034,
+          "minimum_signed_distance_m": 0.5013220938700564,
           "phase_at_minimum": "retreat"
         }
       ],
       "min_unexpected_signed_distance_by_role_pair_m": {
-        "arm-table": 0.03778024646139987,
+        "arm-table": 0.03778024647017932,
         "arm-floor": 0.1709999973341671,
-        "arm-cube": 0.12273626692711248,
-        "gripper-table": 0.002421552548440481,
-        "floor-gripper": 0.14242155254844047,
-        "cube-gripper": 0.00151724470935794,
-        "cube-floor": 0.13798960559657017
+        "arm-cube": 0.1230319419379995,
+        "gripper-table": 0.0024870883550836276,
+        "floor-gripper": 0.1424870883550836,
+        "cube-gripper": 0.0015603170558306787,
+        "cube-floor": 0.1379339549964319,
+        "cube-table": 0.005148775255190501
       },
       "minimum_unexpected_pairs_m": [
         {
           "geom_pair": [
             "cube_geom",
-            "left_follower_follower_collision"
-          ],
-          "roles": [
-            "cube",
-            "gripper"
-          ],
-          "minimum_signed_distance_m": 0.00151724470935794,
-          "phase_at_minimum": "lift"
-        },
-        {
-          "geom_pair": [
-            "cube_geom",
             "right_follower_follower_collision"
           ],
           "roles": [
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.0015187474004710816,
+          "minimum_signed_distance_m": 0.0015603170558306787,
+          "phase_at_minimum": "lift"
+        },
+        {
+          "geom_pair": [
+            "cube_geom",
+            "left_follower_follower_collision"
+          ],
+          "roles": [
+            "cube",
+            "gripper"
+          ],
+          "minimum_signed_distance_m": 0.001569149836552119,
           "phase_at_minimum": "lift"
         },
         {
@@ -1112,7 +1184,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.002421552548440481,
+          "minimum_signed_distance_m": 0.0024870883550836276,
           "phase_at_minimum": "lift"
         },
         {
@@ -1124,7 +1196,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.002582854127531259,
+          "minimum_signed_distance_m": 0.0026474346554009594,
           "phase_at_minimum": "lift"
         },
         {
@@ -1136,7 +1208,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.0027153272444633,
+          "minimum_signed_distance_m": 0.002780203148245564,
           "phase_at_minimum": "lift"
         },
         {
@@ -1148,7 +1220,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.0028728929286274962,
+          "minimum_signed_distance_m": 0.0029368628700232324,
           "phase_at_minimum": "lift"
         },
         {
@@ -1160,7 +1232,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.0042538132497019964,
+          "minimum_signed_distance_m": 0.004308591830361934,
           "phase_at_minimum": "lift"
         },
         {
@@ -1172,7 +1244,19 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.004265162822929709,
+          "minimum_signed_distance_m": 0.004318737499248467,
+          "phase_at_minimum": "lift"
+        },
+        {
+          "geom_pair": [
+            "cube_geom",
+            "worktable"
+          ],
+          "roles": [
+            "cube",
+            "table"
+          ],
+          "minimum_signed_distance_m": 0.005148775255190501,
           "phase_at_minimum": "lift"
         },
         {
@@ -1184,7 +1268,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.011587794348803117,
+          "minimum_signed_distance_m": 0.008613624736220364,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1196,7 +1280,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.011622568760170732,
+          "minimum_signed_distance_m": 0.008648849833100221,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1208,7 +1292,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.014605380830888352,
+          "minimum_signed_distance_m": 0.011684646994858208,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1220,7 +1304,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.016991434228335246,
+          "minimum_signed_distance_m": 0.016636325221889875,
           "phase_at_minimum": "descend"
         },
         {
@@ -1232,7 +1316,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.017011634980326314,
+          "minimum_signed_distance_m": 0.016656526003002714,
           "phase_at_minimum": "descend"
         },
         {
@@ -1244,7 +1328,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.01718823931613478,
+          "minimum_signed_distance_m": 0.016833130315986176,
           "phase_at_minimum": "descend"
         },
         {
@@ -1256,7 +1340,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.021464408311614114,
+          "minimum_signed_distance_m": 0.021529244960497185,
           "phase_at_minimum": "lift"
         },
         {
@@ -1268,7 +1352,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.021620612144655382,
+          "minimum_signed_distance_m": 0.021684556087406354,
           "phase_at_minimum": "lift"
         },
         {
@@ -1280,7 +1364,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.021767585956937136,
+          "minimum_signed_distance_m": 0.021804381784415655,
           "phase_at_minimum": "close_gripper"
         },
         {
@@ -1292,8 +1376,8 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.022347239017199122,
-          "phase_at_minimum": "transfer"
+          "minimum_signed_distance_m": 0.0223916044484111,
+          "phase_at_minimum": "lift"
         },
         {
           "geom_pair": [
@@ -1304,7 +1388,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.02942678996044066,
+          "minimum_signed_distance_m": 0.02968088456856257,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1316,7 +1400,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.031555995402467035,
+          "minimum_signed_distance_m": 0.031623388942043834,
           "phase_at_minimum": "lift"
         },
         {
@@ -1328,7 +1412,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.031788825994493036,
+          "minimum_signed_distance_m": 0.031854481307717925,
           "phase_at_minimum": "lift"
         },
         {
@@ -1340,7 +1424,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.03778024646139987,
+          "minimum_signed_distance_m": 0.03778024647017932,
           "phase_at_minimum": "transfer"
         },
         {
@@ -1352,7 +1436,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.04096700012782398,
+          "minimum_signed_distance_m": 0.04103228961560948,
           "phase_at_minimum": "lift"
         },
         {
@@ -1364,7 +1448,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.04117463021304332,
+          "minimum_signed_distance_m": 0.04123833875304461,
           "phase_at_minimum": "lift"
         },
         {
@@ -1376,7 +1460,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.046495257139649776,
+          "minimum_signed_distance_m": 0.04656113320086913,
           "phase_at_minimum": "lift"
         },
         {
@@ -1388,7 +1472,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.046854285704933996,
+          "minimum_signed_distance_m": 0.04691735398414035,
           "phase_at_minimum": "lift"
         },
         {
@@ -1400,7 +1484,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.05672985904403123,
+          "minimum_signed_distance_m": 0.056795490047296004,
           "phase_at_minimum": "lift"
         },
         {
@@ -1412,7 +1496,7 @@
             "cube",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.05678028215581859,
+          "minimum_signed_distance_m": 0.05684597467023713,
           "phase_at_minimum": "lift"
         },
         {
@@ -1424,7 +1508,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.06937150353900132,
+          "minimum_signed_distance_m": 0.0696255981464722,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1436,7 +1520,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.0880102489240112,
+          "minimum_signed_distance_m": 0.08807755786758724,
           "phase_at_minimum": "lift"
         },
         {
@@ -1448,7 +1532,7 @@
             "gripper",
             "table"
           ],
-          "minimum_signed_distance_m": 0.08838876723565547,
+          "minimum_signed_distance_m": 0.08845312014994976,
           "phase_at_minimum": "lift"
         },
         {
@@ -1460,7 +1544,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.12273626692711248,
+          "minimum_signed_distance_m": 0.1230319419379995,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1484,7 +1568,7 @@
             "cube",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.13798960559657017,
+          "minimum_signed_distance_m": 0.1379339549964319,
           "phase_at_minimum": "release"
         },
         {
@@ -1496,7 +1580,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14242155254844047,
+          "minimum_signed_distance_m": 0.1424870883550836,
           "phase_at_minimum": "lift"
         },
         {
@@ -1508,7 +1592,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14258285412753124,
+          "minimum_signed_distance_m": 0.14264743465540095,
           "phase_at_minimum": "lift"
         },
         {
@@ -1520,7 +1604,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14271532724446329,
+          "minimum_signed_distance_m": 0.14278020314824555,
           "phase_at_minimum": "lift"
         },
         {
@@ -1532,7 +1616,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.14287289292862748,
+          "minimum_signed_distance_m": 0.14293686287002322,
           "phase_at_minimum": "lift"
         },
         {
@@ -1544,7 +1628,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.1614644083116141,
+          "minimum_signed_distance_m": 0.16152924496049717,
           "phase_at_minimum": "lift"
         },
         {
@@ -1556,7 +1640,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.16162061214465537,
+          "minimum_signed_distance_m": 0.16168455608740634,
           "phase_at_minimum": "lift"
         },
         {
@@ -1568,7 +1652,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.1625201480383923,
+          "minimum_signed_distance_m": 0.1627663860136529,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1580,7 +1664,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.1684362811704251,
+          "minimum_signed_distance_m": 0.16873196960287745,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1604,7 +1688,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.17155599540246702,
+          "minimum_signed_distance_m": 0.17162338894204382,
           "phase_at_minimum": "lift"
         },
         {
@@ -1616,7 +1700,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.17178882599449302,
+          "minimum_signed_distance_m": 0.1718544813077179,
           "phase_at_minimum": "lift"
         },
         {
@@ -1628,7 +1712,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.18096700012782396,
+          "minimum_signed_distance_m": 0.18103228961560947,
           "phase_at_minimum": "lift"
         },
         {
@@ -1640,7 +1724,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.1811746302130433,
+          "minimum_signed_distance_m": 0.1812383387530446,
           "phase_at_minimum": "lift"
         },
         {
@@ -1652,7 +1736,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.18649525713964976,
+          "minimum_signed_distance_m": 0.18656113320086912,
           "phase_at_minimum": "lift"
         },
         {
@@ -1664,7 +1748,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.18685428570493398,
+          "minimum_signed_distance_m": 0.18691735398414033,
           "phase_at_minimum": "lift"
         },
         {
@@ -1676,7 +1760,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.20836408110255988,
+          "minimum_signed_distance_m": 0.20861368132440275,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1688,7 +1772,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.2093715035390013,
+          "minimum_signed_distance_m": 0.2096255981464722,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1700,7 +1784,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.21245889614743202,
+          "minimum_signed_distance_m": 0.21299432429818102,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1712,7 +1796,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.2280102489240112,
+          "minimum_signed_distance_m": 0.22807755786758724,
           "phase_at_minimum": "lift"
         },
         {
@@ -1724,7 +1808,7 @@
             "floor",
             "gripper"
           ],
-          "minimum_signed_distance_m": 0.22838876723565546,
+          "minimum_signed_distance_m": 0.22845312014994976,
           "phase_at_minimum": "lift"
         },
         {
@@ -1736,7 +1820,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.24637542331609602,
+          "minimum_signed_distance_m": 0.2465256525949534,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1748,7 +1832,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.2526563199839055,
+          "minimum_signed_distance_m": 0.2519064415363846,
           "phase_at_minimum": "lift"
         },
         {
@@ -1760,8 +1844,8 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.2598000383814312,
-          "phase_at_minimum": "lift"
+          "minimum_signed_distance_m": 0.25980003838143123,
+          "phase_at_minimum": "approach"
         },
         {
           "geom_pair": [
@@ -1772,7 +1856,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.27457179488639905,
+          "minimum_signed_distance_m": 0.2736482706779264,
           "phase_at_minimum": "transfer"
         },
         {
@@ -1784,7 +1868,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.3025201480383923,
+          "minimum_signed_distance_m": 0.3027663860136529,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1796,7 +1880,7 @@
             "arm",
             "cube"
           ],
-          "minimum_signed_distance_m": 0.30558989767812444,
+          "minimum_signed_distance_m": 0.3059482058425086,
           "phase_at_minimum": "lower_place"
         },
         {
@@ -1808,7 +1892,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.34836408110255984,
+          "minimum_signed_distance_m": 0.34861368132440274,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1820,7 +1904,7 @@
             "arm",
             "table"
           ],
-          "minimum_signed_distance_m": 0.3612203787927034,
+          "minimum_signed_distance_m": 0.36132209387005637,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1832,7 +1916,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.386375423316096,
+          "minimum_signed_distance_m": 0.3865256525949534,
           "phase_at_minimum": "retreat"
         },
         {
@@ -1844,7 +1928,7 @@
             "arm",
             "floor"
           ],
-          "minimum_signed_distance_m": 0.5012203787927034,
+          "minimum_signed_distance_m": 0.5013220938700564,
           "phase_at_minimum": "retreat"
         }
       ],
@@ -1857,93 +1941,109 @@
         "cube_geom<->right_pad2",
         "cube_geom<->worktable"
       ],
+      "distinct_contact_event_counts": {
+        "expected": 42
+      },
+      "distinct_contact_event_pairs": {
+        "expected": [
+          "cube_geom<->left_follower_tongue_collision",
+          "cube_geom<->left_pad1",
+          "cube_geom<->left_pad2",
+          "cube_geom<->right_follower_tongue_collision",
+          "cube_geom<->right_pad1",
+          "cube_geom<->right_pad2",
+          "cube_geom<->worktable"
+        ]
+      },
+      "contact_observation_definition": "one pair observation per physics step with a MuJoCo contact record",
+      "distinct_contact_event_definition": "transition into dist<=0 for a geom pair after a step without that pair in actual contact",
       "contact_pair_details": {
         "cube_geom<->worktable": {
           "phase_observations": {
             "approach": 3936,
             "descend": 5000,
-            "close_gripper": 1736,
-            "lift": 217,
-            "lower_place": 32,
+            "close_gripper": 1716,
+            "lift": 218,
+            "lower_place": 45,
             "release": 1767,
             "retreat": 3000
           },
-          "minimum_contact_distance_m": -0.002010394403429837,
-          "actual_contact_observations": 15688
+          "minimum_contact_distance_m": -0.0020660450035680867,
+          "actual_contact_observations": 15682
         },
         "cube_geom<->right_follower_tongue_collision": {
           "phase_observations": {
-            "close_gripper": 1408,
-            "lift": 3932,
+            "close_gripper": 1366,
+            "lift": 3871,
             "transfer": 2502,
-            "lower_place": 1994,
-            "release": 7
+            "lower_place": 1993,
+            "release": 6
           },
-          "minimum_contact_distance_m": -0.0016168299212348967,
-          "actual_contact_observations": 9843
-        },
-        "cube_geom<->right_pad2": {
-          "phase_observations": {
-            "close_gripper": 952,
-            "lift": 1689,
-            "transfer": 2136,
-            "lower_place": 1710,
-            "release": 2
-          },
-          "minimum_contact_distance_m": -0.0014026680117402166,
-          "actual_contact_observations": 6489
+          "minimum_contact_distance_m": -0.0015885346635723303,
+          "actual_contact_observations": 9738
         },
         "cube_geom<->right_pad1": {
           "phase_observations": {
-            "close_gripper": 1568,
-            "lift": 4708,
+            "close_gripper": 1592,
+            "lift": 4720,
             "transfer": 4991,
-            "lower_place": 3838,
-            "release": 4
+            "lower_place": 3835,
+            "release": 3
           },
-          "minimum_contact_distance_m": -0.0016624616041331238,
-          "actual_contact_observations": 15109
+          "minimum_contact_distance_m": -0.0016332980157343325,
+          "actual_contact_observations": 15141
+        },
+        "cube_geom<->right_pad2": {
+          "phase_observations": {
+            "close_gripper": 932,
+            "lift": 1685,
+            "transfer": 2129,
+            "lower_place": 1700,
+            "release": 3
+          },
+          "minimum_contact_distance_m": -0.0013453389918590892,
+          "actual_contact_observations": 6449
         },
         "cube_geom<->left_follower_tongue_collision": {
           "phase_observations": {
-            "close_gripper": 1442,
-            "lift": 3936,
+            "close_gripper": 1414,
+            "lift": 3869,
             "transfer": 2500,
             "lower_place": 2000,
-            "release": 12
+            "release": 8
           },
-          "minimum_contact_distance_m": -0.0015549918407740052,
-          "actual_contact_observations": 9890
+          "minimum_contact_distance_m": -0.001587160846678669,
+          "actual_contact_observations": 9791
         },
         "cube_geom<->left_pad1": {
           "phase_observations": {
-            "close_gripper": 1485,
-            "lift": 4505,
-            "transfer": 4978,
-            "lower_place": 3489,
-            "release": 6
+            "close_gripper": 1488,
+            "lift": 4401,
+            "transfer": 4977,
+            "lower_place": 3475,
+            "release": 7
           },
-          "minimum_contact_distance_m": -0.0015834418472142266,
-          "actual_contact_observations": 14463
+          "minimum_contact_distance_m": -0.0016149400964796628,
+          "actual_contact_observations": 14348
         },
         "cube_geom<->left_pad2": {
           "phase_observations": {
-            "close_gripper": 897,
-            "lift": 2093,
-            "transfer": 1717,
-            "lower_place": 1369,
-            "release": 7
+            "close_gripper": 881,
+            "lift": 2079,
+            "transfer": 1709,
+            "lower_place": 1356,
+            "release": 5
           },
-          "minimum_contact_distance_m": -0.0010018478060476441,
-          "actual_contact_observations": 6083
+          "minimum_contact_distance_m": -0.0010392472894823256,
+          "actual_contact_observations": 6030
         }
       },
       "expected_contact_exclusions": {
-        "cube_geom<->worktable": "allowed all phases as cube support/rest contact",
+        "cube_geom<->worktable": "allowed during approach, descend, close_gripper, lower_place, release, and retreat; during lift only while the cube remains within 6 mm of its geometric support height; transfer-phase table contact is unexpected",
         "cube_geom<->finger surfaces": "left/right pad boxes and left/right follower tongue meshes; allowed phases close_gripper, lift, transfer, lower_place, release; counted separately",
         "tray": "no tray geometry exists; no tray contacts or clearances are measured"
       },
-      "expected_contact_observations": 77565,
+      "expected_contact_observations": 77179,
       "expected_contact_pairs": [
         "cube_geom<->left_follower_tongue_collision",
         "cube_geom<->left_pad1",
@@ -1959,15 +2059,15 @@
       "expected_contact_observations_by_phase": {
         "approach": 3936,
         "descend": 5000,
-        "close_gripper": 9488,
-        "lift": 21080,
-        "transfer": 18824,
-        "lower_place": 14432,
-        "release": 1805,
+        "close_gripper": 9389,
+        "lift": 20843,
+        "transfer": 18808,
+        "lower_place": 14404,
+        "release": 1799,
         "retreat": 3000
       },
-      "penetrating_contact_observations_lt_minus_1e_6_m": 77323,
-      "deepest_contact_penetration_m": -0.002010394403429837,
+      "penetrating_contact_observations_lt_minus_1e_6_m": 76776,
+      "deepest_contact_penetration_m": -0.0020660450035680867,
       "unexpected_actual_contact_observations_dist_le_0": 0,
       "unexpected_penetrating_contact_observations_lt_minus_1e_6_m": 0,
       "deepest_unexpected_penetration_m": 0.0,
@@ -2022,14 +2122,14 @@
     "tray_geom": null,
     "monitored_pair_count": 65,
     "min_signed_distance_by_role_pair_m": {
-      "arm-table": 0.03778024646139987,
+      "arm-table": 0.03778024647017932,
       "arm-floor": 0.1709999973341671,
-      "arm-cube": 0.12273626692711248,
-      "gripper-table": 0.002421552548440481,
-      "floor-gripper": 0.14242155254844047,
-      "cube-gripper": -0.0016622274558332605,
-      "cube-table": -0.0020103944034298156,
-      "cube-floor": 0.13798960559657017
+      "arm-cube": 0.1230319419379995,
+      "gripper-table": 0.0024870883550836276,
+      "floor-gripper": 0.1424870883550836,
+      "cube-gripper": -0.0016330088243589511,
+      "cube-table": -0.0020660450035680784,
+      "cube-floor": 0.1379339549964319
     },
     "minimum_pairs_m": [
       {
@@ -2041,7 +2141,7 @@
           "cube",
           "table"
         ],
-        "minimum_signed_distance_m": -0.0020103944034298156,
+        "minimum_signed_distance_m": -0.0020660450035680784,
         "phase_at_minimum": "release"
       },
       {
@@ -2053,19 +2153,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": -0.0016622274558332605,
-        "phase_at_minimum": "transfer"
-      },
-      {
-        "geom_pair": [
-          "cube_geom",
-          "right_follower_tongue_collision"
-        ],
-        "roles": [
-          "cube",
-          "gripper"
-        ],
-        "minimum_signed_distance_m": -0.001616602196882056,
+        "minimum_signed_distance_m": -0.0016330088243589511,
         "phase_at_minimum": "transfer"
       },
       {
@@ -2077,8 +2165,20 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": -0.001583441847214237,
+        "minimum_signed_distance_m": -0.0016149400964796258,
         "phase_at_minimum": "release"
+      },
+      {
+        "geom_pair": [
+          "cube_geom",
+          "right_follower_tongue_collision"
+        ],
+        "roles": [
+          "cube",
+          "gripper"
+        ],
+        "minimum_signed_distance_m": -0.0015882533946598464,
+        "phase_at_minimum": "transfer"
       },
       {
         "geom_pair": [
@@ -2089,7 +2189,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": -0.0015523581105225226,
+        "minimum_signed_distance_m": -0.0015844682610314815,
         "phase_at_minimum": "release"
       },
       {
@@ -2101,7 +2201,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": -0.001402668011740209,
+        "minimum_signed_distance_m": -0.0013453389918590662,
         "phase_at_minimum": "transfer"
       },
       {
@@ -2113,20 +2213,8 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": -0.0010018478060475821,
+        "minimum_signed_distance_m": -0.0010392472894822412,
         "phase_at_minimum": "release"
-      },
-      {
-        "geom_pair": [
-          "cube_geom",
-          "left_follower_follower_collision"
-        ],
-        "roles": [
-          "cube",
-          "gripper"
-        ],
-        "minimum_signed_distance_m": 0.00151724470935794,
-        "phase_at_minimum": "lift"
       },
       {
         "geom_pair": [
@@ -2137,7 +2225,19 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.0015187474004710816,
+        "minimum_signed_distance_m": 0.0015603170558306787,
+        "phase_at_minimum": "lift"
+      },
+      {
+        "geom_pair": [
+          "cube_geom",
+          "left_follower_follower_collision"
+        ],
+        "roles": [
+          "cube",
+          "gripper"
+        ],
+        "minimum_signed_distance_m": 0.001569149836552119,
         "phase_at_minimum": "lift"
       },
       {
@@ -2149,7 +2249,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.002421552548440481,
+        "minimum_signed_distance_m": 0.0024870883550836276,
         "phase_at_minimum": "lift"
       },
       {
@@ -2161,7 +2261,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.002582854127531259,
+        "minimum_signed_distance_m": 0.0026474346554009594,
         "phase_at_minimum": "lift"
       },
       {
@@ -2173,7 +2273,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.0027153272444633,
+        "minimum_signed_distance_m": 0.002780203148245564,
         "phase_at_minimum": "lift"
       },
       {
@@ -2185,7 +2285,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.0028728929286274962,
+        "minimum_signed_distance_m": 0.0029368628700232324,
         "phase_at_minimum": "lift"
       },
       {
@@ -2197,7 +2297,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.0042538132497019964,
+        "minimum_signed_distance_m": 0.004308591830361934,
         "phase_at_minimum": "lift"
       },
       {
@@ -2209,7 +2309,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.004265162822929709,
+        "minimum_signed_distance_m": 0.004318737499248467,
         "phase_at_minimum": "lift"
       },
       {
@@ -2221,7 +2321,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.021464408311614114,
+        "minimum_signed_distance_m": 0.021529244960497185,
         "phase_at_minimum": "lift"
       },
       {
@@ -2233,7 +2333,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.021620612144655382,
+        "minimum_signed_distance_m": 0.021684556087406354,
         "phase_at_minimum": "lift"
       },
       {
@@ -2245,7 +2345,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.021767585956937136,
+        "minimum_signed_distance_m": 0.021804381784415655,
         "phase_at_minimum": "close_gripper"
       },
       {
@@ -2257,8 +2357,8 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.022347239017199122,
-        "phase_at_minimum": "transfer"
+        "minimum_signed_distance_m": 0.0223916044484111,
+        "phase_at_minimum": "lift"
       },
       {
         "geom_pair": [
@@ -2269,7 +2369,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.02942678996044066,
+        "minimum_signed_distance_m": 0.02968088456856257,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2281,7 +2381,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.031555995402467035,
+        "minimum_signed_distance_m": 0.031623388942043834,
         "phase_at_minimum": "lift"
       },
       {
@@ -2293,7 +2393,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.031788825994493036,
+        "minimum_signed_distance_m": 0.031854481307717925,
         "phase_at_minimum": "lift"
       },
       {
@@ -2305,7 +2405,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.03778024646139987,
+        "minimum_signed_distance_m": 0.03778024647017932,
         "phase_at_minimum": "transfer"
       },
       {
@@ -2317,7 +2417,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.04096700012782398,
+        "minimum_signed_distance_m": 0.04103228961560948,
         "phase_at_minimum": "lift"
       },
       {
@@ -2329,7 +2429,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.04117463021304332,
+        "minimum_signed_distance_m": 0.04123833875304461,
         "phase_at_minimum": "lift"
       },
       {
@@ -2341,7 +2441,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.046495257139649776,
+        "minimum_signed_distance_m": 0.04656113320086913,
         "phase_at_minimum": "lift"
       },
       {
@@ -2353,7 +2453,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.046854285704933996,
+        "minimum_signed_distance_m": 0.04691735398414035,
         "phase_at_minimum": "lift"
       },
       {
@@ -2365,7 +2465,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.05672985904403123,
+        "minimum_signed_distance_m": 0.056795490047296004,
         "phase_at_minimum": "lift"
       },
       {
@@ -2377,7 +2477,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.05678028215581859,
+        "minimum_signed_distance_m": 0.05684597467023713,
         "phase_at_minimum": "lift"
       },
       {
@@ -2389,7 +2489,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.06937150353900132,
+        "minimum_signed_distance_m": 0.0696255981464722,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2401,7 +2501,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.0880102489240112,
+        "minimum_signed_distance_m": 0.08807755786758724,
         "phase_at_minimum": "lift"
       },
       {
@@ -2413,7 +2513,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.08838876723565547,
+        "minimum_signed_distance_m": 0.08845312014994976,
         "phase_at_minimum": "lift"
       },
       {
@@ -2425,7 +2525,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.12273626692711248,
+        "minimum_signed_distance_m": 0.1230319419379995,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2449,7 +2549,7 @@
           "cube",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.13798960559657017,
+        "minimum_signed_distance_m": 0.1379339549964319,
         "phase_at_minimum": "release"
       },
       {
@@ -2461,7 +2561,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14242155254844047,
+        "minimum_signed_distance_m": 0.1424870883550836,
         "phase_at_minimum": "lift"
       },
       {
@@ -2473,7 +2573,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14258285412753124,
+        "minimum_signed_distance_m": 0.14264743465540095,
         "phase_at_minimum": "lift"
       },
       {
@@ -2485,7 +2585,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14271532724446329,
+        "minimum_signed_distance_m": 0.14278020314824555,
         "phase_at_minimum": "lift"
       },
       {
@@ -2497,7 +2597,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14287289292862748,
+        "minimum_signed_distance_m": 0.14293686287002322,
         "phase_at_minimum": "lift"
       },
       {
@@ -2509,7 +2609,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.1614644083116141,
+        "minimum_signed_distance_m": 0.16152924496049717,
         "phase_at_minimum": "lift"
       },
       {
@@ -2521,7 +2621,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.16162061214465537,
+        "minimum_signed_distance_m": 0.16168455608740634,
         "phase_at_minimum": "lift"
       },
       {
@@ -2533,7 +2633,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.1625201480383923,
+        "minimum_signed_distance_m": 0.1627663860136529,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2545,7 +2645,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.1684362811704251,
+        "minimum_signed_distance_m": 0.16873196960287745,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2569,7 +2669,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.17155599540246702,
+        "minimum_signed_distance_m": 0.17162338894204382,
         "phase_at_minimum": "lift"
       },
       {
@@ -2581,7 +2681,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.17178882599449302,
+        "minimum_signed_distance_m": 0.1718544813077179,
         "phase_at_minimum": "lift"
       },
       {
@@ -2593,7 +2693,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.18096700012782396,
+        "minimum_signed_distance_m": 0.18103228961560947,
         "phase_at_minimum": "lift"
       },
       {
@@ -2605,7 +2705,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.1811746302130433,
+        "minimum_signed_distance_m": 0.1812383387530446,
         "phase_at_minimum": "lift"
       },
       {
@@ -2617,7 +2717,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.18649525713964976,
+        "minimum_signed_distance_m": 0.18656113320086912,
         "phase_at_minimum": "lift"
       },
       {
@@ -2629,7 +2729,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.18685428570493398,
+        "minimum_signed_distance_m": 0.18691735398414033,
         "phase_at_minimum": "lift"
       },
       {
@@ -2641,7 +2741,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.20836408110255988,
+        "minimum_signed_distance_m": 0.20861368132440275,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2653,7 +2753,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.2093715035390013,
+        "minimum_signed_distance_m": 0.2096255981464722,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2665,7 +2765,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.21245889614743202,
+        "minimum_signed_distance_m": 0.21299432429818102,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2677,7 +2777,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.2280102489240112,
+        "minimum_signed_distance_m": 0.22807755786758724,
         "phase_at_minimum": "lift"
       },
       {
@@ -2689,7 +2789,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.22838876723565546,
+        "minimum_signed_distance_m": 0.22845312014994976,
         "phase_at_minimum": "lift"
       },
       {
@@ -2701,7 +2801,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.24637542331609602,
+        "minimum_signed_distance_m": 0.2465256525949534,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2713,7 +2813,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.2526563199839055,
+        "minimum_signed_distance_m": 0.2519064415363846,
         "phase_at_minimum": "lift"
       },
       {
@@ -2725,8 +2825,8 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.2598000383814312,
-        "phase_at_minimum": "lift"
+        "minimum_signed_distance_m": 0.25980003838143123,
+        "phase_at_minimum": "approach"
       },
       {
         "geom_pair": [
@@ -2737,7 +2837,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.27457179488639905,
+        "minimum_signed_distance_m": 0.2736482706779264,
         "phase_at_minimum": "transfer"
       },
       {
@@ -2749,7 +2849,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.3025201480383923,
+        "minimum_signed_distance_m": 0.3027663860136529,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2761,7 +2861,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.30558989767812444,
+        "minimum_signed_distance_m": 0.3059482058425086,
         "phase_at_minimum": "lower_place"
       },
       {
@@ -2773,7 +2873,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.34836408110255984,
+        "minimum_signed_distance_m": 0.34861368132440274,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2785,7 +2885,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.3612203787927034,
+        "minimum_signed_distance_m": 0.36132209387005637,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2797,7 +2897,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.386375423316096,
+        "minimum_signed_distance_m": 0.3865256525949534,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2809,42 +2909,43 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.5012203787927034,
+        "minimum_signed_distance_m": 0.5013220938700564,
         "phase_at_minimum": "retreat"
       }
     ],
     "min_unexpected_signed_distance_by_role_pair_m": {
-      "arm-table": 0.03778024646139987,
+      "arm-table": 0.03778024647017932,
       "arm-floor": 0.1709999973341671,
-      "arm-cube": 0.12273626692711248,
-      "gripper-table": 0.002421552548440481,
-      "floor-gripper": 0.14242155254844047,
-      "cube-gripper": 0.00151724470935794,
-      "cube-floor": 0.13798960559657017
+      "arm-cube": 0.1230319419379995,
+      "gripper-table": 0.0024870883550836276,
+      "floor-gripper": 0.1424870883550836,
+      "cube-gripper": 0.0015603170558306787,
+      "cube-floor": 0.1379339549964319,
+      "cube-table": 0.005148775255190501
     },
     "minimum_unexpected_pairs_m": [
       {
         "geom_pair": [
           "cube_geom",
-          "left_follower_follower_collision"
-        ],
-        "roles": [
-          "cube",
-          "gripper"
-        ],
-        "minimum_signed_distance_m": 0.00151724470935794,
-        "phase_at_minimum": "lift"
-      },
-      {
-        "geom_pair": [
-          "cube_geom",
           "right_follower_follower_collision"
         ],
         "roles": [
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.0015187474004710816,
+        "minimum_signed_distance_m": 0.0015603170558306787,
+        "phase_at_minimum": "lift"
+      },
+      {
+        "geom_pair": [
+          "cube_geom",
+          "left_follower_follower_collision"
+        ],
+        "roles": [
+          "cube",
+          "gripper"
+        ],
+        "minimum_signed_distance_m": 0.001569149836552119,
         "phase_at_minimum": "lift"
       },
       {
@@ -2856,7 +2957,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.002421552548440481,
+        "minimum_signed_distance_m": 0.0024870883550836276,
         "phase_at_minimum": "lift"
       },
       {
@@ -2868,7 +2969,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.002582854127531259,
+        "minimum_signed_distance_m": 0.0026474346554009594,
         "phase_at_minimum": "lift"
       },
       {
@@ -2880,7 +2981,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.0027153272444633,
+        "minimum_signed_distance_m": 0.002780203148245564,
         "phase_at_minimum": "lift"
       },
       {
@@ -2892,7 +2993,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.0028728929286274962,
+        "minimum_signed_distance_m": 0.0029368628700232324,
         "phase_at_minimum": "lift"
       },
       {
@@ -2904,7 +3005,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.0042538132497019964,
+        "minimum_signed_distance_m": 0.004308591830361934,
         "phase_at_minimum": "lift"
       },
       {
@@ -2916,7 +3017,19 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.004265162822929709,
+        "minimum_signed_distance_m": 0.004318737499248467,
+        "phase_at_minimum": "lift"
+      },
+      {
+        "geom_pair": [
+          "cube_geom",
+          "worktable"
+        ],
+        "roles": [
+          "cube",
+          "table"
+        ],
+        "minimum_signed_distance_m": 0.005148775255190501,
         "phase_at_minimum": "lift"
       },
       {
@@ -2928,7 +3041,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.011587794348803117,
+        "minimum_signed_distance_m": 0.008613624736220364,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2940,7 +3053,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.011622568760170732,
+        "minimum_signed_distance_m": 0.008648849833100221,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2952,7 +3065,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.014605380830888352,
+        "minimum_signed_distance_m": 0.011684646994858208,
         "phase_at_minimum": "retreat"
       },
       {
@@ -2964,7 +3077,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.016991434228335246,
+        "minimum_signed_distance_m": 0.016636325221889875,
         "phase_at_minimum": "descend"
       },
       {
@@ -2976,7 +3089,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.017011634980326314,
+        "minimum_signed_distance_m": 0.016656526003002714,
         "phase_at_minimum": "descend"
       },
       {
@@ -2988,7 +3101,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.01718823931613478,
+        "minimum_signed_distance_m": 0.016833130315986176,
         "phase_at_minimum": "descend"
       },
       {
@@ -3000,7 +3113,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.021464408311614114,
+        "minimum_signed_distance_m": 0.021529244960497185,
         "phase_at_minimum": "lift"
       },
       {
@@ -3012,7 +3125,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.021620612144655382,
+        "minimum_signed_distance_m": 0.021684556087406354,
         "phase_at_minimum": "lift"
       },
       {
@@ -3024,7 +3137,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.021767585956937136,
+        "minimum_signed_distance_m": 0.021804381784415655,
         "phase_at_minimum": "close_gripper"
       },
       {
@@ -3036,8 +3149,8 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.022347239017199122,
-        "phase_at_minimum": "transfer"
+        "minimum_signed_distance_m": 0.0223916044484111,
+        "phase_at_minimum": "lift"
       },
       {
         "geom_pair": [
@@ -3048,7 +3161,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.02942678996044066,
+        "minimum_signed_distance_m": 0.02968088456856257,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3060,7 +3173,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.031555995402467035,
+        "minimum_signed_distance_m": 0.031623388942043834,
         "phase_at_minimum": "lift"
       },
       {
@@ -3072,7 +3185,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.031788825994493036,
+        "minimum_signed_distance_m": 0.031854481307717925,
         "phase_at_minimum": "lift"
       },
       {
@@ -3084,7 +3197,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.03778024646139987,
+        "minimum_signed_distance_m": 0.03778024647017932,
         "phase_at_minimum": "transfer"
       },
       {
@@ -3096,7 +3209,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.04096700012782398,
+        "minimum_signed_distance_m": 0.04103228961560948,
         "phase_at_minimum": "lift"
       },
       {
@@ -3108,7 +3221,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.04117463021304332,
+        "minimum_signed_distance_m": 0.04123833875304461,
         "phase_at_minimum": "lift"
       },
       {
@@ -3120,7 +3233,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.046495257139649776,
+        "minimum_signed_distance_m": 0.04656113320086913,
         "phase_at_minimum": "lift"
       },
       {
@@ -3132,7 +3245,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.046854285704933996,
+        "minimum_signed_distance_m": 0.04691735398414035,
         "phase_at_minimum": "lift"
       },
       {
@@ -3144,7 +3257,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.05672985904403123,
+        "minimum_signed_distance_m": 0.056795490047296004,
         "phase_at_minimum": "lift"
       },
       {
@@ -3156,7 +3269,7 @@
           "cube",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.05678028215581859,
+        "minimum_signed_distance_m": 0.05684597467023713,
         "phase_at_minimum": "lift"
       },
       {
@@ -3168,7 +3281,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.06937150353900132,
+        "minimum_signed_distance_m": 0.0696255981464722,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3180,7 +3293,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.0880102489240112,
+        "minimum_signed_distance_m": 0.08807755786758724,
         "phase_at_minimum": "lift"
       },
       {
@@ -3192,7 +3305,7 @@
           "gripper",
           "table"
         ],
-        "minimum_signed_distance_m": 0.08838876723565547,
+        "minimum_signed_distance_m": 0.08845312014994976,
         "phase_at_minimum": "lift"
       },
       {
@@ -3204,7 +3317,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.12273626692711248,
+        "minimum_signed_distance_m": 0.1230319419379995,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3228,7 +3341,7 @@
           "cube",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.13798960559657017,
+        "minimum_signed_distance_m": 0.1379339549964319,
         "phase_at_minimum": "release"
       },
       {
@@ -3240,7 +3353,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14242155254844047,
+        "minimum_signed_distance_m": 0.1424870883550836,
         "phase_at_minimum": "lift"
       },
       {
@@ -3252,7 +3365,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14258285412753124,
+        "minimum_signed_distance_m": 0.14264743465540095,
         "phase_at_minimum": "lift"
       },
       {
@@ -3264,7 +3377,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14271532724446329,
+        "minimum_signed_distance_m": 0.14278020314824555,
         "phase_at_minimum": "lift"
       },
       {
@@ -3276,7 +3389,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.14287289292862748,
+        "minimum_signed_distance_m": 0.14293686287002322,
         "phase_at_minimum": "lift"
       },
       {
@@ -3288,7 +3401,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.1614644083116141,
+        "minimum_signed_distance_m": 0.16152924496049717,
         "phase_at_minimum": "lift"
       },
       {
@@ -3300,7 +3413,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.16162061214465537,
+        "minimum_signed_distance_m": 0.16168455608740634,
         "phase_at_minimum": "lift"
       },
       {
@@ -3312,7 +3425,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.1625201480383923,
+        "minimum_signed_distance_m": 0.1627663860136529,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3324,7 +3437,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.1684362811704251,
+        "minimum_signed_distance_m": 0.16873196960287745,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3348,7 +3461,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.17155599540246702,
+        "minimum_signed_distance_m": 0.17162338894204382,
         "phase_at_minimum": "lift"
       },
       {
@@ -3360,7 +3473,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.17178882599449302,
+        "minimum_signed_distance_m": 0.1718544813077179,
         "phase_at_minimum": "lift"
       },
       {
@@ -3372,7 +3485,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.18096700012782396,
+        "minimum_signed_distance_m": 0.18103228961560947,
         "phase_at_minimum": "lift"
       },
       {
@@ -3384,7 +3497,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.1811746302130433,
+        "minimum_signed_distance_m": 0.1812383387530446,
         "phase_at_minimum": "lift"
       },
       {
@@ -3396,7 +3509,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.18649525713964976,
+        "minimum_signed_distance_m": 0.18656113320086912,
         "phase_at_minimum": "lift"
       },
       {
@@ -3408,7 +3521,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.18685428570493398,
+        "minimum_signed_distance_m": 0.18691735398414033,
         "phase_at_minimum": "lift"
       },
       {
@@ -3420,7 +3533,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.20836408110255988,
+        "minimum_signed_distance_m": 0.20861368132440275,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3432,7 +3545,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.2093715035390013,
+        "minimum_signed_distance_m": 0.2096255981464722,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3444,7 +3557,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.21245889614743202,
+        "minimum_signed_distance_m": 0.21299432429818102,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3456,7 +3569,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.2280102489240112,
+        "minimum_signed_distance_m": 0.22807755786758724,
         "phase_at_minimum": "lift"
       },
       {
@@ -3468,7 +3581,7 @@
           "floor",
           "gripper"
         ],
-        "minimum_signed_distance_m": 0.22838876723565546,
+        "minimum_signed_distance_m": 0.22845312014994976,
         "phase_at_minimum": "lift"
       },
       {
@@ -3480,7 +3593,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.24637542331609602,
+        "minimum_signed_distance_m": 0.2465256525949534,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3492,7 +3605,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.2526563199839055,
+        "minimum_signed_distance_m": 0.2519064415363846,
         "phase_at_minimum": "lift"
       },
       {
@@ -3504,8 +3617,8 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.2598000383814312,
-        "phase_at_minimum": "lift"
+        "minimum_signed_distance_m": 0.25980003838143123,
+        "phase_at_minimum": "approach"
       },
       {
         "geom_pair": [
@@ -3516,7 +3629,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.27457179488639905,
+        "minimum_signed_distance_m": 0.2736482706779264,
         "phase_at_minimum": "transfer"
       },
       {
@@ -3528,7 +3641,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.3025201480383923,
+        "minimum_signed_distance_m": 0.3027663860136529,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3540,7 +3653,7 @@
           "arm",
           "cube"
         ],
-        "minimum_signed_distance_m": 0.30558989767812444,
+        "minimum_signed_distance_m": 0.3059482058425086,
         "phase_at_minimum": "lower_place"
       },
       {
@@ -3552,7 +3665,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.34836408110255984,
+        "minimum_signed_distance_m": 0.34861368132440274,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3564,7 +3677,7 @@
           "arm",
           "table"
         ],
-        "minimum_signed_distance_m": 0.3612203787927034,
+        "minimum_signed_distance_m": 0.36132209387005637,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3576,7 +3689,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.386375423316096,
+        "minimum_signed_distance_m": 0.3865256525949534,
         "phase_at_minimum": "retreat"
       },
       {
@@ -3588,7 +3701,7 @@
           "arm",
           "floor"
         ],
-        "minimum_signed_distance_m": 0.5012203787927034,
+        "minimum_signed_distance_m": 0.5013220938700564,
         "phase_at_minimum": "retreat"
       }
     ],
@@ -3601,93 +3714,109 @@
       "cube_geom<->right_pad2",
       "cube_geom<->worktable"
     ],
+    "distinct_contact_event_counts": {
+      "expected": 42
+    },
+    "distinct_contact_event_pairs": {
+      "expected": [
+        "cube_geom<->left_follower_tongue_collision",
+        "cube_geom<->left_pad1",
+        "cube_geom<->left_pad2",
+        "cube_geom<->right_follower_tongue_collision",
+        "cube_geom<->right_pad1",
+        "cube_geom<->right_pad2",
+        "cube_geom<->worktable"
+      ]
+    },
+    "contact_observation_definition": "one pair observation per physics step with a MuJoCo contact record",
+    "distinct_contact_event_definition": "transition into dist<=0 for a geom pair after a step without that pair in actual contact",
     "contact_pair_details": {
       "cube_geom<->worktable": {
         "phase_observations": {
           "approach": 3936,
           "descend": 5000,
-          "close_gripper": 1736,
-          "lift": 217,
-          "lower_place": 32,
+          "close_gripper": 1716,
+          "lift": 218,
+          "lower_place": 45,
           "release": 1767,
           "retreat": 3000
         },
-        "minimum_contact_distance_m": -0.002010394403429837,
-        "actual_contact_observations": 15688
+        "minimum_contact_distance_m": -0.0020660450035680867,
+        "actual_contact_observations": 15682
       },
       "cube_geom<->right_follower_tongue_collision": {
         "phase_observations": {
-          "close_gripper": 1408,
-          "lift": 3932,
+          "close_gripper": 1366,
+          "lift": 3871,
           "transfer": 2502,
-          "lower_place": 1994,
-          "release": 7
+          "lower_place": 1993,
+          "release": 6
         },
-        "minimum_contact_distance_m": -0.0016168299212348967,
-        "actual_contact_observations": 9843
-      },
-      "cube_geom<->right_pad2": {
-        "phase_observations": {
-          "close_gripper": 952,
-          "lift": 1689,
-          "transfer": 2136,
-          "lower_place": 1710,
-          "release": 2
-        },
-        "minimum_contact_distance_m": -0.0014026680117402166,
-        "actual_contact_observations": 6489
+        "minimum_contact_distance_m": -0.0015885346635723303,
+        "actual_contact_observations": 9738
       },
       "cube_geom<->right_pad1": {
         "phase_observations": {
-          "close_gripper": 1568,
-          "lift": 4708,
+          "close_gripper": 1592,
+          "lift": 4720,
           "transfer": 4991,
-          "lower_place": 3838,
-          "release": 4
+          "lower_place": 3835,
+          "release": 3
         },
-        "minimum_contact_distance_m": -0.0016624616041331238,
-        "actual_contact_observations": 15109
+        "minimum_contact_distance_m": -0.0016332980157343325,
+        "actual_contact_observations": 15141
+      },
+      "cube_geom<->right_pad2": {
+        "phase_observations": {
+          "close_gripper": 932,
+          "lift": 1685,
+          "transfer": 2129,
+          "lower_place": 1700,
+          "release": 3
+        },
+        "minimum_contact_distance_m": -0.0013453389918590892,
+        "actual_contact_observations": 6449
       },
       "cube_geom<->left_follower_tongue_collision": {
         "phase_observations": {
-          "close_gripper": 1442,
-          "lift": 3936,
+          "close_gripper": 1414,
+          "lift": 3869,
           "transfer": 2500,
           "lower_place": 2000,
-          "release": 12
+          "release": 8
         },
-        "minimum_contact_distance_m": -0.0015549918407740052,
-        "actual_contact_observations": 9890
+        "minimum_contact_distance_m": -0.001587160846678669,
+        "actual_contact_observations": 9791
       },
       "cube_geom<->left_pad1": {
         "phase_observations": {
-          "close_gripper": 1485,
-          "lift": 4505,
-          "transfer": 4978,
-          "lower_place": 3489,
-          "release": 6
+          "close_gripper": 1488,
+          "lift": 4401,
+          "transfer": 4977,
+          "lower_place": 3475,
+          "release": 7
         },
-        "minimum_contact_distance_m": -0.0015834418472142266,
-        "actual_contact_observations": 14463
+        "minimum_contact_distance_m": -0.0016149400964796628,
+        "actual_contact_observations": 14348
       },
       "cube_geom<->left_pad2": {
         "phase_observations": {
-          "close_gripper": 897,
-          "lift": 2093,
-          "transfer": 1717,
-          "lower_place": 1369,
-          "release": 7
+          "close_gripper": 881,
+          "lift": 2079,
+          "transfer": 1709,
+          "lower_place": 1356,
+          "release": 5
         },
-        "minimum_contact_distance_m": -0.0010018478060476441,
-        "actual_contact_observations": 6083
+        "minimum_contact_distance_m": -0.0010392472894823256,
+        "actual_contact_observations": 6030
       }
     },
     "expected_contact_exclusions": {
-      "cube_geom<->worktable": "allowed all phases as cube support/rest contact",
+      "cube_geom<->worktable": "allowed during approach, descend, close_gripper, lower_place, release, and retreat; during lift only while the cube remains within 6 mm of its geometric support height; transfer-phase table contact is unexpected",
       "cube_geom<->finger surfaces": "left/right pad boxes and left/right follower tongue meshes; allowed phases close_gripper, lift, transfer, lower_place, release; counted separately",
       "tray": "no tray geometry exists; no tray contacts or clearances are measured"
     },
-    "expected_contact_observations": 77565,
+    "expected_contact_observations": 77179,
     "expected_contact_pairs": [
       "cube_geom<->left_follower_tongue_collision",
       "cube_geom<->left_pad1",
@@ -3703,15 +3832,15 @@
     "expected_contact_observations_by_phase": {
       "approach": 3936,
       "descend": 5000,
-      "close_gripper": 9488,
-      "lift": 21080,
-      "transfer": 18824,
-      "lower_place": 14432,
-      "release": 1805,
+      "close_gripper": 9389,
+      "lift": 20843,
+      "transfer": 18808,
+      "lower_place": 14404,
+      "release": 1799,
       "retreat": 3000
     },
-    "penetrating_contact_observations_lt_minus_1e_6_m": 77323,
-    "deepest_contact_penetration_m": -0.002010394403429837,
+    "penetrating_contact_observations_lt_minus_1e_6_m": 76776,
+    "deepest_contact_penetration_m": -0.0020660450035680867,
     "unexpected_actual_contact_observations_dist_le_0": 0,
     "unexpected_penetrating_contact_observations_lt_minus_1e_6_m": 0,
     "deepest_unexpected_penetration_m": 0.0,

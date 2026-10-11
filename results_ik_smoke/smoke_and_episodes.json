@@ -44,7 +44,7 @@
       "ik_iterations": 19,
       "ik_iteration_definition": "DLS Jacobian update iterations",
       "backend_iterations": null,
-      "solve_time_s": 0.002524104000031002,
+      "solve_time_s": 0.002051342002232559,
       "joint_position_limit_violation_rad": 0.0,
       "velocity_limit_violation_rad_s": null,
       "velocity_limit_rad_s": null,
@@ -68,7 +68,7 @@
       "ik_iterations": 27,
       "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
       "backend_iterations": null,
-      "solve_time_s": 0.00911313100004918,
+      "solve_time_s": 0.007242718002089532,
       "joint_position_limit_violation_rad": 0.0,
       "velocity_limit_violation_rad_s": 9.325873406851315e-15,
       "velocity_limit_rad_s": 1.2,
@@ -92,13 +92,13 @@
       "ik_iterations": 28,
       "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
       "backend_iterations": null,
-      "solve_time_s": 0.006209300000136864,
+      "solve_time_s": 0.005129230998136336,
       "joint_position_limit_violation_rad": 0.0,
       "velocity_limit_violation_rad_s": 7.993605777301127e-15,
       "velocity_limit_rad_s": 1.2,
       "velocity_limit_enforcement": "hard_constraint",
       "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-      "message": "DAQP found=True; solve_time_s=1.1529999937920365e-05"
+      "message": "DAQP found=True; solve_time_s=1.0593001206871122e-05"
     }
   ],
   "matched_episodes": [
@@ -107,25 +107,40 @@
       "success": true,
       "failure_reason": null,
       "episode_status": "completed_success",
+      "seed": 7,
       "initial_cube_xyz": [
         0.35,
         0.0,
         0.165
       ],
-      "initial_cube_yaw_rad": 0.0,
+      "initial_cube_yaw_rad": 0.05513713804903872,
+      "pick_target_xyz_m": [
+        0.35,
+        0.0,
+        0.165
+      ],
       "place_target_xyz": [
         0.35,
         0.18,
         0.165
       ],
       "final_cube_xyz": [
-        0.3648421864925481,
-        0.1803733341395702,
-        0.15994471357940163
+        0.36484277214487815,
+        0.18021192638798306,
+        0.15994471357940152
       ],
-      "lift_peak_z_m": 0.3089779303014277,
+      "lift_peak_z_m": 0.3094528158865309,
       "sim_time_s": 15.200000000001745,
-      "episode_wall_time_s": 0.8381635060000008,
+      "executed_phase_count": 8,
+      "ik_solve_time_total_s": 0.08382658999835257,
+      "ik_iterations_total": 557,
+      "max_position_residual_m": 0.006195118215615589,
+      "max_orientation_residual_rad": 0.034932828368773185,
+      "max_joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "max_velocity_limit_violation_rad_s": 2.3314683517128287e-14,
+      "episode_wall_time_s": 0.7021533809966058,
       "sim_time_scope": "MuJoCo simulation clock; excludes wall-clock rendering and planning interpretation",
       "episode_wall_time_scope": "wall-clock duration for the full episode, including IK solves and simulation steps",
       "waypoints": [
@@ -145,13 +160,20 @@
           "ik_iterations": 18,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.009555104000128267,
+          "solve_time_s": 0.004669504000048619,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 3.774758283725532e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual."
+          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+          "phase": "approach",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.41500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
@@ -169,13 +191,20 @@
           "ik_iterations": 180,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.04935223899997254,
+          "solve_time_s": 0.024047007998888148,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 1.2212453270876722e-14,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; iteration limit not yet met."
+          "message": "Mink/DAQP: velocity solution returned; iteration limit not yet met.",
+          "phase": "descend",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
@@ -193,133 +222,175 @@
           "ik_iterations": 180,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.0290933699998277,
+          "solve_time_s": 0.025584449998859782,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 1.1102230246251565e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; iteration limit not yet met."
+          "message": "Mink/DAQP: velocity solution returned; iteration limit not yet met.",
+          "phase": "close_gripper",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
           "q": [
-            0.0037781560296596232,
-            -0.09444092210659152,
-            -0.15963778654611385,
-            -0.15178092818141878,
-            0.16422547127379902,
-            -0.009939705680833025
+            0.003777373733639945,
+            -0.09443969713688363,
+            -0.15963488979542062,
+            -0.15176863391636974,
+            0.16421404599846842,
+            -0.009937945620946895
           ],
           "status": "converged",
-          "position_error_m": 0.002511492522348803,
-          "orientation_error_rad": 0.01674832131753824,
+          "position_error_m": 0.0025108350443022115,
+          "orientation_error_rad": 0.016743867956316712,
           "ik_iterations": 57,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.011556062999943606,
+          "solve_time_s": 0.008394956999836722,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 2.3314683517128287e-14,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual."
+          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+          "phase": "lift",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.47500000000000003
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
           "q": [
-            0.4724343988172945,
-            0.0555676635051951,
-            -0.005087902008346596,
-            -0.10671054607647472,
-            0.12446395586872713,
-            -0.4752092945832422
+            0.47243325514697593,
+            0.05556749956407863,
+            -0.005087991225831242,
+            -0.10670979299623165,
+            0.12446394036537403,
+            -0.4752078611637229
           ],
           "status": "converged",
-          "position_error_m": 0.001080249380257504,
-          "orientation_error_rad": 0.0021900551793702767,
+          "position_error_m": 0.0010806120816011966,
+          "orientation_error_rad": 0.002190827822497466,
           "ik_iterations": 20,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.005155376999937289,
+          "solve_time_s": 0.00383898899963242,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 1.0880185641326534e-14,
+          "velocity_limit_violation_rad_s": 9.325873406851315e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual."
+          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+          "phase": "transfer",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.47500000000000003
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
           "q": [
-            0.4751335186437929,
-            0.24139324357196415,
-            -0.2890398478018058,
-            -1.4286519814068948,
-            1.4487844776460919,
-            -0.9155376896138298
+            0.47513350970318546,
+            0.24139326139722284,
+            -0.2890397871495503,
+            -1.4286498544413468,
+            1.4487826419986825,
+            -0.9155366505135822
           ],
           "status": "converged",
-          "position_error_m": 0.003896164209969543,
-          "orientation_error_rad": 0.02444988450327554,
+          "position_error_m": 0.0038961775184442634,
+          "orientation_error_rad": 0.02444996905542715,
           "ik_iterations": 56,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.010562918000005084,
+          "solve_time_s": 0.008392529001866933,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 1.2212453270876722e-14,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual."
+          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+          "phase": "lower_place",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
           "q": [
-            0.4750872207640297,
-            0.2414870559569466,
-            -0.2887208243830881,
-            -1.4178703841652378,
-            1.4394793387947507,
-            -0.9102726108234902
+            0.47508737759707576,
+            0.24148673372495635,
+            -0.2887219195432469,
+            -1.4179061018378385,
+            1.4395101656843625,
+            -0.9102900462729169
           ],
           "status": "converged",
-          "position_error_m": 0.003966160738765387,
-          "orientation_error_rad": 0.024894675319446672,
+          "position_error_m": 0.003965920463420821,
+          "orientation_error_rad": 0.024893148353791295,
           "ik_iterations": 10,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.003794731999960277,
+          "solve_time_s": 0.0027199739997740835,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 1.1102230246251565e-15,
+          "velocity_limit_violation_rad_s": 2.4424906541753444e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual."
+          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+          "phase": "release",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "mink",
           "q": [
-            0.4782780019950667,
-            0.07834122832410204,
-            -0.14956219835111123,
-            -0.4708875210931369,
-            0.5194455815618767,
-            -0.5379167309793222
+            0.4782782992799294,
+            0.07834054681998022,
+            -0.14956387873890947,
+            -0.4708951657409477,
+            0.5194527662550475,
+            -0.5379188866517327
           ],
           "status": "converged",
-          "position_error_m": 0.002771941101010708,
-          "orientation_error_rad": 0.018732325957616473,
+          "position_error_m": 0.002772287575707046,
+          "orientation_error_rad": 0.018734666343615,
           "ik_iterations": 36,
           "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
           "backend_iterations": null,
-          "solve_time_s": 0.006549117000076876,
+          "solve_time_s": 0.006179178999445867,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 1.2212453270876722e-14,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual."
+          "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+          "phase": "retreat",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.41500000000000004
+          ],
+          "execution_decision": "executed"
         }
       ],
       "collision_audit": null
@@ -329,25 +400,40 @@
       "success": true,
       "failure_reason": null,
       "episode_status": "completed_success",
+      "seed": 7,
       "initial_cube_xyz": [
         0.35,
         0.0,
         0.165
       ],
-      "initial_cube_yaw_rad": 0.0,
+      "initial_cube_yaw_rad": 0.05513713804903872,
+      "pick_target_xyz_m": [
+        0.35,
+        0.0,
+        0.165
+      ],
       "place_target_xyz": [
         0.35,
         0.18,
         0.165
       ],
       "final_cube_xyz": [
-        0.3521443312575459,
-        0.17794576260430686,
-        0.1599447135794016
+        0.35444183821820824,
+        0.1747828565717873,
+        0.15994471357940157
       ],
-      "lift_peak_z_m": 0.3097477559199674,
+      "lift_peak_z_m": 0.3092510556428978,
       "sim_time_s": 15.200000000001745,
-      "episode_wall_time_s": 0.7319636400000036,
+      "executed_phase_count": 8,
+      "ik_solve_time_total_s": 0.05291302200203063,
+      "ik_iterations_total": 519,
+      "max_position_residual_m": 0.006211243586756592,
+      "max_orientation_residual_rad": 0.034858409573903786,
+      "max_joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": null,
+      "velocity_limit_enforcement": "not_enforced",
+      "max_velocity_limit_violation_rad_s": null,
+      "episode_wall_time_s": 0.6575904749988695,
       "sim_time_scope": "MuJoCo simulation clock; excludes wall-clock rendering and planning interpretation",
       "episode_wall_time_scope": "wall-clock duration for the full episode, including IK solves and simulation steps",
       "waypoints": [
@@ -367,13 +453,20 @@
           "ik_iterations": 13,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.0018113660000835807,
+          "solve_time_s": 0.0013632390000566375,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "approach",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.41500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
@@ -391,13 +484,20 @@
           "ik_iterations": 180,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.018697732000191536,
+          "solve_time_s": 0.01654643800065969,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "descend",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
@@ -415,133 +515,175 @@
           "ik_iterations": 180,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.019714083000053506,
+          "solve_time_s": 0.01642683099998976,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "close_gripper",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
           "q": [
-            0.002473977673275433,
-            -0.09474697031742482,
-            -0.15978623411121518,
-            -0.15370993279790476,
-            0.16320872464754377,
-            -0.008231676806223581
+            0.0024746979051990083,
+            -0.09474741783241108,
+            -0.1597871620732828,
+            -0.1537482233115912,
+            0.16321289416143944,
+            -0.008232426470835861
           ],
           "status": "converged",
-          "position_error_m": 0.0025731328615114205,
-          "orientation_error_rad": 0.01802942684194201,
+          "position_error_m": 0.0025744881062843288,
+          "orientation_error_rad": 0.01805175688096821,
           "ik_iterations": 40,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.004823764999855484,
+          "solve_time_s": 0.003814121999312192,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "lift",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.47500000000000003
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
           "q": [
-            0.47481715843665295,
-            0.05546214194059598,
-            -0.005441598225838143,
-            -0.10839468643783984,
-            0.12475374719408006,
-            -0.4779054872798253
+            0.4748167423505766,
+            0.05546183430108762,
+            -0.005441948935623291,
+            -0.10839463383181858,
+            0.1247539914338819,
+            -0.4779050736344877
           ],
           "status": "converged",
-          "position_error_m": 0.0003478903464713166,
-          "orientation_error_rad": 0.0007536233889218957,
+          "position_error_m": 0.0003480453712411764,
+          "orientation_error_rad": 0.0007538895142168315,
           "ik_iterations": 15,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.0022177040000315174,
+          "solve_time_s": 0.0015687310005887412,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "transfer",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.47500000000000003
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
           "q": [
-            0.4751944971834215,
-            0.2415101654174104,
-            -0.2887116073410926,
-            -1.4215641566965946,
-            1.4418924611878778,
-            -0.9118502995624257
+            0.4751944967520127,
+            0.2415101663460268,
+            -0.28871160427931,
+            -1.4215640564626006,
+            1.4418923742437437,
+            -0.9118502503246112
           ],
           "status": "converged",
-          "position_error_m": 0.0039656808870501305,
-          "orientation_error_rad": 0.02468277828998723,
+          "position_error_m": 0.003965681549978183,
+          "orientation_error_rad": 0.024682782472243137,
           "ik_iterations": 48,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.008332449999898017,
+          "solve_time_s": 0.006862985999759985,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "lower_place",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
           "q": [
-            0.47518320536259706,
-            0.24153455552020195,
-            -0.2886312116494225,
-            -1.4189550107136997,
-            1.4396291925815794,
-            -0.910568691058993
+            0.4751830315928629,
+            0.24153493215027186,
+            -0.28862997053049105,
+            -1.4189150825685746,
+            1.4395945564341328,
+            -0.9105490796477845
           ],
           "status": "converged",
-          "position_error_m": 0.003983086557841864,
-          "orientation_error_rad": 0.02479259517814676,
+          "position_error_m": 0.003983355238736459,
+          "orientation_error_rad": 0.024794290491083625,
           "ik_iterations": 17,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.003796059000023888,
+          "solve_time_s": 0.003692076003062539,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "release",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "dls",
           "q": [
-            0.4772634682109606,
-            0.07916550417503364,
-            -0.14697800101233338,
-            -0.45839194724081755,
-            0.5070369891204533,
-            -0.5336040703167366
+            0.47726428083861544,
+            0.07916535843479158,
+            -0.14697877192766473,
+            -0.45845170044807393,
+            0.5070444751720562,
+            -0.5336065157496663
           ],
           "status": "converged",
-          "position_error_m": 0.002178203555241504,
-          "orientation_error_rad": 0.015004800322818425,
+          "position_error_m": 0.0021790682398816646,
+          "orientation_error_rad": 0.015030844440801057,
           "ik_iterations": 26,
           "ik_iteration_definition": "DLS Jacobian update iterations",
           "backend_iterations": null,
-          "solve_time_s": 0.0028268889998344093,
+          "solve_time_s": 0.0026385989986010827,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": null,
           "velocity_limit_rad_s": null,
           "velocity_limit_enforcement": "not_enforced",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": ""
+          "message": "",
+          "phase": "retreat",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.41500000000000004
+          ],
+          "execution_decision": "executed"
         }
       ],
       "collision_audit": null
@@ -551,25 +693,40 @@
       "success": true,
       "failure_reason": null,
       "episode_status": "completed_success",
+      "seed": 7,
       "initial_cube_xyz": [
         0.35,
         0.0,
         0.165
       ],
-      "initial_cube_yaw_rad": 0.0,
+      "initial_cube_yaw_rad": 0.05513713804903872,
+      "pick_target_xyz_m": [
+        0.35,
+        0.0,
+        0.165
+      ],
       "place_target_xyz": [
         0.35,
         0.18,
         0.165
       ],
       "final_cube_xyz": [
-        0.3648126288018347,
-        0.18039438445406974,
-        0.15994471357940154
+        0.3648557297809682,
+        0.180215376298141,
+        0.15994471357940157
       ],
-      "lift_peak_z_m": 0.308928140702377,
+      "lift_peak_z_m": 0.3094051460516043,
       "sim_time_s": 15.200000000001745,
-      "episode_wall_time_s": 0.7808264779998808,
+      "executed_phase_count": 8,
+      "ik_solve_time_total_s": 0.07840116299848887,
+      "ik_iterations_total": 563,
+      "max_position_residual_m": 0.00619543555112231,
+      "max_orientation_residual_rad": 0.03493195162746681,
+      "max_joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "max_velocity_limit_violation_rad_s": 4.729550084903167e-14,
+      "episode_wall_time_s": 0.6877087499997288,
       "sim_time_scope": "MuJoCo simulation clock; excludes wall-clock rendering and planning interpretation",
       "episode_wall_time_scope": "wall-clock duration for the full episode, including IK solves and simulation steps",
       "waypoints": [
@@ -589,13 +746,20 @@
           "ik_iterations": 19,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.003594481999925847,
+          "solve_time_s": 0.0026079050003318116,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 8.881784197001252e-16,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=9.180999995805905e-06"
+          "message": "DAQP found=True; solve_time_s=7.353999535553157e-06",
+          "phase": "approach",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.41500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
@@ -613,13 +777,20 @@
           "ik_iterations": 180,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.028167429000177435,
+          "solve_time_s": 0.02303639100136934,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 7.771561172376096e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=7.673000027352828e-06"
+          "message": "DAQP found=True; solve_time_s=7.653998181922361e-06",
+          "phase": "descend",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
@@ -637,133 +808,175 @@
           "ik_iterations": 180,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.02814261800017448,
+          "solve_time_s": 0.022823144998255884,
           "joint_position_limit_violation_rad": 0.0,
           "velocity_limit_violation_rad_s": 3.552713678800501e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=8.269999852927867e-06"
+          "message": "DAQP found=True; solve_time_s=7.474998710677028e-06",
+          "phase": "close_gripper",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
           "q": [
-            0.003760527948114223,
-            -0.09439588767669964,
-            -0.15961949542850876,
-            -0.15197637881754056,
-            0.1644075488467125,
-            -0.009937643233659234
+            0.003759948594357808,
+            -0.0943949615972347,
+            -0.15961730089949341,
+            -0.15196706309935068,
+            0.16439888311307235,
+            -0.009936321276553532
           ],
           "status": "converged",
-          "position_error_m": 0.0025218968795240465,
-          "orientation_error_rad": 0.016818958997431847,
+          "position_error_m": 0.002521398026718363,
+          "orientation_error_rad": 0.016815586223397686,
           "ik_iterations": 58,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.008949657000130173,
+          "solve_time_s": 0.007551307997346157,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 4.8405723873656825e-14,
+          "velocity_limit_violation_rad_s": 4.729550084903167e-14,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=7.740999990346609e-06"
+          "message": "DAQP found=True; solve_time_s=7.544000254711136e-06",
+          "phase": "lift",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.47500000000000003
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
           "q": [
-            0.4724302439102783,
-            0.055581331502118234,
-            -0.005212445745279769,
-            -0.10698536407489846,
-            0.12477577219623387,
-            -0.4753185396057165
+            0.4724291219687772,
+            0.055581176143590066,
+            -0.005212586513187377,
+            -0.10698478224427542,
+            0.12477592050671113,
+            -0.47531731157703594
           ],
           "status": "converged",
-          "position_error_m": 0.0010801187664825995,
-          "orientation_error_rad": 0.002174432721900283,
+          "position_error_m": 0.0010804748830539937,
+          "orientation_error_rad": 0.0021751510241534346,
           "ik_iterations": 21,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.004335249999940061,
+          "solve_time_s": 0.0030466349999187514,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 9.769962616701378e-15,
+          "velocity_limit_violation_rad_s": 5.551115123125783e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=7.67000005907903e-06"
+          "message": "DAQP found=True; solve_time_s=6.666999979643151e-06",
+          "phase": "transfer",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.47500000000000003
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
           "q": [
-            0.47513236983843893,
-            0.24140060657794676,
-            -0.2890380989250789,
-            -1.4289492458216024,
-            1.4490408965736286,
-            -0.9156804990945645
+            0.4751323625834227,
+            0.24140062110734353,
+            -0.2890380497893298,
+            -1.4289475236717544,
+            1.4490394102962476,
+            -0.9156796577190268
           ],
           "status": "converged",
-          "position_error_m": 0.003894433614356433,
-          "orientation_error_rad": 0.024437716798827627,
+          "position_error_m": 0.0038944443681781515,
+          "orientation_error_rad": 0.02443778511373958,
           "ik_iterations": 57,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.014635491999797523,
+          "solve_time_s": 0.011546488000021782,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 9.992007221626409e-15,
+          "velocity_limit_violation_rad_s": 7.105427357601002e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=8.521000154360081e-06"
+          "message": "DAQP found=True; solve_time_s=1.5147001249715686e-05",
+          "phase": "lower_place",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
           "q": [
-            0.4750849069056219,
-            0.2414972339203367,
-            -0.28871147204987896,
-            -1.417926131896429,
-            1.4395273251075649,
-            -0.910297240816747
+            0.4750850718726453,
+            0.24149689347613465,
+            -0.28871262236618345,
+            -1.417963567884431,
+            1.4395596349085507,
+            -0.9103155158069554
           ],
           "status": "converged",
-          "position_error_m": 0.003965918289999205,
-          "orientation_error_rad": 0.024891913970643564,
+          "position_error_m": 0.003965666529237542,
+          "orientation_error_rad": 0.0248903141890677,
           "ik_iterations": 11,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.0034118850001050305,
+          "solve_time_s": 0.0030232600001909304,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 2.220446049250313e-15,
+          "velocity_limit_violation_rad_s": 1.9984014443252818e-15,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=8.836999995764927e-06"
+          "message": "DAQP found=True; solve_time_s=8.58999919728376e-06",
+          "phase": "release",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.29500000000000004
+          ],
+          "execution_decision": "executed"
         },
         {
           "method": "qp_daqp",
           "q": [
-            0.47826536586772284,
-            0.07838460359727144,
-            -0.14953809778297875,
-            -0.47103325310599664,
-            0.5195828471827545,
-            -0.5379395470659197
+            0.478265713826095,
+            0.078383807671176,
+            -0.1495400680611071,
+            -0.47104224069330336,
+            0.5195912941307725,
+            -0.5379420804289151
           ],
           "status": "converged",
-          "position_error_m": 0.002778513160935431,
-          "orientation_error_rad": 0.01877672116969903,
+          "position_error_m": 0.002778920494875609,
+          "orientation_error_rad": 0.018779472383148883,
           "ik_iterations": 37,
           "ik_iteration_definition": "outer Cartesian-IK iterations / DAQP QP calls",
           "backend_iterations": null,
-          "solve_time_s": 0.006935080999937782,
+          "solve_time_s": 0.004766031001054216,
           "joint_position_limit_violation_rad": 0.0,
-          "velocity_limit_violation_rad_s": 1.2656542480726785e-14,
+          "velocity_limit_violation_rad_s": 1.865174681370263e-14,
           "velocity_limit_rad_s": 1.2,
           "velocity_limit_enforcement": "hard_constraint",
           "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
-          "message": "DAQP found=True; solve_time_s=9.133000048677786e-06"
+          "message": "DAQP found=True; solve_time_s=7.457001629518345e-06",
+          "phase": "retreat",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.41500000000000004
+          ],
+          "execution_decision": "executed"
         }
       ],
       "collision_audit": null

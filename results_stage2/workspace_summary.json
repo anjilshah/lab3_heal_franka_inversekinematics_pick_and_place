@@ -146,7 +146,7 @@
       "y_max": 0.19
     }
   },
-  "runtime_wall_time_s": 9.89953163899986,
+  "runtime_wall_time_s": 9.299751528000343,
   "plots": [
     "workspace_task_xy_contact.png",
     "workspace_dexterous_xy_contact.png",
