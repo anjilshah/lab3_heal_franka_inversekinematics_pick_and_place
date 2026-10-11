@@ -1,0 +1,4141 @@
+{
+  "model": "robot_descriptions/arm_gripper.xml",
+  "table": {
+    "center_xyz_m": [
+      0.36,
+      0.05,
+      0.12
+    ],
+    "dimensions_xyz_m": [
+      0.56,
+      0.64,
+      0.04
+    ],
+    "top_z_m": 0.14
+  },
+  "tray": {
+    "present": false,
+    "placement_region": "existing placement coordinate only; no tray collision geometry added"
+  },
+  "assumptions": [
+    "The active HEAL collision meshes and MuJoCo signed geom distances are the geometry authority.",
+    "A 0.75 mm minimum margin is selected because the nominal gripper-to-table geometric gap is only a few millimetres; it is a simulation threshold, not a hardware safety rating.",
+    "The cube is released with TCP 20 mm higher than the original grasp contact height; using the modeled 130 mm wrist-to-pad offset, this yields an estimated 25 mm cube drop to the table surface.",
+    "Path checks sample 25 points on each planned smooth joint interpolation, so collisions between samples may be missed.",
+    "The held cube follows a fixed TCP-relative transform only in kinematic path checks; the actual MuJoCo grasp remains contact-based and is monitored during execution.",
+    "During close, held-object, and release kinematic checks, cube-to-gripper geom distances are excluded because the cube is intentionally nested in the finger envelope and the rigid hold proxy produced mesh overlap not present in recorded actual contacts; runtime MuJoCo contacts on non-excluded gripper geoms still trigger an abort.",
+    "Unsafe segments are rejected. No arbitrary obstacle or tray geometry is introduced and no general detour search is claimed."
+  ],
+  "avoidance_design": {
+    "sampled_joint_segment_precheck": true,
+    "runtime_clearance_abort_guard": true,
+    "passive_contact_monitoring_alone": false,
+    "general_collision_free_planning_claimed": false,
+    "obstacle_detour_search": false,
+    "collision_constrained_ik": false
+  },
+  "cases": [
+    {
+      "case": "nominal",
+      "success": true,
+      "episode_status": "completed_success",
+      "failure_reason": null,
+      "initial_cube_xyz_m": [
+        0.35,
+        0.0,
+        0.165
+      ],
+      "initial_cube_yaw_rad": 0.0,
+      "pick_target_xyz_m": [
+        0.35,
+        0.0,
+        0.16499999999999998
+      ],
+      "place_target_xyz_m": [
+        0.35,
+        0.18,
+        0.165
+      ],
+      "final_cube_xyz_m": [
+        0.33191621224354556,
+        0.181406185413604,
+        0.1599447135794016
+      ],
+      "lift_peak_z_m": 0.3097464517690313,
+      "sim_time_s": 15.200000000001745,
+      "episode_wall_time_s": 3.9266973710000457,
+      "clearance_policy": {
+        "minimum_unexpected_clearance_m": 0.00075,
+        "precheck": "25 sampled points on the same smooth joint interpolation used for execution",
+        "runtime_guard": "after each physics step, abort next control update if unexpected clearance is below margin or unexpected actual contact occurs",
+        "held_cube_model": "during lift/transfer/lower path checks, rigid TCP-to-cube transform captured after close is used; actual physical state is separately monitored each step"
+      },
+      "release_tcp_height_m": 0.31500000000000006,
+      "nominal_cube_release_drop_estimate_m": 0.025,
+      "completed_phase_count": 8,
+      "waypoints": [
+        {
+          "phase": "approach",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.415
+          ],
+          "method": "dls",
+          "q": [
+            0.0003233820862354861,
+            -0.05789896108256884,
+            -0.2734150542102373,
+            -0.3759458934969026,
+            0.42000000000000015,
+            -0.038706812440200286
+          ],
+          "status": "converged",
+          "position_error_m": 0.0023558885739443395,
+          "orientation_error_rad": 0.015868900117467454,
+          "ik_iterations": 13,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.0018561589999990247,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "approach",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.03778877209781186,
+            "minimum_pair": "link_1_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": false
+          }
+        },
+        {
+          "phase": "descend",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.295
+          ],
+          "method": "dls",
+          "q": [
+            0.0007433620444832155,
+            0.10652226249754362,
+            -0.4382347722186926,
+            -1.5711199269757508,
+            1.5715889886087164,
+            -0.5105363026286193
+          ],
+          "status": "max_iterations",
+          "position_error_m": 0.006211243584223241,
+          "orientation_error_rad": 0.03485840957390332,
+          "ik_iterations": 180,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.017657431999850814,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "descend",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.0007925832846673586,
+            "minimum_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": false
+          }
+        },
+        {
+          "phase": "close_gripper",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.295
+          ],
+          "method": "dls",
+          "q": [
+            0.000743386446665338,
+            0.10652226249551243,
+            -0.4382347722307133,
+            -1.5711238451383436,
+            1.5715923601293316,
+            -0.5105382540330482
+          ],
+          "status": "max_iterations",
+          "position_error_m": 0.006211243586756807,
+          "orientation_error_rad": 0.03485840956299119,
+          "ik_iterations": 180,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.017615608000141947,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "close_gripper",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.0007927432731207329,
+            "minimum_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": true
+          }
+        },
+        {
+          "phase": "lift",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.475
+          ],
+          "method": "dls",
+          "q": [
+            0.002473975725234963,
+            -0.0947469695735485,
+            -0.15978623271817793,
+            -0.15370983029484406,
+            0.1632087176674868,
+            -0.008231675090675912
+          ],
+          "status": "converged",
+          "position_error_m": 0.0025731293491932337,
+          "orientation_error_rad": 0.018029365976267545,
+          "ik_iterations": 40,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.0043384010000409035,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "lift",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.0024212339896043933,
+            "minimum_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": true,
+            "grasp_envelope_pairs_excluded": true
+          }
+        },
+        {
+          "phase": "transfer",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.475
+          ],
+          "method": "dls",
+          "q": [
+            0.4748171592344915,
+            0.055462142486580525,
+            -0.005441597627068264,
+            -0.10839468672126082,
+            0.12475374691557489,
+            -0.47790548811413314
+          ],
+          "status": "converged",
+          "position_error_m": 0.00034789005461862267,
+          "orientation_error_rad": 0.0007536228712415799,
+          "ik_iterations": 15,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.0018761510000331327,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "transfer",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.03778026973631407,
+            "minimum_pair": "link_1_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": true,
+            "grasp_envelope_pairs_excluded": true
+          }
+        },
+        {
+          "phase": "lower_place",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.31500000000000006
+          ],
+          "method": "dls",
+          "q": [
+            0.4743057005168445,
+            0.20740871668263822,
+            -0.27002652863356,
+            -1.058535018803682,
+            1.1183904722891298,
+            -0.7414169828125016
+          ],
+          "status": "converged",
+          "position_error_m": 0.003665023228707228,
+          "orientation_error_rad": 0.023034517613305733,
+          "ik_iterations": 29,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.003715697000188811,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "lower_place",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.005976863612553812,
+            "minimum_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": true,
+            "grasp_envelope_pairs_excluded": true
+          }
+        },
+        {
+          "phase": "release",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.31500000000000006
+          ],
+          "method": "dls",
+          "q": [
+            0.4741488505170731,
+            0.20776923558102878,
+            -0.26894864207449337,
+            -1.0484833591545368,
+            1.1094304578933136,
+            -0.7367348259232896
+          ],
+          "status": "converged",
+          "position_error_m": 0.003894569530741591,
+          "orientation_error_rad": 0.02450452295149731,
+          "ik_iterations": 6,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.0013704969996979344,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "release",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.006159120449258012,
+            "minimum_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": true
+          }
+        },
+        {
+          "phase": "retreat",
+          "target_xyz_m": [
+            0.35,
+            0.18,
+            0.415
+          ],
+          "method": "dls",
+          "q": [
+            0.4773139239769801,
+            0.07779716407510887,
+            -0.15023861680763928,
+            -0.46744306120205525,
+            0.5224592507958958,
+            -0.5366787747170277
+          ],
+          "status": "converged",
+          "position_error_m": 0.0028378743969956818,
+          "orientation_error_rad": 0.01831209220560593,
+          "ik_iterations": 16,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.001828998999826581,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "retreat",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.0156034214568231,
+            "minimum_pair": "cube_geom<->left_pad2",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": false
+          }
+        }
+      ],
+      "collision_audit": {
+        "measurement_scope": "post-step scene monitor; exact mj_geomDistance query for each listed geom pair at every physics step",
+        "distance_sign_definition": "positive=separated; zero=touching; negative=geometric overlap/penetration",
+        "steps_monitored": 7600,
+        "distance_queries": 494000,
+        "distmax_m": 10.0,
+        "active_collision_geom_count": 24,
+        "arm_collision_geoms": [
+          "link_1_collision",
+          "link_2_collision",
+          "link_3_collision",
+          "link_4_collision",
+          "link_5_collision",
+          "end_effector_collision"
+        ],
+        "gripper_collision_geoms": [
+          "gripper_base_base_collision",
+          "left_driver_driver_collision",
+          "left_coupler_coupler_collision",
+          "left_spring_link_spring_link_collision",
+          "left_follower_follower_collision",
+          "left_follower_tongue_collision",
+          "left_pad1",
+          "left_pad2",
+          "right_driver_driver_collision",
+          "right_coupler_coupler_collision",
+          "right_spring_link_spring_link_collision",
+          "right_follower_tongue_collision",
+          "right_follower_follower_collision",
+          "right_pad1",
+          "right_pad2"
+        ],
+        "expected_finger_contact_geoms": [
+          "left_follower_tongue_collision",
+          "left_pad1",
+          "left_pad2",
+          "right_follower_tongue_collision",
+          "right_pad1",
+          "right_pad2"
+        ],
+        "cube_geom": "cube_geom",
+        "table_geom": "worktable",
+        "floor_geom": "floor",
+        "tray_geom": null,
+        "monitored_pair_count": 65,
+        "min_signed_distance_by_role_pair_m": {
+          "arm-table": 0.03778024646138578,
+          "arm-floor": 0.1709999973341671,
+          "arm-cube": 0.12710904958385721,
+          "gripper-table": 0.0024212339896043933,
+          "floor-gripper": 0.14242123398960438,
+          "cube-gripper": -0.0018586811348446763,
+          "cube-table": -0.002468275883679927,
+          "cube-floor": 0.13753172411632006
+        },
+        "minimum_pairs_m": [
+          {
+            "geom_pair": [
+              "cube_geom",
+              "worktable"
+            ],
+            "roles": [
+              "cube",
+              "table"
+            ],
+            "minimum_signed_distance_m": -0.002468275883679927,
+            "phase_at_minimum": "release"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": -0.0018586811348446763,
+            "phase_at_minimum": "release"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": -0.0018174545385525075,
+            "phase_at_minimum": "release"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": -0.0016678034772062034,
+            "phase_at_minimum": "release"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": -0.0016622315632901351,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": -0.00161660655970803,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": -0.001402680671312904,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0015170303794784378,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0015186174402445202,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0024212339896043933,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0025825237651567468,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0027150125010001465,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.002872564346458606,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0042536196245416946,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0042650692913733974,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.021464093942397455,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.021620283201566226,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.021767585956936987,
+            "phase_at_minimum": "close_gripper"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.022347426951562964,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "right_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03155565111771927,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03178850854302773,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.03440171820106733,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_1_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03778024646138578,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "right_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04096667186610578,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.041174315503674924,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04649492139155373,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.046853978178018924,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.056729580200988464,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.056779976154232116,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "gripper_base_base_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.07409955115421277,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.088009905722776,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.08838845383542068,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "end_effector_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.12710904958385721,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_2_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.13671700929328306,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "floor"
+            ],
+            "roles": [
+              "cube",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.13753172411632006,
+            "phase_at_minimum": "release"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.14242123398960438,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.14258252376515673,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.14271501250100013,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1428725643464586,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.16146409394239744,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1616202832015662,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.16729188324815863,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.1709999973341671,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.17155565111771925,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1717885085430277,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.17305934673204532,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18096667186610577,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1811743155036749,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18649492139155371,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1868539781780189,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_5_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.21312073959208971,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.21409955115421275,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.21420078688529404,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.228009905722776,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.22838845383542067,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_4_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.25007211212055847,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.2526559832531891,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.25980003838143123,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.27457204033687094,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.30559200998403047,
+            "phase_at_minimum": "lower_place"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "floor"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3072918832481586,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3531207395920897,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_3_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.36716658160391547,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3900721121205585,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.5071665816039155,
+            "phase_at_minimum": "lift"
+          }
+        ],
+        "min_unexpected_signed_distance_by_role_pair_m": {
+          "arm-table": 0.03778024646138578,
+          "arm-floor": 0.1709999973341671,
+          "arm-cube": 0.12710904958385721,
+          "gripper-table": 0.0024212339896043933,
+          "floor-gripper": 0.14242123398960438,
+          "cube-gripper": 0.0015170303794784378,
+          "cube-floor": 0.13753172411632006,
+          "cube-table": 0.00517148223942418
+        },
+        "minimum_unexpected_pairs_m": [
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0015170303794784378,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0015186174402445202,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0024212339896043933,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0025825237651567468,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0027150125010001465,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.002872564346458606,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0042536196245416946,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.0042650692913733974,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "worktable"
+            ],
+            "roles": [
+              "cube",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.00517148223942418,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.015819527529961994,
+            "phase_at_minimum": "retreat"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.016110830549463804,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.016121713894848462,
+            "phase_at_minimum": "retreat"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.01699143422833528,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017011634980326363,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017188239316134803,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.021464093942397455,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.021620283201566226,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.021767585956936987,
+            "phase_at_minimum": "close_gripper"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.022347426951562964,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "right_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03155565111771927,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03178850854302773,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.03440171820106733,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_1_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03778024646138578,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "right_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04096667186610578,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.041174315503674924,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04649492139155373,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.046853978178018924,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.056729580200988464,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.056779976154232116,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "gripper_base_base_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.07409955115421277,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "right_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.088009905722776,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "left_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.08838845383542068,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "end_effector_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.12710904958385721,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_2_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.13671700929328306,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "floor"
+            ],
+            "roles": [
+              "cube",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.13753172411632006,
+            "phase_at_minimum": "release"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.14242123398960438,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.14258252376515673,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.14271501250100013,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1428725643464586,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.16146409394239744,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1616202832015662,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.16729188324815863,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.1709999973341671,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.17155565111771925,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1717885085430277,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.17305934673204532,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18096667186610577,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1811743155036749,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18649492139155371,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1868539781780189,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_5_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.21312073959208971,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.21409955115421275,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.21420078688529404,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.228009905722776,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.22838845383542067,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_4_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.25007211212055847,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.2526559832531891,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.25980003838143123,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.27457204033687094,
+            "phase_at_minimum": "transfer"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.30559200998403047,
+            "phase_at_minimum": "lower_place"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "floor"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3072918832481586,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3531207395920897,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "link_3_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.36716658160391547,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3900721121205585,
+            "phase_at_minimum": "lift"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.5071665816039155,
+            "phase_at_minimum": "lift"
+          }
+        ],
+        "actual_contact_pairs": [
+          "cube_geom<->left_follower_tongue_collision",
+          "cube_geom<->left_pad1",
+          "cube_geom<->left_pad2",
+          "cube_geom<->right_follower_tongue_collision",
+          "cube_geom<->right_pad1",
+          "cube_geom<->right_pad2",
+          "cube_geom<->worktable"
+        ],
+        "distinct_contact_event_counts": {
+          "expected": 38
+        },
+        "distinct_contact_event_pairs": {
+          "expected": [
+            "cube_geom<->left_follower_tongue_collision",
+            "cube_geom<->left_pad1",
+            "cube_geom<->left_pad2",
+            "cube_geom<->right_follower_tongue_collision",
+            "cube_geom<->right_pad1",
+            "cube_geom<->right_pad2",
+            "cube_geom<->worktable"
+          ]
+        },
+        "contact_observation_definition": "one pair observation per physics step with a MuJoCo contact record",
+        "distinct_contact_event_definition": "transition into dist<=0 for a geom pair after a step without that pair in actual contact",
+        "contact_pair_details": {
+          "cube_geom<->worktable": {
+            "phase_observations": {
+              "approach": 3936,
+              "descend": 5000,
+              "close_gripper": 1736,
+              "lift": 217,
+              "release": 1864,
+              "retreat": 3000
+            },
+            "minimum_contact_distance_m": -0.0024682758836799446,
+            "actual_contact_observations": 15753
+          },
+          "cube_geom<->right_follower_tongue_collision": {
+            "phase_observations": {
+              "close_gripper": 1408,
+              "lift": 3930,
+              "transfer": 2502,
+              "lower_place": 1994,
+              "release": 6
+            },
+            "minimum_contact_distance_m": -0.0016168343067557713,
+            "actual_contact_observations": 9840
+          },
+          "cube_geom<->right_pad2": {
+            "phase_observations": {
+              "close_gripper": 952,
+              "lift": 1689,
+              "transfer": 2136,
+              "lower_place": 1724,
+              "release": 3
+            },
+            "minimum_contact_distance_m": -0.0014026806713128537,
+            "actual_contact_observations": 6504
+          },
+          "cube_geom<->right_pad1": {
+            "phase_observations": {
+              "close_gripper": 1568,
+              "lift": 4707,
+              "transfer": 4991,
+              "lower_place": 3888,
+              "release": 5
+            },
+            "minimum_contact_distance_m": -0.0016624657348718566,
+            "actual_contact_observations": 15159
+          },
+          "cube_geom<->left_follower_tongue_collision": {
+            "phase_observations": {
+              "close_gripper": 1442,
+              "lift": 3935,
+              "transfer": 2500,
+              "lower_place": 2000,
+              "release": 12
+            },
+            "minimum_contact_distance_m": -0.0018176879738885244,
+            "actual_contact_observations": 9889
+          },
+          "cube_geom<->left_pad1": {
+            "phase_observations": {
+              "close_gripper": 1485,
+              "lift": 4508,
+              "transfer": 4978,
+              "lower_place": 3619,
+              "release": 7
+            },
+            "minimum_contact_distance_m": -0.0018586811348446928,
+            "actual_contact_observations": 14597
+          },
+          "cube_geom<->left_pad2": {
+            "phase_observations": {
+              "close_gripper": 897,
+              "lift": 2093,
+              "transfer": 1717,
+              "lower_place": 1388,
+              "release": 10
+            },
+            "minimum_contact_distance_m": -0.0016678034772062366,
+            "actual_contact_observations": 6105
+          }
+        },
+        "expected_contact_exclusions": {
+          "cube_geom<->worktable": "allowed during approach, descend, close_gripper, lower_place, release, and retreat; during lift only while the cube remains within 6 mm of its geometric support height; transfer-phase table contact is unexpected",
+          "cube_geom<->finger surfaces": "left/right pad boxes and left/right follower tongue meshes; allowed phases close_gripper, lift, transfer, lower_place, release; counted separately",
+          "tray": "no tray geometry exists; no tray contacts or clearances are measured"
+        },
+        "expected_contact_observations": 77847,
+        "expected_contact_pairs": [
+          "cube_geom<->left_follower_tongue_collision",
+          "cube_geom<->left_pad1",
+          "cube_geom<->left_pad2",
+          "cube_geom<->right_follower_tongue_collision",
+          "cube_geom<->right_pad1",
+          "cube_geom<->right_pad2",
+          "cube_geom<->worktable"
+        ],
+        "unexpected_contact_observations": 0,
+        "unexpected_contact_pairs": [],
+        "unexpected_contact_observations_by_phase": {},
+        "expected_contact_observations_by_phase": {
+          "approach": 3936,
+          "descend": 5000,
+          "close_gripper": 9488,
+          "lift": 21079,
+          "transfer": 18824,
+          "lower_place": 14613,
+          "release": 1907,
+          "retreat": 3000
+        },
+        "penetrating_contact_observations_lt_minus_1e_6_m": 77558,
+        "deepest_contact_penetration_m": -0.0024682758836799446,
+        "unexpected_actual_contact_observations_dist_le_0": 0,
+        "unexpected_penetrating_contact_observations_lt_minus_1e_6_m": 0,
+        "deepest_unexpected_penetration_m": 0.0,
+        "waypoint_prechecks": true,
+        "trajectory_contacts_checked_after_each_simulation_step": true,
+        "collision_avoidance_enforced_by_controller": true,
+        "collision_avoidance_enforcement_scope": "sampled segment-clearance rejection plus runtime clearance/contact abort; not a general planner"
+      },
+      "active_avoidance_scope": "sampled waypoint-segment validation plus runtime abort guard; no general obstacle detour search or collision-constrained IK"
+    },
+    {
+      "case": "low_pick_target_intersects_table_clearance",
+      "success": false,
+      "episode_status": "aborted",
+      "failure_reason": "unsafe_segment:descend:right_follower_tongue_collision<->worktable",
+      "initial_cube_xyz_m": [
+        0.35,
+        0.0,
+        0.165
+      ],
+      "initial_cube_yaw_rad": 0.0,
+      "pick_target_xyz_m": [
+        0.35,
+        0.0,
+        0.12
+      ],
+      "place_target_xyz_m": [
+        0.35,
+        0.18,
+        0.165
+      ],
+      "final_cube_xyz_m": [
+        0.3500000282137916,
+        4.860971712334088e-08,
+        0.15994471357940154
+      ],
+      "lift_peak_z_m": 0.165,
+      "sim_time_s": 3.5599999999998295,
+      "episode_wall_time_s": 0.8688947579998967,
+      "clearance_policy": {
+        "minimum_unexpected_clearance_m": 0.00075,
+        "precheck": "25 sampled points on the same smooth joint interpolation used for execution",
+        "runtime_guard": "after each physics step, abort next control update if unexpected clearance is below margin or unexpected actual contact occurs",
+        "held_cube_model": "during lift/transfer/lower path checks, rigid TCP-to-cube transform captured after close is used; actual physical state is separately monitored each step"
+      },
+      "release_tcp_height_m": 0.31500000000000006,
+      "nominal_cube_release_drop_estimate_m": 0.025,
+      "completed_phase_count": 1,
+      "waypoints": [
+        {
+          "phase": "approach",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.37
+          ],
+          "method": "dls",
+          "q": [
+            0.00015973597665051094,
+            -0.013838121660919911,
+            -0.35295894231049457,
+            -0.6407233886391559,
+            0.7000000000000004,
+            -0.10759667494902644
+          ],
+          "status": "converged",
+          "position_error_m": 0.0030677006672799843,
+          "orientation_error_rad": 0.020520707548866444,
+          "ik_iterations": 21,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.002173672000026272,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "executed_after_clearance_precheck",
+          "segment_clearance_check": {
+            "phase": "approach",
+            "safe": true,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": 0.030766933152718303,
+            "minimum_pair": "cube_geom<->right_follower_tongue_collision",
+            "first_violation_sample": null,
+            "first_violation_pair": null,
+            "first_violation_distance_m": null,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": false
+          }
+        },
+        {
+          "phase": "descend",
+          "target_xyz_m": [
+            0.35,
+            0.0,
+            0.25
+          ],
+          "method": "dls",
+          "q": [
+            0.0007489109016782545,
+            0.2133974913286342,
+            -0.41560727632104855,
+            -1.5710730007081213,
+            1.5715926611799416,
+            -0.5105740238467696
+          ],
+          "status": "max_iterations",
+          "position_error_m": 0.020848698036175554,
+          "orientation_error_rad": 0.11910610809706002,
+          "ik_iterations": 180,
+          "ik_iteration_definition": "DLS Jacobian update iterations",
+          "backend_iterations": null,
+          "solve_time_s": 0.032863966999684635,
+          "joint_position_limit_violation_rad": 0.0,
+          "velocity_limit_violation_rad_s": null,
+          "velocity_limit_rad_s": null,
+          "velocity_limit_enforcement": "not_enforced",
+          "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+          "message": "",
+          "execution_decision": "aborted_refined_clearance_check",
+          "segment_clearance_check": {
+            "phase": "descend",
+            "safe": false,
+            "sample_count": 25,
+            "clearance_margin_m": 0.00075,
+            "minimum_unexpected_clearance_m": -0.031597525740139604,
+            "minimum_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_sample": 16,
+            "first_violation_pair": "right_follower_tongue_collision<->worktable",
+            "first_violation_distance_m": -5.115750633757909e-05,
+            "attached_cube_approximation_used": false,
+            "grasp_envelope_pairs_excluded": false
+          },
+          "cartesian_refinement_attempted": true,
+          "cartesian_refinement_segments": [
+            {
+              "target_xyz_m": [
+                0.35,
+                0.0,
+                0.3762299411318301
+              ],
+              "ik_status": "converged",
+              "ik_position_error_m": 0.003489349917696493,
+              "ik_orientation_error_rad": 0.02346770545923339,
+              "segment_clearance_check": {
+                "phase": "descend",
+                "safe": true,
+                "sample_count": 25,
+                "clearance_margin_m": 0.00075,
+                "minimum_unexpected_clearance_m": 0.03778864287538479,
+                "minimum_pair": "link_1_collision<->worktable",
+                "first_violation_sample": null,
+                "first_violation_pair": null,
+                "first_violation_distance_m": null,
+                "attached_cube_approximation_used": false,
+                "grasp_envelope_pairs_excluded": false
+              }
+            },
+            {
+              "target_xyz_m": [
+                0.35,
+                0.0,
+                0.35819709239871156
+              ],
+              "ik_status": "converged",
+              "ik_position_error_m": 0.002680121194930252,
+              "ik_orientation_error_rad": 0.015356959114549885,
+              "segment_clearance_check": {
+                "phase": "descend",
+                "safe": true,
+                "sample_count": 25,
+                "clearance_margin_m": 0.00075,
+                "minimum_unexpected_clearance_m": 0.026345379030796617,
+                "minimum_pair": "cube_geom<->right_pad2",
+                "first_violation_sample": null,
+                "first_violation_pair": null,
+                "first_violation_distance_m": null,
+                "attached_cube_approximation_used": false,
+                "grasp_envelope_pairs_excluded": false
+              }
+            },
+            {
+              "target_xyz_m": [
+                0.35,
+                0.0,
+                0.34016424366559295
+              ],
+              "ik_status": "converged",
+              "ik_position_error_m": 0.0035232164600405634,
+              "ik_orientation_error_rad": 0.020154982313334534,
+              "segment_clearance_check": {
+                "phase": "descend",
+                "safe": true,
+                "sample_count": 25,
+                "clearance_margin_m": 0.00075,
+                "minimum_unexpected_clearance_m": 0.015528821543508209,
+                "minimum_pair": "cube_geom<->right_pad2",
+                "first_violation_sample": null,
+                "first_violation_pair": null,
+                "first_violation_distance_m": null,
+                "attached_cube_approximation_used": false,
+                "grasp_envelope_pairs_excluded": false
+              }
+            },
+            {
+              "target_xyz_m": [
+                0.35,
+                0.0,
+                0.32213139493247434
+              ],
+              "ik_status": "converged",
+              "ik_position_error_m": 0.003487869291154237,
+              "ik_orientation_error_rad": 0.01988248145419367,
+              "segment_clearance_check": {
+                "phase": "descend",
+                "safe": true,
+                "sample_count": 25,
+                "clearance_margin_m": 0.00075,
+                "minimum_unexpected_clearance_m": 0.014935886913978732,
+                "minimum_pair": "cube_geom<->right_pad2",
+                "first_violation_sample": null,
+                "first_violation_pair": null,
+                "first_violation_distance_m": null,
+                "attached_cube_approximation_used": false,
+                "grasp_envelope_pairs_excluded": false
+              }
+            },
+            {
+              "target_xyz_m": [
+                0.35,
+                0.0,
+                0.3040985461993558
+              ],
+              "ik_status": "converged",
+              "ik_position_error_m": 0.003970910214667625,
+              "ik_orientation_error_rad": 0.02230975145961471,
+              "segment_clearance_check": {
+                "phase": "descend",
+                "safe": true,
+                "sample_count": 25,
+                "clearance_margin_m": 0.00075,
+                "minimum_unexpected_clearance_m": 0.008058439293876118,
+                "minimum_pair": "right_follower_tongue_collision<->worktable",
+                "first_violation_sample": null,
+                "first_violation_pair": null,
+                "first_violation_distance_m": null,
+                "attached_cube_approximation_used": false,
+                "grasp_envelope_pairs_excluded": false
+              }
+            },
+            {
+              "target_xyz_m": [
+                0.35,
+                0.0,
+                0.28606569746623717
+              ],
+              "ik_status": "max_iterations",
+              "ik_position_error_m": 0.009183908921207623,
+              "ik_orientation_error_rad": 0.05166318811059584,
+              "segment_clearance_check": {
+                "phase": "descend",
+                "safe": false,
+                "sample_count": 25,
+                "clearance_margin_m": 0.00075,
+                "minimum_unexpected_clearance_m": -0.005612269464205455,
+                "minimum_pair": "right_follower_tongue_collision<->worktable",
+                "first_violation_sample": 19,
+                "first_violation_pair": "right_follower_tongue_collision<->worktable",
+                "first_violation_distance_m": 8.436180768858768e-05,
+                "attached_cube_approximation_used": false,
+                "grasp_envelope_pairs_excluded": false
+              }
+            }
+          ]
+        }
+      ],
+      "collision_audit": {
+        "measurement_scope": "post-step scene monitor; exact mj_geomDistance query for each listed geom pair at every physics step",
+        "distance_sign_definition": "positive=separated; zero=touching; negative=geometric overlap/penetration",
+        "steps_monitored": 1780,
+        "distance_queries": 115700,
+        "distmax_m": 10.0,
+        "active_collision_geom_count": 24,
+        "arm_collision_geoms": [
+          "link_1_collision",
+          "link_2_collision",
+          "link_3_collision",
+          "link_4_collision",
+          "link_5_collision",
+          "end_effector_collision"
+        ],
+        "gripper_collision_geoms": [
+          "gripper_base_base_collision",
+          "left_driver_driver_collision",
+          "left_coupler_coupler_collision",
+          "left_spring_link_spring_link_collision",
+          "left_follower_follower_collision",
+          "left_follower_tongue_collision",
+          "left_pad1",
+          "left_pad2",
+          "right_driver_driver_collision",
+          "right_coupler_coupler_collision",
+          "right_spring_link_spring_link_collision",
+          "right_follower_tongue_collision",
+          "right_follower_follower_collision",
+          "right_pad1",
+          "right_pad2"
+        ],
+        "expected_finger_contact_geoms": [
+          "left_follower_tongue_collision",
+          "left_pad1",
+          "left_pad2",
+          "right_follower_tongue_collision",
+          "right_pad1",
+          "right_pad2"
+        ],
+        "cube_geom": "cube_geom",
+        "table_geom": "worktable",
+        "floor_geom": "floor",
+        "tray_geom": null,
+        "monitored_pair_count": 65,
+        "min_signed_distance_by_role_pair_m": {
+          "arm-table": 0.03778863643404128,
+          "arm-floor": 0.1709999973341671,
+          "arm-cube": 0.15781279895253114,
+          "gripper-table": 0.04533790279932844,
+          "floor-gripper": 0.18533790279932844,
+          "cube-gripper": 0.017043485718686406,
+          "cube-table": -0.0012630968831756348,
+          "cube-floor": 0.13873690311682435
+        },
+        "minimum_pairs_m": [
+          {
+            "geom_pair": [
+              "cube_geom",
+              "worktable"
+            ],
+            "roles": [
+              "cube",
+              "table"
+            ],
+            "minimum_signed_distance_m": -0.0012630968831756348,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017043485718686406,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017092220692238813,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017750363734133016,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.018382666571808242,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.029423172476946126,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.030018385616423608,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_1_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03778863643404128,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04325777136304211,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04533790279932844,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04563740675509756,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04583646618946832,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.046106422712881345,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.046387189058042316,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04937970256925095,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04979827980501184,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.06418097809808082,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0643856203503965,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.06454201166996798,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.06462558561066276,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.06513526183780499,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.07433498389341577,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.07528244482289839,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.08381010120842383,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.08465486388381246,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.09019813307345122,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.09133106277494549,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.09176005669597692,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.09250287456624484,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "gripper_base_base_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.10457029918739655,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.12928184562903605,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.1302177605265855,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_2_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.1366896007914819,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "floor"
+            ],
+            "roles": [
+              "cube",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.13873690311682435,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "end_effector_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.15781279895253114,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.1709999973341671,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18533790279932844,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18563740675509754,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18610642271288133,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1863871890580423,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.19759674789613757,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.2035800543696326,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.20438562035039648,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.20513526183780498,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.21433498389341576,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.21528244482289838,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.22381010120842382,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.22465486388381245,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.23019813307345122,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.23133106277494547,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_5_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.24351932281590066,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.24457029918739653,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.24657409748837764,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.2598000383814313,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.26854564177915524,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.26928184562903607,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.2702177605265855,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_4_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.28102473773800607,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.3039386446502439,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "floor"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3375967478961376,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_3_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.37851614551494406,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3835193228159007,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.3914986125629118,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.4210247377380061,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.5185161455149441,
+            "phase_at_minimum": "descend"
+          }
+        ],
+        "min_unexpected_signed_distance_by_role_pair_m": {
+          "arm-table": 0.03778863643404128,
+          "arm-floor": 0.1709999973341671,
+          "arm-cube": 0.15781279895253114,
+          "gripper-table": 0.04533790279932844,
+          "floor-gripper": 0.18533790279932844,
+          "cube-gripper": 0.017043485718686406,
+          "cube-floor": 0.13873690311682435
+        },
+        "minimum_unexpected_pairs_m": [
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017043485718686406,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017092220692238813,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad2"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.017750363734133016,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.018382666571808242,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.029423172476946126,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_pad1"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.030018385616423608,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_1_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.03778863643404128,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04325777136304211,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04533790279932844,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.04563740675509756,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04583646618946832,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_follower_tongue_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.046106422712881345,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_pad2",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.046387189058042316,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04937970256925095,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.04979827980501184,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.06418097809808082,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.0643856203503965,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.06454201166996798,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.06462558561066276,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_pad1",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.06513526183780499,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.07433498389341577,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_follower_follower_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.07528244482289839,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.08381010120842383,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_spring_link_spring_link_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.08465486388381246,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.09019813307345122,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_coupler_coupler_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.09133106277494549,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.09176005669597692,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "cube",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.09250287456624484,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "gripper_base_base_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.10457029918739655,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "right_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.12928184562903605,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "left_driver_driver_collision",
+              "worktable"
+            ],
+            "roles": [
+              "gripper",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.1302177605265855,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_2_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.1366896007914819,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "floor"
+            ],
+            "roles": [
+              "cube",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.13873690311682435,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "end_effector_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.15781279895253114,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.1709999973341671,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18533790279932844,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18563740675509754,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_tongue_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.18610642271288133,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad2"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.1863871890580423,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.19759674789613757,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.2035800543696326,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.20438562035039648,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_pad1"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.20513526183780498,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.21433498389341576,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_follower_follower_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.21528244482289838,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.22381010120842382,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_spring_link_spring_link_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.22465486388381245,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.23019813307345122,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_coupler_coupler_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.23133106277494547,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_5_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.24351932281590066,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "gripper_base_base_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.24457029918739653,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.24657409748837764,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.2598000383814313,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_1_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.26854564177915524,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "right_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.26928184562903607,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "left_driver_driver_collision"
+            ],
+            "roles": [
+              "floor",
+              "gripper"
+            ],
+            "minimum_signed_distance_m": 0.2702177605265855,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_4_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.28102473773800607,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_2_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.3039386446502439,
+            "phase_at_minimum": "approach"
+          },
+          {
+            "geom_pair": [
+              "end_effector_collision",
+              "floor"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3375967478961376,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "link_3_collision",
+              "worktable"
+            ],
+            "roles": [
+              "arm",
+              "table"
+            ],
+            "minimum_signed_distance_m": 0.37851614551494406,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_5_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.3835193228159007,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "cube_geom",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "cube"
+            ],
+            "minimum_signed_distance_m": 0.3914986125629118,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_4_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.4210247377380061,
+            "phase_at_minimum": "descend"
+          },
+          {
+            "geom_pair": [
+              "floor",
+              "link_3_collision"
+            ],
+            "roles": [
+              "arm",
+              "floor"
+            ],
+            "minimum_signed_distance_m": 0.5185161455149441,
+            "phase_at_minimum": "descend"
+          }
+        ],
+        "actual_contact_pairs": [
+          "cube_geom<->worktable"
+        ],
+        "distinct_contact_event_counts": {
+          "expected": 1
+        },
+        "distinct_contact_event_pairs": {
+          "expected": [
+            "cube_geom<->worktable"
+          ]
+        },
+        "contact_observation_definition": "one pair observation per physics step with a MuJoCo contact record",
+        "distinct_contact_event_definition": "transition into dist<=0 for a geom pair after a step without that pair in actual contact",
+        "contact_pair_details": {
+          "cube_geom<->worktable": {
+            "phase_observations": {
+              "approach": 3936,
+              "descend": 3120
+            },
+            "minimum_contact_distance_m": -0.0012630968831756591,
+            "actual_contact_observations": 7056
+          }
+        },
+        "expected_contact_exclusions": {
+          "cube_geom<->worktable": "allowed during approach, descend, close_gripper, lower_place, release, and retreat; during lift only while the cube remains within 6 mm of its geometric support height; transfer-phase table contact is unexpected",
+          "cube_geom<->finger surfaces": "left/right pad boxes and left/right follower tongue meshes; allowed phases close_gripper, lift, transfer, lower_place, release; counted separately",
+          "tray": "no tray geometry exists; no tray contacts or clearances are measured"
+        },
+        "expected_contact_observations": 7056,
+        "expected_contact_pairs": [
+          "cube_geom<->worktable"
+        ],
+        "unexpected_contact_observations": 0,
+        "unexpected_contact_pairs": [],
+        "unexpected_contact_observations_by_phase": {},
+        "expected_contact_observations_by_phase": {
+          "approach": 3936,
+          "descend": 3120
+        },
+        "penetrating_contact_observations_lt_minus_1e_6_m": 7056,
+        "deepest_contact_penetration_m": -0.0012630968831756591,
+        "unexpected_actual_contact_observations_dist_le_0": 0,
+        "unexpected_penetrating_contact_observations_lt_minus_1e_6_m": 0,
+        "deepest_unexpected_penetration_m": 0.0,
+        "waypoint_prechecks": true,
+        "trajectory_contacts_checked_after_each_simulation_step": true,
+        "collision_avoidance_enforced_by_controller": true,
+        "collision_avoidance_enforcement_scope": "sampled segment-clearance rejection plus runtime clearance/contact abort; not a general planner"
+      },
+      "active_avoidance_scope": "sampled waypoint-segment validation plus runtime abort guard; no general obstacle detour search or collision-constrained IK"
+    }
+  ]
+}

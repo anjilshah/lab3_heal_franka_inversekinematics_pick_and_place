@@ -1,0 +1,43 @@
+{
+  "seed_list": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261032,
+    20261033,
+    20261034,
+    20261035
+  ],
+  "methods": [
+    "dls",
+    "mink",
+    "qp"
+  ],
+  "episodes_per_method": 25,
+  "velocity_limit_rad_s_mink_qp": 1.2,
+  "randomization": "per-seed NumPy default_rng; cube x/y \u00b10.01 m around nominal pick, yaw \u00b10.10 rad; place x/y \u00b10.01 m around nominal target",
+  "episode_reset": "mj_resetData before every method/seed episode; fresh collision monitor per episode",
+  "condition_matching": "identical episode_spec for same seed across all methods",
+  "run_order": "seed-major then method order dls, mink, qp",
+  "success_criteria": "cube lifted >0.05 m; final x/y within 0.07 m of placement center; final z in (0.13,0.22) m; no unexpected actual contact",
+  "collision_avoidance_enforced": false,
+  "tray_geometry_present": false
+}

@@ -1,0 +1,262 @@
+{
+  "metric_definitions": {
+    "ik_solve_time_total_s": "sum of wall-clock time around each iterative IK call in one episode; excludes controller simulation time",
+    "episode_wall_time_s": "full episode wall-clock duration including IK, simulation, and passive collision measurements",
+    "ik_iterations_total": "sum of method-specific outer IK updates/calls; comparable only as outer-call counts, not equal computational work",
+    "backend_iterations": "unavailable (null); Mink/DAQP APIs used here do not expose backend iteration counts",
+    "minimum_unexpected_clearance_m": "minimum signed mj_geomDistance over monitored pairs not excluded as expected contact for their phase; negative indicates overlap",
+    "contact_observations": "per-physics-step contact records; repeated observations are not unique events",
+    "distinct_contact_events": "transitions into dist<=0 per geom pair after a step without that pair in actual contact",
+    "dls_velocity_limit": "not enforced; velocity-limit violation is unavailable (null), not zero"
+  },
+  "seed_list": [
+    20261011,
+    20261012,
+    20261013,
+    20261014,
+    20261015,
+    20261016,
+    20261017,
+    20261018,
+    20261019,
+    20261020,
+    20261021,
+    20261022,
+    20261023,
+    20261024,
+    20261025,
+    20261026,
+    20261027,
+    20261028,
+    20261029,
+    20261030,
+    20261031,
+    20261032,
+    20261033,
+    20261034,
+    20261035
+  ],
+  "episode_count_per_method": 25,
+  "velocity_limit_rad_s_mink_qp": 1.2,
+  "methods": {
+    "dls": {
+      "episodes": 25,
+      "successes": 25,
+      "success_rate": 1.0,
+      "success_rate_wilson_95_ci": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "failures": {},
+      "aborted": 0,
+      "ik_solve_time_total_s": {
+        "n": 25,
+        "mean": 0.07035333383992111,
+        "median": 0.06377456299969708,
+        "std": 0.01852690792440056,
+        "ci95_mean": [
+          0.0641056285290715,
+          0.07785833874185709
+        ]
+      },
+      "episode_wall_time_s": {
+        "n": 25,
+        "mean": 4.2676769742801115,
+        "median": 4.27831220500002,
+        "std": 0.061795172423967294,
+        "ci95_mean": [
+          4.243123559962146,
+          4.290573179948124
+        ]
+      },
+      "ik_iterations_total_outer_updates": {
+        "n": 25,
+        "mean": 554.6,
+        "median": 517.0,
+        "std": 100.02249746931936,
+        "ci95_mean": [
+          519.639,
+          595.1259999999999
+        ]
+      },
+      "minimum_unexpected_clearance_m": {
+        "n": 25,
+        "mean": 0.0018344090323363222,
+        "median": 0.0018385997854653976,
+        "std": 0.00020979494780654862,
+        "ci95_mean": [
+          0.0017554706909024365,
+          0.0019144172355044313
+        ]
+      },
+      "max_joint_position_limit_violation_rad": {
+        "n": 25,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "ci95_mean": [
+          0.0,
+          0.0
+        ]
+      },
+      "max_velocity_limit_violation_rad_s": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "ci95_mean": null
+      },
+      "velocity_limit_enforcement": "not_enforced",
+      "unexpected_contact_episodes": 0,
+      "unexpected_penetration_episodes": 0
+    },
+    "mink": {
+      "episodes": 25,
+      "successes": 25,
+      "success_rate": 1.0,
+      "success_rate_wilson_95_ci": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "failures": {},
+      "aborted": 0,
+      "ik_solve_time_total_s": {
+        "n": 25,
+        "mean": 0.10223283031997198,
+        "median": 0.09813578899957065,
+        "std": 0.013658848279864872,
+        "ci95_mean": [
+          0.09760553549201541,
+          0.10786640085501722
+        ]
+      },
+      "episode_wall_time_s": {
+        "n": 25,
+        "mean": 4.309416388200043,
+        "median": 4.323869230000128,
+        "std": 0.05739175623400267,
+        "ci95_mean": [
+          4.286759153450115,
+          4.331639814620997
+        ]
+      },
+      "ik_iterations_total_outer_updates": {
+        "n": 25,
+        "mean": 586.68,
+        "median": 555.0,
+        "std": 89.46680948821188,
+        "ci95_mean": [
+          555.48,
+          623.6809999999999
+        ]
+      },
+      "minimum_unexpected_clearance_m": {
+        "n": 25,
+        "mean": 0.0017743174428110466,
+        "median": 0.0017789751480777065,
+        "std": 0.00020354097111440145,
+        "ci95_mean": [
+          0.0016983570332439728,
+          0.0018521147261882026
+        ]
+      },
+      "max_joint_position_limit_violation_rad": {
+        "n": 25,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "ci95_mean": [
+          0.0,
+          0.0
+        ]
+      },
+      "max_velocity_limit_violation_rad_s": {
+        "n": 25,
+        "mean": 2.9194424655543114e-14,
+        "median": 2.3314683517128287e-14,
+        "std": 1.0524133496930065e-14,
+        "ci95_mean": [
+          2.5179858198498552e-14,
+          3.3297808954557697e-14
+        ]
+      },
+      "velocity_limit_enforcement": "hard_constraint",
+      "unexpected_contact_episodes": 0,
+      "unexpected_penetration_episodes": 0
+    },
+    "qp": {
+      "episodes": 25,
+      "successes": 25,
+      "success_rate": 1.0,
+      "success_rate_wilson_95_ci": [
+        0.8668077490609515,
+        0.9999999999999999
+      ],
+      "failures": {},
+      "aborted": 0,
+      "ik_solve_time_total_s": {
+        "n": 25,
+        "mean": 0.10149967115996333,
+        "median": 0.09370843199940282,
+        "std": 0.023213465123687837,
+        "ci95_mean": [
+          0.09345337452693502,
+          0.11121175724299699
+        ]
+      },
+      "episode_wall_time_s": {
+        "n": 25,
+        "mean": 4.315305902239998,
+        "median": 4.317346945000281,
+        "std": 0.06344123175083277,
+        "ci95_mean": [
+          4.292245711978942,
+          4.341073204070015
+        ]
+      },
+      "ik_iterations_total_outer_updates": {
+        "n": 25,
+        "mean": 592.44,
+        "median": 561.0,
+        "std": 88.90682388508395,
+        "ci95_mean": [
+          561.44,
+          629.24
+        ]
+      },
+      "minimum_unexpected_clearance_m": {
+        "n": 25,
+        "mean": 0.0017883971101030065,
+        "median": 0.0017800740853663535,
+        "std": 0.00019011946735516367,
+        "ci95_mean": [
+          0.0017166266394554733,
+          0.0018609223627665654
+        ]
+      },
+      "max_joint_position_limit_violation_rad": {
+        "n": 25,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0,
+        "ci95_mean": [
+          0.0,
+          0.0
+        ]
+      },
+      "max_velocity_limit_violation_rad_s": {
+        "n": 25,
+        "mean": 3.8529179846591435e-14,
+        "median": 3.8413716652030416e-14,
+        "std": 9.788893763808582e-15,
+        "ci95_mean": [
+          3.4834135576033985e-14,
+          4.24196233694829e-14
+        ]
+      },
+      "velocity_limit_enforcement": "hard_constraint",
+      "unexpected_contact_episodes": 0,
+      "unexpected_penetration_episodes": 0
+    }
+  }
+}

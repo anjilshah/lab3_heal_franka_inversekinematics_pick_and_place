@@ -1,0 +1,287 @@
+{
+  "method": "mink",
+  "success": false,
+  "episode_status": "interrupted",
+  "failure_reason": "viewer_closed_during:retreat",
+  "initial_cube_xyz_m": [
+    0.35,
+    0.0,
+    0.165
+  ],
+  "initial_cube_yaw_rad": 0.0,
+  "pick_target_xyz_m": [
+    0.35,
+    0.0,
+    0.165
+  ],
+  "place_target_xyz_m": [
+    0.35,
+    0.18,
+    0.165
+  ],
+  "final_cube_xyz_m": [
+    0.3648421863422687,
+    0.18037333418745558,
+    0.15994471357940163
+  ],
+  "placement_error_xy_m": 0.014846880946318392,
+  "lift_peak_z_m": 0.3089779303014277,
+  "lifted": true,
+  "completed_phase_count": 7,
+  "sim_time_s": 14.132000000001389,
+  "velocity_limit_rad_s": 1.2,
+  "velocity_limit_enforcement": "hard_constraint",
+  "waypoints": [
+    {
+      "method": "mink",
+      "q": [
+        0.0008515775816163905,
+        -0.05701313011174572,
+        -0.2704321172293741,
+        -0.3636740508423291,
+        0.41145753792615714,
+        -0.03690735267568211
+      ],
+      "status": "converged",
+      "position_error_m": 0.003002658856231266,
+      "orientation_error_rad": 0.017061822212682584,
+      "ik_iterations": 18,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.007400838000648946,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 3.774758283725532e-15,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+      "phase": "approach",
+      "target_xyz_m": [
+        0.35,
+        0.0,
+        0.41500000000000004
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.0007908469748392281,
+        0.10651104179302848,
+        -0.4382913569272045,
+        -1.5596027233613114,
+        1.5614206856341482,
+        -0.5049811431184716
+      ],
+      "status": "max_iterations",
+      "position_error_m": 0.006195118215615589,
+      "orientation_error_rad": 0.034932828368773185,
+      "ik_iterations": 180,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.04627455700028804,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 1.2212453270876722e-14,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; iteration limit not yet met.",
+      "phase": "descend",
+      "target_xyz_m": [
+        0.35,
+        0.0,
+        0.29500000000000004
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.0006694840907076428,
+        0.10650944290817531,
+        -0.43829946750124427,
+        -1.5779018812822603,
+        1.5777014298782004,
+        -0.5137536404083854
+      ],
+      "status": "max_iterations",
+      "position_error_m": 0.006192971027631488,
+      "orientation_error_rad": 0.03492128127864543,
+      "ik_iterations": 180,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.04649463800069498,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 1.1102230246251565e-15,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; iteration limit not yet met.",
+      "phase": "close_gripper",
+      "target_xyz_m": [
+        0.35,
+        0.0,
+        0.29500000000000004
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.0037781560296596232,
+        -0.09444092210659152,
+        -0.15963778654611385,
+        -0.15178092818141878,
+        0.16422547127379902,
+        -0.009939705680833025
+      ],
+      "status": "converged",
+      "position_error_m": 0.002511492522348803,
+      "orientation_error_rad": 0.01674832131753824,
+      "ik_iterations": 57,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.022952905999773066,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 2.3314683517128287e-14,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+      "phase": "lift",
+      "target_xyz_m": [
+        0.35,
+        0.0,
+        0.47500000000000003
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.4724343988172945,
+        0.0555676635051951,
+        -0.005087902008346596,
+        -0.10671054607647472,
+        0.12446395586872713,
+        -0.4752092945832422
+      ],
+      "status": "converged",
+      "position_error_m": 0.001080249380257504,
+      "orientation_error_rad": 0.0021900551793702767,
+      "ik_iterations": 20,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.014050882000447018,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 1.0880185641326534e-14,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+      "phase": "transfer",
+      "target_xyz_m": [
+        0.35,
+        0.18,
+        0.47500000000000003
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.4751335186437929,
+        0.24139324357196415,
+        -0.2890398478018058,
+        -1.4286519814068948,
+        1.4487844776460919,
+        -0.9155376896138298
+      ],
+      "status": "converged",
+      "position_error_m": 0.003896164209969543,
+      "orientation_error_rad": 0.02444988450327554,
+      "ik_iterations": 56,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.017426960000193503,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 1.2212453270876722e-14,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+      "phase": "lower_place",
+      "target_xyz_m": [
+        0.35,
+        0.18,
+        0.29500000000000004
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.4750872207640297,
+        0.2414870559569466,
+        -0.2887208243830881,
+        -1.4178703841652378,
+        1.4394793387947507,
+        -0.9102726108234902
+      ],
+      "status": "converged",
+      "position_error_m": 0.003966160738765387,
+      "orientation_error_rad": 0.024894675319446672,
+      "ik_iterations": 10,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.01134267900033592,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 1.1102230246251565e-15,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+      "phase": "release",
+      "target_xyz_m": [
+        0.35,
+        0.18,
+        0.29500000000000004
+      ],
+      "execution_decision": "executed"
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.4782780019950667,
+        0.07834122832410204,
+        -0.14956219835111123,
+        -0.4708875210931369,
+        0.5194455815618767,
+        -0.5379167309793222
+      ],
+      "status": "converged",
+      "position_error_m": 0.002771941101010708,
+      "orientation_error_rad": 0.018732325957616473,
+      "ik_iterations": 36,
+      "ik_iteration_definition": "outer differential-IK calls to mink.solve_ik",
+      "backend_iterations": null,
+      "solve_time_s": 0.020149711999692954,
+      "joint_position_limit_violation_rad": 0.0,
+      "velocity_limit_violation_rad_s": 1.2212453270876722e-14,
+      "velocity_limit_rad_s": 1.2,
+      "velocity_limit_enforcement": "hard_constraint",
+      "solve_time_scope": "wall_clock_for_one_complete_iterative_ik_call",
+      "message": "Mink/DAQP: velocity solution returned; terminated on pose residual.",
+      "phase": "retreat",
+      "target_xyz_m": [
+        0.35,
+        0.18,
+        0.41500000000000004
+      ],
+      "execution_decision": "interrupted"
+    }
+  ],
+  "viewer_requested": true,
+  "viewer_context_used": true,
+  "playback_rate_sim_seconds_per_wall_second": 0.6
+}

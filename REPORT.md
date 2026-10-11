@@ -1,35 +1,66 @@
-# Lab 3 report — HEAL and Robotiq 2F-85
+# HEAL Pick-and-Place with Three IK Methods
 
-## Model integration
+## 1. Goal and simulation setup
 
-The project Python environment is `./.venv` (Python 3.10.12) with MuJoCo 3.15.0 and NumPy installed. No system-wide packages were installed. The standalone Robotiq `2f85.xml` was used as the gripper source. Its 8 mesh assets and relative asset paths compile both standalone and in the combined arm model. The combined model uses the source `2f85` defaults (including 0.001 mesh scaling), per-geom transforms, visual/collision layers, inertials, pad boxes, driver and follower joints, connect and joint equalities, split tendon, and 0–255 actuator with ±5 N actuator force range. The source base body is mounted under the HEAL wrist joint. The combined MJCF compiles as MuJoCo 3.15.0 (`nq=19`, `nv=18`, `nu=7`).
+This project evaluates pick-and-place with a six-joint HEAL arm and Robotiq 2F-85 gripper in MuJoCo. The active model is [`robot_descriptions/arm_gripper.xml`](robot_descriptions/arm_gripper.xml); it uses the `right_center` site as the TCP and includes a static worktable and a free 4 cm cube. The table center is `[0.36, 0.05, 0.12] m`, its full dimensions are `[0.56, 0.64, 0.04] m` (x, y, z), and its top is at `z=0.14 m`. The nominal cube starts at `[0.35, 0.00, 0.165] m` and the target center is `[0.35, 0.18, 0.165] m`.
 
-A static table and a 0.08 kg free cube were added. Since the arm model sets `inertiafromgeom=false`, the cube has explicit mass and box inertia. The pick controller uses damped least-squares position and orientation IK, gravity/bias-compensated joint PD control, smooth joint-target ramps, and the source gripper actuator. Episode success requires a measured cube lift of at least 5 cm and release within 7 cm of the requested x/y placement at table height.
+The preserved baseline in [`scripts/pick_and_place.py`](scripts/pick_and_place.py) uses custom damped least-squares IK and the existing gravity/bias-compensated joint PD torque tracker. It ramps joint targets through the same eight phases used by the comparison: approach, descend, close, lift, transfer, lower, release, retreat. Its nominal headless regression passes: the cube lifts and settles at `[0.35214, 0.17795, 0.15994] m` after `15.2 s` of simulation time. This matches the saved record in [`results/episodes.json`](results/episodes.json).
 
-## Measured tests
+## 2. IK methods and evaluation
 
-The workspace did not contain a formal assignment handout or rubric, so this audit maps the implementation to the requirements stated in the project request. `SUBMISSION.md` lists intended deliverables. Backups are preserved under `backups/` and excluded from runtime and submission inputs.
+The comparable solvers in [`utils/ik_solvers.py`](utils/ik_solvers.py) control only the six HEAL arm joints; gripper and cube state remain in the same MuJoCo task. All methods use the same `right_center` pose targets and torque-tracking execution. DLS uses the damped Jacobian pseudoinverse update with damping `0.08` and clips each update to `0.035 rad`. Mink uses a differential `FrameTask`, DAQP, damping `1e-4`, model configuration limits, and a `1.2 rad/s` per-joint velocity limit. The custom QP minimizes weighted task velocity error with a `1e-4` regularizer and hard next-step joint-position and `1.2 rad/s` velocity bounds. The velocity cap is an evaluation setting, not a claimed HEAL hardware rating.
 
-The reported metric runs below were executed headless. The default entry point now opens a passive MuJoCo viewer before starting the episode and keeps it open afterward. The actual GUI window was not launched during this audit; GUI control flow was checked with a passive-viewer test double.
+The Stage 3 batch in [`results_stage3/batch/episodes.jsonl`](results_stage3/batch/episodes.jsonl) contains 25 episodes per method, using the same seeds (`20261011`–`20261035`) and matched initial cube pose, yaw, pick, and placement target for every method. The manifest and metric definitions are in [`manifest.json`](results_stage3/batch/manifest.json) and [`summary.json`](results_stage3/batch/summary.json). Each episode resets the simulation and uses the same task phases and success rule. The final horizontal placement tolerance is **70 mm**, with final cube z in `[0.13, 0.22] m`; this is a broad task-level tolerance, not precision-placement evidence.
 
-- MJCF compilation: standalone gripper and combined scene both passed.
-- Python syntax: `./.venv/bin/python -m py_compile scripts/*.py robot_descriptions/robotiq_2f85_v4/test.py` passed.
-- Default GUI path: fake passive-viewer control-flow test verified viewer launch occurs before the first simulation step, simulation calls `sync`, completed runs wait for the viewer to close, and the episode success metric remains passing. A real graphical window was not opened.
-- Headless regression after GUI integration: `--headless` passed with cube peak z 0.30975 m and final position `[0.35214, 0.17795, 0.15994]` m; JSON stdout remains machine-readable.
-- Dependency audit: `./.venv/bin/python -m pip check` reported no broken requirements; `requirements.txt` records the installed MuJoCo and NumPy versions.
-- Project-root entry points: the loader, arm hold viewer, gripper viewer, velocity demo, and standalone Robotiq viewer all passed their `--check` path without opening a GUI. A headless velocity-control step check passed.
-- Asset/model compile: the active HEAL+Robotiq model, standalone Robotiq model/scene, and compatibility XML aliases compiled. Main mesh references resolve from project paths.
-- Arm hold: three-second hold completed; all six arm joints remained effectively at 0 rad.
-- Gripper actuation: open command 0 produced driver positions 0.0031/0.0031 rad; close command 255 produced 0.8238/0.8241 rad (symmetry error 0.000286 rad).
-- Nominal pick/place: passed 1/1. Cube started at `[0.3500, 0.0000, 0.1650]` m, reached a peak z of 0.30975 m, and settled at `[0.35214, 0.17795, 0.15994]` m for target `[0.350, 0.180, 0.165]` m.
-- Randomized pick/place: passed 8/8 using seed 21. Each cube start was perturbed by up to ±4 cm in x/y and each destination by up to ±5 cm; initial and final cube positions, pick targets, and placement targets are in `results_randomized/episodes.json`.
-- Workspace sampling: 95/125 grid points met position error <25 mm and orientation error <0.05 rad over x=[0.15,0.55], y=[-0.25,0.30], z=[0.18,0.55] m. Full data is in `results_workspace/workspace.csv`.
-- Demonstration: passed 1/1 and saved 382 timestamped arm/cube/gripper samples in `results_demonstrations/episodes.json`.
-- Failure evaluation: 0/5 succeeded when the pick target was deliberately offset from the cube by deterministic pick-target offsets of (2,0), (4,0), (6,0), (0,6), and (8,8) cm. These cases failed to lift, as expected. Data is in `results_failures/episodes.json`.
+“IK time” below is the sum of wall-clock durations for that episode’s iterative solver calls. “Episode wall time” covers the complete episode, including simulation and collision measurements. Intervals are 95% bootstrap confidence intervals for means; success intervals are 95% Wilson intervals. `n=25` for each entry.
 
-## Audit findings and limitations
+| Method | Success, Wilson 95% CI | Total IK time mean [95% CI] (s) | Full episode wall mean [95% CI] (s) |
+|---|---:|---:|---:|
+| DLS | 25/25 [0.867, 1.000] | 0.07035 [0.06411, 0.07786] | 4.26768 [4.24312, 4.29057] |
+| Mink | 25/25 [0.867, 1.000] | 0.10223 [0.09761, 0.10787] | 4.30942 [4.28676, 4.33164] |
+| QP | 25/25 [0.867, 1.000] | 0.10150 [0.09345, 0.11121] | 4.31531 [4.29225, 4.34107] |
 
-Several unused starter XML descriptions remain outside the submission model and do not compile in this workspace: `dual_ur5.xml` and `world.xml` use the unsupported `mujocoimport` format; `franka_scene.xml` and `load_dual_ur_5.xml` reference absent include files; `load_ur_5.xml` has a repeated `silver` material; and `ur5.xml` references absent mesh assets. They are excluded from the HEAL Lab 3 deliverables in `SUBMISSION.md`. The former machine-specific `arm_gripper_2.xml` and empty Robotiq compatibility files now include the maintained relative-path models.
+All three methods succeeded in these 25 tested episodes; this does not guarantee future success. All measured joint-position-limit excursions were zero. Mink and QP had no meaningful measured velocity-limit violations against `1.2 rad/s` (reported residuals were about `10^-14 rad/s`). DLS does not enforce a time-based velocity cap, so its velocity-limit metric is unavailable, not zero. Internal backend iteration counts are unavailable. The reported outer update counts (mean: DLS 554.6, Mink 586.68, QP 592.44 per episode) are method-specific and are not equal units of computation.
 
+There are 200 waypoint calls per method across the batch. `max_iterations` was reported for 56 DLS calls and 55 calls each for Mink and QP. These waypoints were still executed because their residuals passed the controller’s existing execution thresholds of `0.06 m` and `0.25 rad`; task success therefore does not mean every IK call converged to its stricter solver threshold.
 
-The workspace result describes position and orientation IK reachability only; it does not include collision-free path planning. Randomization varies cube start and destination positions, but not cube properties, mass, or friction. Failure evaluation currently covers pick-target localization offsets, not actuator faults or sensor noise. The scripted controller has passed the listed nominal and randomized simulation scenarios, but these results are from MuJoCo simulation and do not establish real-world performance.
+The plots below are regenerated from the saved batch summary. The success-rate confidence intervals overlap fully; the small timing differences do not establish a universally best solver.
+
+<p>
+<img src="results_stage3/batch/success_rate.png" alt="Success rate with Wilson intervals" width="48%">
+<img src="results_stage3/batch/ik_solve_time.png" alt="IK solve time per episode" width="48%">
+</p>
+
+<p>
+<img src="results_stage3/batch/episode_wall_time.png" alt="Full episode wall time" width="48%">
+<img src="results_stage3/batch/minimum_clearance.png" alt="Minimum unexpected-pair clearance" width="48%">
+</p>
+
+## 3. Workspace and table rationale
+
+The workspace sampler in [`scripts/workspace_collision_audit.py`](scripts/workspace_collision_audit.py) solves endpoint IK with the model’s six joint ranges. It uses a deterministic grid over x `[0.08, 0.64] m`, y `[-0.27, 0.37] m`, and TCP z `[0.295, 0.415, 0.475] m`; the 50 mm edge-buffered table-center grid is x `[0.13, 0.59] m`, y `[-0.22, 0.32] m`. A sample passes when position residual is below `0.025 m` and orientation residual below `0.05 rad` (DLS damping `0.08`, maximum 180 updates). The recorded seed is 7; the grid itself uses no random samples.
+
+Of 249 task samples, 248 passed. At TCP z `0.295 m`, all 81 regular buffered table-center points, including pick and place, passed. Of 1,743 sampled poses over seven yaw orientations from `−90°` to `+90°`, 1,735 passed. The dexterous summary reports 82/83 contact-height positions feasible at all seven yaws; its XY plot shows the 81-point regular grid (80/81). The extra exact task samples account for the denominator difference. Only sampled points are classified; unsampled positions are unknown.
+
+The measured task grid supports retaining the existing 0.56×0.64 m table footprint for these sampled targets, with a cube-edge buffer. This is a workspace reachability recommendation only; it does not establish continuous path access, structural strength, load capacity, or collision-free coverage. No model table dimensions were changed.
+
+<p>
+<img src="results_stage2/workspace_task_xy_contact.png" alt="Task workspace at pick orientation, with table and targets" width="48%">
+<img src="results_stage2/workspace_dexterous_xy_contact.png" alt="Dexterous workspace across seven yaw samples" width="48%">
+</p>
+
+Raw samples and thresholds are in [`workspace_samples.csv`](results_stage2/workspace_samples.csv) and [`workspace_summary.json`](results_stage2/workspace_summary.json). The 3D task plot is [`workspace_task_3d.png`](results_stage2/workspace_task_3d.png).
+
+## 4. Collision measurements and Stage 4 segment rejection
+
+Stage 2’s [`nominal_collision_smoke.json`](results_stage2/nominal_collision_smoke.json) is a passive audit: it recorded 7,600 steps, 494,000 distance queries across 65 monitored pair sets, and 77,565 expected contact observations. It recorded no unexpected actual contacts. The minimum measured clearance over unexpected pairs was `1.517 mm`. Repeated observations during physics steps are not distinct contact events. Passive contact/distance monitoring does not alter motion or enforce avoidance.
+
+The opt-in Stage 4 controller in [`scripts/collision_aware_pick_place.py`](scripts/collision_aware_pick_place.py) adds a finite sampled joint-segment precheck and a runtime clearance/contact abort guard while retaining the baseline torque tracker. Its 25-point path checks reject a segment below a `0.75 mm` clearance margin. In [`collision_aware_smoke.json`](results_stage4/collision_aware_smoke.json), the nominal episode completed all eight phases with no unexpected actual contact or penetration observations. Its minimum planned-segment clearance was **0.793 mm**, only **0.043 mm** above the configured threshold. During executed simulation, the minimum unexpected-pair clearance was **1.517 mm**. These are simulation measurements, not hardware safety margins.
+
+The nominal final cube x coordinate was `0.33192 m` versus target `0.35000 m`, an approximately **18 mm x offset**; it met the same broad placement acceptance. In the deliberately low-pick case, the approach completed but descent was rejected for `right_follower_tongue_collision` with the worktable. The candidate segment’s minimum signed clearance was `−31.598 mm`; the first sampled threshold crossing was `−0.051 mm`. The executed portion had no unexpected actual contacts. The figure [`segment_clearance.png`](results_stage4/segment_clearance.png) plots the six executed Cartesian refinement subsegments for that descent, not the rejected full candidate segment.
+
+This is limited active segment rejection, not general or certified collision-free planning. Twenty-five samples can miss collisions between samples; there is no obstacle detour search or collision-constrained IK. The model has no tray geometry, so no tray avoidance is evaluated. Selected cube/gripper geometry pairs are excluded in some kinematic checks because the fixed held-cube proxy overlaps the finger envelope; actual runtime contacts are monitored separately. Expected support and grasp contacts are not treated as unexpected collisions.
+
+## 5. Conclusion and remaining limits
+
+The saved evidence supports successful HEAL pick-and-place in the nominal baseline and in 25 matched simulation episodes for each of DLS, Mink, and QP. It also supports sampled endpoint workspace reachability for the stated targets and shows that the Stage 4 controller can reject one deliberately unsafe descent. The data does not establish guaranteed success, precise placement, continuous workspace coverage, general collision avoidance, tray handling, or real-robot performance. The three-minute viewer demonstration video, with about one minute per IK method, remains outstanding. The current viewer runner is the original DLS script; the three-method smoke/batch runner is headless, so Mink/QP viewer footage requires a future viewer-capable demo runner.
