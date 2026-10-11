@@ -1,3 +1,9 @@
+## Final Submission
+
+[Open Lab 3 submission folder on Google Drive](https://drive.google.com/drive/folders/1Nn2GQ8It-x4Evr7712yIRmdIf-mNng5z?usp=drive_link)
+
+---
+
 # HEAL pick-and-place in MuJoCo
 
 This project runs a HEAL six-axis arm with a Robotiq 2F-85 gripper, cube, and table in MuJoCo. The original DLS controller in [`scripts/pick_and_place.py`](scripts/pick_and_place.py) remains the baseline. Solver comparison, workspace, collision, and result details are in [`REPORT.md`](REPORT.md); the current evidence checklist is [`SUBMISSION.md`](SUBMISSION.md).
