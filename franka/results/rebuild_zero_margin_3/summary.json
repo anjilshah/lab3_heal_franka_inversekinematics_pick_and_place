@@ -1,0 +1,120 @@
+{
+  "records": 9,
+  "methods": {
+    "dls": {
+      "n": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "ik_solve_time_total_s": {
+        "mean": 0.014491858668407076,
+        "std": 0.0005314197379540532
+      },
+      "target_error_m": {
+        "mean": 0.0018881598493624236,
+        "std": 4.829292830282543e-05
+      },
+      "sim_time_s": {
+        "mean": 16.00000000000201,
+        "std": 0.0
+      },
+      "episode_wall_time_s": {
+        "mean": 0.4502008216665369,
+        "std": 0.002676289080738878
+      },
+      "minimum_sampled_clearance_m": {
+        "mean": 0.009104231715417438,
+        "std": 0.00044946861210555565
+      },
+      "max_position_residual_m": {
+        "mean": 0.0012636317443566129,
+        "std": 0.0005634508763397914
+      },
+      "max_orientation_residual_rad": {
+        "mean": 0.008582875007410578,
+        "std": 0.0053616449486339314
+      }
+    },
+    "mink": {
+      "n": 3,
+      "successes": 0,
+      "success_rate": 0.0,
+      "ik_solve_time_total_s": {
+        "mean": 0.08077852133343792,
+        "std": 0.06778513907129748
+      },
+      "target_error_m": {
+        "mean": 0.3219594178182783,
+        "std": 0.016800600534701626
+      },
+      "sim_time_s": {
+        "mean": 3.9999999999997073,
+        "std": 3.4641016151375013
+      },
+      "episode_wall_time_s": {
+        "mean": 0.19691792099911254,
+        "std": 0.15874277339667406
+      },
+      "minimum_sampled_clearance_m": {
+        "mean": -0.006995819625889236,
+        "std": 0.0032661850143228892
+      },
+      "max_position_residual_m": {
+        "mean": 0.001315752277315207,
+        "std": 0.0004881463100413852
+      },
+      "max_orientation_residual_rad": {
+        "mean": 0.012030938319099425,
+        "std": 0.006386964854487202
+      }
+    },
+    "qp": {
+      "n": 3,
+      "successes": 0,
+      "success_rate": 0.0,
+      "ik_solve_time_total_s": {
+        "mean": 0.011782497998865438,
+        "std": 0.00411521410096618
+      },
+      "target_error_m": {
+        "mean": 0.2205422400088771,
+        "std": 0.1854174823443728
+      },
+      "sim_time_s": {
+        "mean": 7.333333333333044,
+        "std": 2.309401076758762
+      },
+      "episode_wall_time_s": {
+        "mean": 0.2156153890003528,
+        "std": 0.08818719438977671
+      },
+      "minimum_sampled_clearance_m": {
+        "mean": -0.00786515047697702,
+        "std": 0.010049621529342075
+      },
+      "max_position_residual_m": {
+        "mean": 0.0017031523349813147,
+        "std": 0.00010998310832395391
+      },
+      "max_orientation_residual_rad": {
+        "mean": 0.018346311560179986,
+        "std": 0.0022757483556060058
+      }
+    }
+  },
+  "success_criterion": {
+    "final_xy_tolerance_m": 0.01,
+    "lift_peak_z_m_gt_initial_plus_m": 0.045,
+    "final_cube_z_m_open_interval": [
+      0.39,
+      0.49
+    ]
+  },
+  "solver_configuration": {
+    "ik_position_tolerance_m": 0.002,
+    "ik_orientation_tolerance_rad": 0.02,
+    "joint_velocity_limit_rad_s": 1.2,
+    "ik_timestep_multiplier": 8,
+    "sampled_path_points": 25,
+    "required_path_clearance_m": 0.0
+  }
+}

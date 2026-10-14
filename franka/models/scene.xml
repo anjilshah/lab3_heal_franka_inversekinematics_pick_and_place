@@ -1,4 +1,5 @@
 <mujoco model="franka_pick_place">
+  <compiler angle="radian" meshdir="franka/assets" autolimits="true"/>
   <include file="franka/panda.xml"/>
   <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.81"/>
   <visual><global offwidth="1280" offheight="900"/><quality shadowsize="2048"/></visual>

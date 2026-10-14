@@ -1,0 +1,23 @@
+{
+  "baseline_directory": "collision_aware_trial_20261013_20261015",
+  "tests": [
+    {
+      "method": "mink",
+      "seed": 20261013
+    },
+    {
+      "method": "qp",
+      "seed": 20261015
+    }
+  ],
+  "change": "collision-constrained local endpoint projection for Mink and QP; original solver outputs remain starting points",
+  "clearance_gate": "existing 25-sample signed-distance gate, zero threshold; local projection target 1e-6 m numeric clearance",
+  "task_success_criterion": {
+    "final_xy_error_lt_m": 0.01,
+    "lift_peak_gt_initial_z_plus_m": 0.045,
+    "final_cube_z_open_interval_m": [
+      0.39,
+      0.49
+    ]
+  }
+}

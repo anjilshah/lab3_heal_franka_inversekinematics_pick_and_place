@@ -1,0 +1,175 @@
+{
+  "method": "SLSQP local endpoint feasibility probe; objective minimizes joint displacement; constraints are current IK pose tolerances, Panda limits, and signed MuJoCo geom distance >= 0; path checked with existing 25-sample collision gate",
+  "results": [
+    {
+      "method": "mink",
+      "seed": 20261013,
+      "phase": "lift",
+      "target_xyz": [
+        0.1729592778024551,
+        -0.1732409626374763,
+        0.5630000000000001
+      ],
+      "initial_ik_endpoint_q": [
+        -0.24666540386075952,
+        -0.14236929126469056,
+        -0.09358956835026434,
+        -1.6266930878637977,
+        -0.013313589098178551,
+        1.498971720073731,
+        0.45953448838993693
+      ],
+      "initial_endpoint_pose_margins": [
+        0.000817776545122611,
+        0.005974359898940889
+      ],
+      "initial_endpoint_min_clearance_m": -0.0013134993398073724,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "iterations": 24,
+      "joint_displacement_norm_rad": 0.016649568865618296,
+      "refined_q": [
+        -0.23262804586487246,
+        -0.14331511436629077,
+        -0.10175932860115625,
+        -1.6256394727034715,
+        -0.016671757368042748,
+        1.4993374534532933,
+        0.4595347529263517
+      ],
+      "refined_pose_margins": [
+        -5.99722875527231e-12,
+        0.0026404327731013727
+      ],
+      "refined_min_clearance_m": 0.0,
+      "closest_geom_pair_ids": [
+        1,
+        17
+      ],
+      "path_from_actual_start": {
+        "minimum_sampled_clearance_m": 0.0,
+        "closest_pair": {
+          "sample_index": 24,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25
+      },
+      "joint_limits_rad": [
+        [
+          -2.8973,
+          2.8973
+        ],
+        [
+          -1.7628,
+          1.7628
+        ],
+        [
+          -2.8973,
+          2.8973
+        ],
+        [
+          -3.0718,
+          -0.0698
+        ],
+        [
+          -2.8973,
+          2.8973
+        ],
+        [
+          -0.0175,
+          3.7525
+        ],
+        [
+          -2.8973,
+          2.8973
+        ]
+      ]
+    },
+    {
+      "method": "qp",
+      "seed": 20261015,
+      "phase": "lower",
+      "target_xyz": [
+        0.17874494594607523,
+        0.15563897365241697,
+        0.403
+      ],
+      "initial_ik_endpoint_q": [
+        -0.23474939448973134,
+        -0.20122677400349187,
+        0.508256958631043,
+        -2.0635031134497224,
+        0.10213670654732339,
+        1.878720542953646,
+        1.033298695529712
+      ],
+      "initial_endpoint_pose_margins": [
+        0.0014275915245927195,
+        0.013111501286793802
+      ],
+      "initial_endpoint_min_clearance_m": -0.00012982793127641612,
+      "optimizer_success": true,
+      "optimizer_message": "Optimization terminated successfully",
+      "iterations": 6,
+      "joint_displacement_norm_rad": 0.001380836121070268,
+      "refined_q": [
+        -0.2333693995834884,
+        -0.20127496582560284,
+        0.5082569511804625,
+        -2.063503120900303,
+        0.10213669909674285,
+        1.8787205355030654,
+        1.0332986880791315
+      ],
+      "refined_pose_margins": [
+        0.0010995292814384825,
+        0.013042830471010873
+      ],
+      "refined_min_clearance_m": 0.0,
+      "closest_geom_pair_ids": [
+        1,
+        17
+      ],
+      "path_from_actual_start": {
+        "minimum_sampled_clearance_m": 0.0,
+        "closest_pair": {
+          "sample_index": 24,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25
+      },
+      "joint_limits_rad": [
+        [
+          -2.8973,
+          2.8973
+        ],
+        [
+          -1.7628,
+          1.7628
+        ],
+        [
+          -2.8973,
+          2.8973
+        ],
+        [
+          -3.0718,
+          -0.0698
+        ],
+        [
+          -2.8973,
+          2.8973
+        ],
+        [
+          -0.0175,
+          3.7525
+        ],
+        [
+          -2.8973,
+          2.8973
+        ]
+      ]
+    }
+  ]
+}

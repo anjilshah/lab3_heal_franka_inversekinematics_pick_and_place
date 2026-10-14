@@ -1,0 +1,196 @@
+{
+  "seed": 20261016,
+  "cube_xy": [
+    0.17225724382230845,
+    -0.1571642517902306
+  ],
+  "place_xy": [
+    0.18628885880505935,
+    0.15987738809741217
+  ],
+  "methods": [
+    {
+      "method": "mink",
+      "samples": 3000,
+      "max_joint_tracking_error_rad": 0.03723516010053185,
+      "max_ee_position_tracking_error_m": 0.015981408925629464,
+      "mean_ee_position_tracking_error_m": 0.006421534499004595,
+      "observed_contact_pairs": [
+        "geom_70<->cube_geom",
+        "geom_71<->cube_geom",
+        "geom_71<->geom_80",
+        "geom_72<->cube_geom",
+        "geom_72<->geom_79",
+        "geom_73<->cube_geom",
+        "geom_73<->geom_82",
+        "geom_74<->cube_geom",
+        "geom_74<->geom_81",
+        "geom_79<->cube_geom",
+        "geom_80<->cube_geom",
+        "geom_81<->cube_geom",
+        "geom_82<->cube_geom",
+        "worktable<->cube_geom"
+      ],
+      "success": false,
+      "failure_reason": "sampled_path_rejected_lift",
+      "target_error_m": 0.3168903687572608,
+      "lift_peak_z_m": 0.40119011588180437,
+      "final_cube_z_m": 0.4011644184566827,
+      "path_checks": [
+        {
+          "phase": "approach",
+          "minimum_sampled_clearance_m": 0.0032232145263796086,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "descend",
+          "minimum_sampled_clearance_m": 0.003427103684723265,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "grasp",
+          "minimum_sampled_clearance_m": 0.0070582580399026484,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lift",
+          "minimum_sampled_clearance_m": -0.008147993722660314,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": false
+        }
+      ],
+      "unexpected_contacts": []
+    },
+    {
+      "method": "qp",
+      "samples": 5000,
+      "max_joint_tracking_error_rad": 0.042135459341268056,
+      "max_ee_position_tracking_error_m": 0.025077898191925106,
+      "mean_ee_position_tracking_error_m": 0.010041588715822064,
+      "observed_contact_pairs": [
+        "geom_70<->cube_geom",
+        "geom_71<->cube_geom",
+        "geom_71<->geom_80",
+        "geom_72<->cube_geom",
+        "geom_72<->geom_79",
+        "geom_73<->cube_geom",
+        "geom_73<->geom_82",
+        "geom_74<->cube_geom",
+        "geom_74<->geom_81",
+        "geom_79<->cube_geom",
+        "geom_80<->cube_geom",
+        "geom_81<->cube_geom",
+        "geom_82<->cube_geom",
+        "worktable<->cube_geom"
+      ],
+      "success": false,
+      "failure_reason": "sampled_path_rejected_lower",
+      "target_error_m": 0.007049577177965395,
+      "lift_peak_z_m": 0.5591220404929453,
+      "final_cube_z_m": 0.5589247345606362,
+      "path_checks": [
+        {
+          "phase": "approach",
+          "minimum_sampled_clearance_m": 0.011130113707937761,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "descend",
+          "minimum_sampled_clearance_m": 0.008609194899102973,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "grasp",
+          "minimum_sampled_clearance_m": 0.008634049044895009,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lift",
+          "minimum_sampled_clearance_m": 0.00024105401963575576,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "transfer",
+          "minimum_sampled_clearance_m": 0.0006632152803604796,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lower",
+          "minimum_sampled_clearance_m": -0.013073693740773745,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": false
+        }
+      ],
+      "unexpected_contacts": []
+    }
+  ],
+  "note": "Command/state trace from executed control steps. The normal shared path gate and runtime collision audit remained enabled."
+}

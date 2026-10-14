@@ -1,5 +1,6 @@
 <mujoco model="panda">
- <compiler angle="radian" meshdir="assets" autolimits="true"/>
+  <!-- Lab3 modification of Menagerie-derived XML: local compiler mesh directory. See NOTICE.md. -->
+ <compiler angle="radian" meshdir="" autolimits="true"/>
 
  <default>
  <default class="panda">

@@ -1,0 +1,42 @@
+[
+  {
+    "method": "mink",
+    "seed": 20261013,
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "niter": 8,
+    "pose_position_error_m": 0.001999900000069477,
+    "pose_orientation_error_rad": 0.01738560371704537,
+    "minimum_endpoint_clearance_m": 9.999999999732445e-07,
+    "path_clearance": {
+      "minimum_sampled_clearance_m": 9.999999999732445e-07,
+      "closest_pair": {
+        "sample_index": 24,
+        "geom": null,
+        "obstacle": "worktable"
+      },
+      "samples": 25
+    },
+    "q_displacement_rad": 0.01666345566962463
+  },
+  {
+    "method": "qp",
+    "seed": 20261015,
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "niter": 3,
+    "pose_position_error_m": 0.000901315700591818,
+    "pose_orientation_error_rad": 0.006968581014497215,
+    "minimum_endpoint_clearance_m": 1.0000000198462367e-06,
+    "path_clearance": {
+      "minimum_sampled_clearance_m": 1.0000000198462367e-06,
+      "closest_pair": {
+        "sample_index": 24,
+        "geom": null,
+        "obstacle": "worktable"
+      },
+      "samples": 25
+    },
+    "q_displacement_rad": 0.0013914195472979748
+  }
+]

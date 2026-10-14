@@ -1,0 +1,20 @@
+{
+  "run_id": "run_20261014T012857.653921Z_963650",
+  "started_at_utc": "2026-10-14T01:28:57.654201+00:00",
+  "methods": [
+    "dls",
+    "mink",
+    "qp"
+  ],
+  "seed": 20261013,
+  "matched_conditions": true,
+  "live_run": true,
+  "success_criterion": {
+    "final_xy_tolerance_m": 0.01,
+    "lift_peak_z_m_gt_initial_plus_m": 0.045,
+    "final_cube_z_m_open_interval": [
+      0.39,
+      0.49
+    ]
+  }
+}

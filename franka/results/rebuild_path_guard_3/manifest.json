@@ -1,0 +1,16 @@
+{
+  "methods": [
+    "dls",
+    "mink",
+    "qp"
+  ],
+  "seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "matched_conditions": true,
+  "episodes_per_method": 3,
+  "path_samples_per_segment": 25,
+  "minimum_clearance_m": 0.002
+}

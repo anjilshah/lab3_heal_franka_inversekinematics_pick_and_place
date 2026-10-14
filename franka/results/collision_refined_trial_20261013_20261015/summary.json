@@ -1,0 +1,325 @@
+{
+  "results": [
+    {
+      "method": "mink",
+      "seed": 20261013,
+      "success": false,
+      "failure_reason": "sampled_path_rejected_lift",
+      "final_xy_error_m": 0.3136170261727993,
+      "final_cube_xyz": [
+        0.17389627484411146,
+        -0.1727692853978095,
+        0.4012219379580446
+      ],
+      "lift_peak_z_m": 0.40124583086701077,
+      "placement_attempted": false,
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp"
+      ],
+      "path_checks": [
+        {
+          "phase": "approach",
+          "minimum_sampled_clearance_m": 0.002741745291794384,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "descend",
+          "minimum_sampled_clearance_m": 0.0029512463240922437,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "grasp",
+          "minimum_sampled_clearance_m": 0.007528254798281202,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lift",
+          "minimum_sampled_clearance_m": -0.0013134993398073724,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": false
+        }
+      ],
+      "waypoint_refinements": [
+        {
+          "phase": "approach",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.002741745291794384
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "descend",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.01500878879134279
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "grasp",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.01513741252750883
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "lift",
+          "collision_refinement": {
+            "attempted": true,
+            "success": false,
+            "optimizer_message": "Optimization terminated successfully",
+            "iterations": 8,
+            "minimum_clearance_before_m": -0.0013134993398073724,
+            "minimum_clearance_after_m": 9.999999999732445e-07,
+            "position_residual_after_m": 0.0019999000000696775,
+            "orientation_residual_after_rad": 0.017385603898890555,
+            "joint_displacement_norm_rad": 0.016663455669625227
+          },
+          "joint_limit_violation_rad": 0.0
+        }
+      ],
+      "unexpected_contacts": [],
+      "runtime_min_clearance_by_category": {
+        "robot-table": 0.0029541632458087996,
+        "arm-cube": 0.07466846775780464,
+        "robot-floor": 0.1409959322147701,
+        "gripper-cube": -0.0013354930182393674,
+        "cube-table": -0.0004127779555879729
+      }
+    },
+    {
+      "method": "qp",
+      "seed": 20261015,
+      "success": true,
+      "failure_reason": null,
+      "final_xy_error_m": 0.0014072429338233437,
+      "final_cube_xyz": [
+        0.18014299432160225,
+        0.15579957693532867,
+        0.39989224457978395
+      ],
+      "lift_peak_z_m": 0.5597105428551095,
+      "placement_attempted": true,
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "path_checks": [
+        {
+          "phase": "approach",
+          "minimum_sampled_clearance_m": 0.011274715010026746,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "descend",
+          "minimum_sampled_clearance_m": 0.007333431675610375,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "grasp",
+          "minimum_sampled_clearance_m": 0.007427371639261854,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lift",
+          "minimum_sampled_clearance_m": 0.0009938430296816958,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "transfer",
+          "minimum_sampled_clearance_m": 0.0014054756081071926,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lower",
+          "minimum_sampled_clearance_m": 1.0000000198462367e-06,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "release",
+          "minimum_sampled_clearance_m": 1.9358947380782032e-05,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "retreat",
+          "minimum_sampled_clearance_m": 2.9561001500727487e-05,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        }
+      ],
+      "waypoint_refinements": [
+        {
+          "phase": "approach",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.011274715010026746
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "descend",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.01522634181795221
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "grasp",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.015234392688899895
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "lift",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.0009938430296816958
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "transfer",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.001959981471022859
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "lower",
+          "collision_refinement": {
+            "attempted": true,
+            "success": true,
+            "optimizer_message": "Optimization terminated successfully",
+            "iterations": 3,
+            "minimum_clearance_before_m": -0.00012982793127641612,
+            "minimum_clearance_after_m": 1.0000000198462367e-06,
+            "position_residual_after_m": 0.000901315700591818,
+            "orientation_residual_after_rad": 0.006968581014497215,
+            "joint_displacement_norm_rad": 0.0013914195472979748
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "release",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 4.0957066457625306e-05
+          },
+          "joint_limit_violation_rad": 0.0
+        },
+        {
+          "phase": "retreat",
+          "collision_refinement": {
+            "attempted": false,
+            "minimum_clearance_before_m": 0.014607644555456987
+          },
+          "joint_limit_violation_rad": 0.0
+        }
+      ],
+      "unexpected_contacts": [],
+      "runtime_min_clearance_by_category": {
+        "robot-table": 1.0504209503353623e-05,
+        "arm-cube": 0.07439647299370779,
+        "robot-floor": 0.1409959322147701,
+        "gripper-cube": -0.0013298184076898176,
+        "cube-table": -0.0010368856220185352
+      }
+    }
+  ]
+}

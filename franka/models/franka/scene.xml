@@ -1,4 +1,6 @@
 <mujoco model="panda scene">
+  <!-- Lab3 modification of Menagerie-derived XML: local compiler mesh directory and scene integration. See NOTICE.md. -->
+  <compiler angle="radian" meshdir="assets" autolimits="true"/>
   <include file="panda.xml"/>
 
   <option timestep="0.01" integrator="implicitfast">

@@ -4,6 +4,43 @@ import mujoco
 import numpy as np
 
 
+def mink_table_floor_limit(model):
+    """Build Mink's signed-distance velocity constraints for robot/table and floor."""
+    import mink
+
+    table = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "worktable")
+    floor = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "floor")
+    base = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "link0")
+    if min(table, floor, base) < 0:
+        raise ValueError("Missing Panda base, worktable, or floor geometry")
+
+    robot_geoms = []
+    above_floor_geoms = []
+    for geom in range(model.ngeom):
+        if geom in (table, floor):
+            continue
+        if not (model.geom_contype[geom] or model.geom_conaffinity[geom]):
+            continue
+        body = int(model.geom_bodyid[geom])
+        ancestor = body
+        while ancestor > 0 and ancestor != base:
+            ancestor = int(model.body_parentid[ancestor])
+        if ancestor != base:
+            continue
+        body_name = mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_BODY, body) or ""
+        robot_geoms.append(geom)
+        if body_name != "link0":
+            above_floor_geoms.append(geom)
+
+    pairs = [(robot_geoms, [table]), (above_floor_geoms, [floor])]
+    return mink.CollisionAvoidanceLimit(
+        model,
+        geom_pairs=pairs,
+        minimum_distance_from_collisions=0.0,
+        collision_detection_distance=0.01,
+    )
+
+
 def sampled_segment_clearance(model,data,qpos_ids,q0,q1,samples=25):
     """Minimum robot/table or robot/floor clearance along joint-linear samples."""
     table=mujoco.mj_name2id(model,mujoco.mjtObj.mjOBJ_GEOM,'worktable')

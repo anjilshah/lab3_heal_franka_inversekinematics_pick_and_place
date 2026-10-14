@@ -1,0 +1,22 @@
+{
+  "baseline_directory": "collision_aware_trial_20261013_20261015",
+  "tests": [
+    {
+      "method": "mink",
+      "seed": 20261013
+    },
+    {
+      "method": "qp",
+      "seed": 20261015
+    }
+  ],
+  "correction": "solver-native collision constraints plus local pose-feasible endpoint refinement; existing signed-distance path gate retained",
+  "task_success_criterion": {
+    "final_xy_error_lt_m": 0.01,
+    "lift_peak_gt_initial_z_plus_m": 0.045,
+    "final_cube_z_open_interval_m": [
+      0.39,
+      0.49
+    ]
+  }
+}

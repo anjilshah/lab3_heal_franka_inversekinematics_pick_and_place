@@ -1,5 +1,5 @@
 <mujoco model="panda">
-  <compiler angle="radian" meshdir="franka/assets" autolimits="true"/>
+  <!-- Lab3 modification of Menagerie-derived XML: compiler inheritance, world base translation, and fingertip ee_site. See NOTICE.md. -->
   <option gravity="0 0 -9.81" />
   <option integrator="implicitfast"/>
 

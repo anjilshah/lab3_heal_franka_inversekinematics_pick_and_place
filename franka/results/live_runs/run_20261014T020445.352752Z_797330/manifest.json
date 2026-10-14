@@ -1,0 +1,36 @@
+{
+  "run_id": "run_20261014T020445.352752Z_797330",
+  "started_at_utc": "2026-10-14T02:04:45.352934+00:00",
+  "methods": [
+    "dls",
+    "mink",
+    "qp"
+  ],
+  "seed": 20261013,
+  "matched_conditions": true,
+  "live_run": true,
+  "success_criterion": {
+    "final_xy_tolerance_m": 0.01,
+    "lift_peak_z_m_gt_initial_plus_m": 0.045,
+    "final_cube_z_m_open_interval": [
+      0.39,
+      0.49
+    ]
+  },
+  "solver_configuration": {
+    "ik_position_tolerance_m": 0.002,
+    "ik_orientation_tolerance_rad": 0.02,
+    "joint_velocity_limit_rad_s": 1.2,
+    "ik_timestep_multiplier": 8
+  },
+  "phase_duration_s": [
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0
+  ]
+}

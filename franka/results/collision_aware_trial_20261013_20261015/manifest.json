@@ -1,0 +1,32 @@
+{
+  "source_baseline": "franka/results/rebuild_zero_margin_3/episodes.jsonl",
+  "tests": [
+    {
+      "method": "mink",
+      "seed": 20261013
+    },
+    {
+      "method": "qp",
+      "seed": 20261015
+    }
+  ],
+  "conditions": "cube/place coordinates reused from saved zero-margin records; yaw regenerated deterministically from same seed",
+  "collision_aware_ik": {
+    "minimum_distance_m": 0.0,
+    "activation_distance_m": 0.01,
+    "robot_collision_geoms": "MuJoCo collision-enabled geoms attached under Panda link0",
+    "obstacles": [
+      "worktable",
+      "floor"
+    ],
+    "path_gate_retained": true
+  },
+  "success_criterion": {
+    "final_xy_error_lt_m": 0.01,
+    "lift_peak_gt_initial_z_plus_m": 0.045,
+    "final_cube_z_open_interval_m": [
+      0.39,
+      0.49
+    ]
+  }
+}

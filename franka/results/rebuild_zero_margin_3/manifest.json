@@ -1,0 +1,31 @@
+{
+  "methods": [
+    "dls",
+    "mink",
+    "qp"
+  ],
+  "seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "matched_conditions": true,
+  "episodes_per_method": 3,
+  "phase_duration_s": 2.0,
+  "success_criterion": {
+    "final_xy_tolerance_m": 0.01,
+    "lift_peak_z_m_gt_initial_plus_m": 0.045,
+    "final_cube_z_m_open_interval": [
+      0.39,
+      0.49
+    ]
+  },
+  "solver_configuration": {
+    "ik_position_tolerance_m": 0.002,
+    "ik_orientation_tolerance_rad": 0.02,
+    "joint_velocity_limit_rad_s": 1.2,
+    "ik_timestep_multiplier": 8,
+    "sampled_path_points": 25,
+    "required_path_clearance_m": 0.0
+  }
+}

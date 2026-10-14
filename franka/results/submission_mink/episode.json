@@ -1,0 +1,280 @@
+{
+  "seed": 20261013,
+  "method": "mink",
+  "success": false,
+  "failure_reason": "placement_tolerance_or_lost_grasp",
+  "initial_cube_xyz": [
+    0.18,
+    -0.16,
+    0.4
+  ],
+  "final_cube_xyz": [
+    0.1572523655928034,
+    0.1973668071104626,
+    0.39989224457978345
+  ],
+  "place_target_xy": [
+    0.18,
+    0.16
+  ],
+  "target_error_m": 0.04374623577811,
+  "lift_peak_z_m": 0.542937656975282,
+  "sim_time_s": 16.00000000000201,
+  "ik_solve_time_total_s": 0.20668763299909187,
+  "max_position_residual_m": 0.019585292650003694,
+  "max_orientation_residual_rad": 0.11944177167723513,
+  "solver_status": "converged",
+  "waypoints": [
+    {
+      "method": "mink",
+      "q": [
+        -0.06456633898441619,
+        -0.2874887764120611,
+        -0.21742847852444894,
+        -1.9311999999999991,
+        -0.06639473968032557,
+        1.7583546895149782,
+        0.5354884940983801
+      ],
+      "status": "converged",
+      "iterations": 15,
+      "backend_iterations": null,
+      "solve_time_s": 0.12410725699965042,
+      "position_residual_m": 0.019585292650003694,
+      "orientation_residual_rad": 0.10854126672219784,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "approach",
+      "target_xyz": [
+        0.18,
+        -0.16,
+        0.523
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.017824398813102552,
+        -0.18986234997524606,
+        -0.31112479996428855,
+        -2.0258643339231845,
+        -0.06325193832250607,
+        1.804628200240918,
+        0.5291989076151346
+      ],
+      "status": "converged",
+      "iterations": 6,
+      "backend_iterations": null,
+      "solve_time_s": 0.006916144999649987,
+      "position_residual_m": 0.018248932397020884,
+      "orientation_residual_rad": 0.039938463946274746,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "descend",
+      "target_xyz": [
+        0.18,
+        -0.16,
+        0.403
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        0.016753200582487283,
+        -0.18601854917411384,
+        -0.3102992503542084,
+        -2.031285712904424,
+        -0.06359204798705304,
+        1.802879665883125,
+        0.5293270785971894
+      ],
+      "status": "converged",
+      "iterations": 1,
+      "backend_iterations": null,
+      "solve_time_s": 0.00022148000016386504,
+      "position_residual_m": 0.01568217544690043,
+      "orientation_residual_rad": 0.05082593395160999,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "grasp",
+      "target_xyz": [
+        0.18,
+        -0.16,
+        0.403
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        -0.24448136210908672,
+        -0.22734213098081574,
+        -0.06657672218265975,
+        -1.7689518090008847,
+        -0.014281312427462573,
+        1.6569007757846694,
+        0.49013197095819955
+      ],
+      "status": "converged",
+      "iterations": 15,
+      "backend_iterations": null,
+      "solve_time_s": 0.017715780999878916,
+      "position_residual_m": 0.011167846064676242,
+      "orientation_residual_rad": 0.11480360775990527,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "lift",
+      "target_xyz": [
+        0.18,
+        -0.16,
+        0.5630000000000001
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        -0.1356780252332795,
+        -0.17536438865169154,
+        0.371713886477334,
+        -1.6532861656762627,
+        0.10473923148905978,
+        1.5174659205911625,
+        0.9322498456789433
+      ],
+      "status": "converged",
+      "iterations": 24,
+      "backend_iterations": null,
+      "solve_time_s": 0.027915241999835416,
+      "position_residual_m": 0.009828176467509742,
+      "orientation_residual_rad": 0.11741121003061712,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "transfer",
+      "target_xyz": [
+        0.18,
+        0.16,
+        0.5630000000000001
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        -0.3289492159265074,
+        -0.1134511259651487,
+        0.617865744548441,
+        -1.9281634673245438,
+        0.06544205042773103,
+        1.7155552366444662,
+        1.0688205612063084
+      ],
+      "status": "converged",
+      "iterations": 15,
+      "backend_iterations": null,
+      "solve_time_s": 0.01761578700006794,
+      "position_residual_m": 0.009923488020518222,
+      "orientation_residual_rad": 0.11944177167723513,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "lower",
+      "target_xyz": [
+        0.18,
+        0.16,
+        0.403
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        -0.27165376977550126,
+        -0.12922846496537388,
+        0.5807220749669825,
+        -1.9553052753244609,
+        0.06364529378126559,
+        1.7502584485496433,
+        1.071938889990427
+      ],
+      "status": "converged",
+      "iterations": 3,
+      "backend_iterations": null,
+      "solve_time_s": 0.0036618569997699524,
+      "position_residual_m": 0.01209445263849513,
+      "orientation_residual_rad": 0.09782701258756445,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "release",
+      "target_xyz": [
+        0.18,
+        0.16,
+        0.403
+      ]
+    },
+    {
+      "method": "mink",
+      "q": [
+        -0.2096521766564011,
+        -0.23525979501973837,
+        0.46658747053295113,
+        -1.8538871654203626,
+        0.10424731515118363,
+        1.7209323135292138,
+        1.0375815783466222
+      ],
+      "status": "converged",
+      "iterations": 7,
+      "backend_iterations": null,
+      "solve_time_s": 0.008534084000075381,
+      "position_residual_m": 0.0160571287510193,
+      "orientation_residual_rad": 0.07834828447583578,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": 1.2,
+      "phase": "retreat",
+      "target_xyz": [
+        0.18,
+        0.16,
+        0.523
+      ]
+    }
+  ],
+  "path_checks": [],
+  "episode_specs": {
+    "cube_xy": [
+      0.18,
+      -0.16
+    ],
+    "place_xy": [
+      0.18,
+      0.16
+    ],
+    "yaw_rad": -0.03379546654821547
+  },
+  "collision_audit": {
+    "audit_type": "sampled per-stride geom distance plus actual MuJoCo contacts",
+    "sample_stride_simulation_steps": 10,
+    "samples": 800,
+    "minimum_signed_clearance_m_by_category": {
+      "robot-table": -0.0002770316471257806,
+      "arm-cube": 0.07850906551658997,
+      "robot-floor": 0.1409959322147701,
+      "gripper-cube": -0.0016715001359116867,
+      "cube-table": -0.002534120582011412
+    },
+    "expected_contact_pairs": [
+      "cube_geom<->worktable",
+      "geom_70<->cube_geom",
+      "geom_71<->cube_geom",
+      "geom_72<->cube_geom",
+      "geom_73<->cube_geom",
+      "geom_74<->cube_geom",
+      "geom_79<->cube_geom",
+      "geom_80<->cube_geom",
+      "geom_81<->cube_geom",
+      "geom_82<->cube_geom"
+    ],
+    "unexpected_contact_pairs": [
+      "geom_17<->worktable"
+    ],
+    "unexpected_contact_count": 1,
+    "deepest_observed_penetration_m": -0.002534120582011412,
+    "expected_contacts": "cube-table support and hand/finger-cube grasp contacts",
+    "limitation": "sampled geometry pairs only; not a certified collision-free path check"
+  }
+}

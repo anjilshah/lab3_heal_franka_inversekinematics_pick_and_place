@@ -1,0 +1,409 @@
+{
+  "all_pair_count": 45,
+  "additional_pairs": [
+    [
+      0,
+      15
+    ],
+    [
+      1,
+      13
+    ],
+    [
+      1,
+      15
+    ]
+  ],
+  "additional_pairs_maximum_observed_calibration_loss": {
+    "pair": [
+      1,
+      15
+    ],
+    "phase": "lift",
+    "sim_time_s": 6.439999999999513,
+    "clearance_loss_m": 0.0008286468631355237,
+    "planned_m": 0.009994679168953552,
+    "actual_m": 0.009166032305818028
+  },
+  "episodes": [
+    {
+      "method": "dls",
+      "seed": 20261013,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.008588035262830779,
+      "executed_minimum_clearance_m": 0.008701010845030693,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0019204206509895595,
+      "lift_peak_z_m": 0.5597062469164262,
+      "final_cube_z_m": 0.3998922445797833,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.008701010845030693,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "lower",
+        "sim_time_s": 10.024000000000017,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.11033628468666136,
+          -0.10814488410633066,
+          0.14785190898441836,
+          -1.5959988710145705,
+          0.017060647557897823,
+          1.474280751271403,
+          1.0429961286634113
+        ]
+      }
+    },
+    {
+      "method": "mink",
+      "seed": 20261013,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.0012150777853289496,
+      "executed_minimum_clearance_m": 0.0012225379387052202,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0013851343357694525,
+      "lift_peak_z_m": 0.5596493252501368,
+      "final_cube_z_m": 0.3998922445797834,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.007541628140073253,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "grasp",
+        "sim_time_s": 5.999999999999561,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.1319742707041774,
+          -0.19005674210701468,
+          -0.44873434066624424,
+          -2.0716224270331494,
+          -0.08836127156620718,
+          1.8813809568710234,
+          0.5188073672372083
+        ]
+      }
+    },
+    {
+      "method": "qp",
+      "seed": 20261013,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.001215077785135465,
+      "executed_minimum_clearance_m": 0.0012226275552792432,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0013968342204148515,
+      "lift_peak_z_m": 0.5593718577431296,
+      "final_cube_z_m": 0.3998922445797833,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.010046014966391542,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "grasp",
+        "sim_time_s": 5.999999999999561,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.08587831862270305,
+          -0.18289617200857186,
+          -0.40652002091364897,
+          -2.0667732152397083,
+          -0.07772992823013473,
+          1.8754896944949457,
+          0.5103565670963824
+        ]
+      }
+    },
+    {
+      "method": "dls",
+      "seed": 20261014,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.009408998453801968,
+      "executed_minimum_clearance_m": 0.009491980053381172,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0018326386192501118,
+      "lift_peak_z_m": 0.5606898300708716,
+      "final_cube_z_m": 0.3998922445797837,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.009491980053381172,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "lower",
+        "sim_time_s": 10.024000000000017,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.09587342379606185,
+          -0.15843134364801023,
+          0.23399803595869206,
+          -1.6464642913474268,
+          0.038559572726026836,
+          1.4784204532564746,
+          1.1248324702179624
+        ]
+      }
+    },
+    {
+      "method": "mink",
+      "seed": 20261014,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.0012097014561664732,
+      "executed_minimum_clearance_m": 0.001209648172028649,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.001071342807647525,
+      "lift_peak_z_m": 0.5626211392399859,
+      "final_cube_z_m": 0.3998922445797834,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.008703376043550926,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "grasp",
+        "sim_time_s": 5.999999999999561,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.11029268626314531,
+          -0.12953592130402122,
+          -0.40341123214727953,
+          -2.0155276861216587,
+          -0.05544548410093457,
+          1.8747626854746668,
+          0.5275815456030667
+        ]
+      }
+    },
+    {
+      "method": "qp",
+      "seed": 20261014,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.0012101863172743477,
+      "executed_minimum_clearance_m": 0.0012100312247402545,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0011535959713374368,
+      "lift_peak_z_m": 0.5631308117242972,
+      "final_cube_z_m": 0.3998922445797836,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.01219460067351838,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "retreat",
+        "sim_time_s": 16.00000000000201,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.048084844020433164,
+          -0.20854039732822038,
+          0.2812416401672518,
+          -1.8085585236588626,
+          0.058547553188925634,
+          1.611243218291248,
+          1.120888123552921
+        ]
+      }
+    },
+    {
+      "method": "dls",
+      "seed": 20261015,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.009315661429619565,
+      "executed_minimum_clearance_m": 0.009417975788858862,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0019114202778475996,
+      "lift_peak_z_m": 0.559553785188151,
+      "final_cube_z_m": 0.3998922445797833,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.009417975788858862,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "lower",
+        "sim_time_s": 10.024000000000017,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.09721679444065746,
+          -0.12749709049675653,
+          0.18898957693259835,
+          -1.6159201340457077,
+          0.025089782040103818,
+          1.4762048613854193,
+          1.0768540420247503
+        ]
+      }
+    },
+    {
+      "method": "mink",
+      "seed": 20261015,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.0012150777853290051,
+      "executed_minimum_clearance_m": 0.001217173286871126,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0013231698532148158,
+      "lift_peak_z_m": 0.5601912874084408,
+      "final_cube_z_m": 0.3998922445797833,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.005983113831186409,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "grasp",
+        "sim_time_s": 5.999999999999561,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.16056410523465867,
+          -0.22506888071141962,
+          -0.4419128796564027,
+          -2.1066945333077665,
+          -0.10255151955889705,
+          1.8883344711539476,
+          0.5617716155158247
+        ]
+      }
+    },
+    {
+      "method": "qp",
+      "seed": 20261015,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.0012150777853289494,
+      "executed_minimum_clearance_m": 0.0012160634450802954,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0017492471851296163,
+      "lift_peak_z_m": 0.5597145991935791,
+      "final_cube_z_m": 0.39989224457978345,
+      "joint_limit_violation_rad": 0.0,
+      "additional_geom_pairs_minimum_m": 0.007427959675123441,
+      "additional_geom_pairs_minimum_state": {
+        "phase": "grasp",
+        "sim_time_s": 5.999999999999561,
+        "pair": [
+          1,
+          15
+        ],
+        "q_actual_rad": [
+          0.1341253674587741,
+          -0.21929112691782415,
+          -0.4180249734613375,
+          -2.1019001316780743,
+          -0.0950099686585816,
+          1.882303245699403,
+          0.5557187248831181
+        ]
+      }
+    }
+  ],
+  "note": "Supplement to original records: omitted pairs depend only on the saved arm joints, so distances are reconstructed from saved actual q at every physics step. Existing raw records preserved."
+}

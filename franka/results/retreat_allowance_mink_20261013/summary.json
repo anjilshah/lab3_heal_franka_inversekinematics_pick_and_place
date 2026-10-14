@@ -1,0 +1,28 @@
+{
+  "episodes": [
+    {
+      "method": "mink",
+      "seed": 20261013,
+      "success": true,
+      "failure_reason": null,
+      "planned_minimum_clearance_m": 0.0012150777853289496,
+      "executed_minimum_clearance_m": 0.0012225379387052202,
+      "unexpected_contacts": [],
+      "penetrating_geom_pair_ids": [],
+      "completed_phases": [
+        "approach",
+        "descend",
+        "grasp",
+        "lift",
+        "transfer",
+        "lower",
+        "release",
+        "retreat"
+      ],
+      "final_xy_error_m": 0.0013851343357694525,
+      "lift_peak_z_m": 0.5596493252501368,
+      "final_cube_z_m": 0.3998922445797834,
+      "joint_limit_violation_rad": 0.0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "run_id": "run_20261014T020054.685916Z_972647",
+  "status": "completed",
+  "records_saved": 3,
+  "episodes_completed": 3,
+  "success_criterion": {
+    "final_xy_tolerance_m": 0.01,
+    "lift_peak_z_m_gt_initial_plus_m": 0.045,
+    "final_cube_z_m_open_interval": [
+      0.39,
+      0.49
+    ]
+  },
+  "methods": {
+    "dls": {
+      "episodes_completed": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "mean_ik_solve_time_s": 0.026834739999685553,
+      "mean_episode_wall_time_s": 20.23284667199914,
+      "mean_min_sampled_clearance_m": 0.008365536079155966
+    },
+    "mink": {
+      "episodes_completed": 1,
+      "successes": 0,
+      "success_rate": 0.0,
+      "mean_ik_solve_time_s": 0.15298796499882883,
+      "mean_episode_wall_time_s": 0.1563254100001359,
+      "mean_min_sampled_clearance_m": 0.0015238019339738063
+    },
+    "qp": {
+      "episodes_completed": 1,
+      "successes": 0,
+      "success_rate": 0.0,
+      "mean_ik_solve_time_s": 0.008674016000441043,
+      "mean_episode_wall_time_s": 7.786603889999242,
+      "mean_min_sampled_clearance_m": -0.0018108308220700642
+    }
+  },
+  "clearance_metric": "Minimum signed robot-floor/table and arm-cube geom distance from sampled joint paths and runtime CollisionAudit. Sampling is discrete and is not a collision-free guarantee."
+}

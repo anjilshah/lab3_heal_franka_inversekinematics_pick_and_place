@@ -1,9 +1,10 @@
 <mujoco model="panda_scene_with_objects">
+  <!-- Lab3 modification of Menagerie-derived XML: portable external plate include path. See NOTICE.md. -->
   <!-- Include the Franka robot scene -->
   <include file="mjx_scene.xml"/>
 
   <!-- Include the plate model (assumed to be saved as plate_model.xml) -->
-  <include file="/home/iitgn-robotics-2/s.p.openvla/mujoco_scanned_objects/models/Ecoforms_Plate_S20Avocado/model.xml"/>
+  <include file="../external/Ecoforms_Plate_S20Avocado/model.xml"/>
 
   <worldbody>
     <!-- Add a green cube with a freejoint (draggable) -->

@@ -1,0 +1,4160 @@
+[
+  {
+    "start_q_rad": [
+      0.0,
+      -0.5,
+      0.0,
+      -2.2,
+      0.0,
+      1.7,
+      0.8
+    ],
+    "end_q_rad": [
+      -0.2009758701512845,
+      -0.17067244840331502,
+      -0.13411522815519802,
+      -1.7583999999999982,
+      -0.022545129820978213,
+      1.5950573811042046,
+      0.4671711616691487
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.014786274085424237,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.014456566815747971,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.013890889534711374,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.013339522127075287,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.012802508178614252,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.012279884675790078,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.011771682003324457,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.011277923944980199,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.0107986276875488,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.010333803828042137,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.009883456384083472,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.009447582807491445,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.00902617400104913,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.008619214338449838,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.008226681687407617,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.007848547435920866,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.007463490808362366,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.006930290276815382,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.006411877391888337,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.00590827202498892,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.005419487446469166,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.004781655684747116,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.004087888267738898,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.0034079179782734166,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.002741745291794384,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": 0.002741745291794384,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      -0.1984294416307266,
+      -0.1697181495580303,
+      -0.13263667602767878,
+      -1.7705303127228365,
+      -0.022582020124529006,
+      1.5953184293171327,
+      0.4715571811134777
+    ],
+    "end_q_rad": [
+      0.11717102447759523,
+      -0.18697738709285708,
+      -0.4349507406300962,
+      -2.054412121567167,
+      -0.08197502620977506,
+      1.8683298076238317,
+      0.5140786192146612
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.0029512463240922437,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.004030208144463281,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.005099221174197283,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.005794889689287597,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.00650168850448582,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.007219495576548078,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.00794818693435656,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.008687636700294488,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.009437717111957927,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.010198298544201623,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.010969249531514347,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.01175043679072005,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.012541725244001238,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.013342978042240298,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.014154056588674331,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.014537469114882766,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.01432488409868135,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.013540639877149705,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.012766158637468826,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.012001574303336563,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.011247019087072818,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.01050262346675701,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.009768516163666224,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.009044824120016197,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.008331672477010693,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 0,
+      "fraction": 0.0,
+      "minimum_clearance_m": 0.0029512463240922437,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      0.11302706810956593,
+      -0.18184222241068565,
+      -0.43156556062263635,
+      -2.057237706989059,
+      -0.0814977008962563,
+      1.8635950620201627,
+      0.5135178092285538
+    ],
+    "end_q_rad": [
+      0.1322270681095658,
+      -0.19503231043677358,
+      -0.44830235045205963,
+      -2.06515254048872,
+      -0.08814845386591771,
+      1.8827950620201626,
+      0.5188783010288042
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.008555262512654954,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.008512015652152177,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.008468808143957313,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.008425640015723102,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.008382511295077194,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.00833942200962201,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.008296372186934575,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.008253361854566793,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.008210391040045423,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.00816745977087166,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.008124568074521471,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.00808171597844562,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.008038903510069443,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.007996130696792891,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.007953397565990589,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.007910704145011743,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.007868050461180082,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.007825436541794017,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.007782862414126457,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.007740328105424854,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.007697833642911073,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.00765537905378172,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.007612964365207587,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.007570589604334128,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.007528254798281202,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": 0.007528254798281202,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 15,
+          "geom": "geom_15",
+          "body": "link1",
+          "mesh": "link1_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      0.1319742707041774,
+      -0.19005674210701468,
+      -0.44873434066624424,
+      -2.0716224270331494,
+      -0.08836127156620718,
+      1.8813809568710234,
+      0.5188073672372083
+    ],
+    "end_q_rad": [
+      -0.24666540386075952,
+      -0.14236929126469056,
+      -0.09358956835026434,
+      -1.6266930878637977,
+      -0.013313589098178551,
+      1.498971720073731,
+      0.45953448838993693
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.007541628140073253,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.008384098299746318,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.009241904510742497,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.010114833267137052,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.011002667299039454,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.011905185626671838,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.012822163615369754,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.013753373031493848,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.014536543028640853,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.01442077275389933,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.013445517575882249,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.01248455530683601,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.011538124589063975,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.01060646017756628,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.009689792881988207,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.008788349509673499,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.007902352809837837,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.007032021418875351,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.006177569806811752,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.005339208224917014,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.004217086322366476,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.002926012802014155,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.0016517902076310098,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.0001636436853389156,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": -0.0013134993398073724,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": -0.0013134993398073724,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": -0.0013134993398073724,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    }
+  },
+  {
+    "start_q_rad": [
+      0.0,
+      -0.5,
+      0.0,
+      -2.2,
+      0.0,
+      1.7,
+      0.8
+    ],
+    "end_q_rad": [
+      -0.06237555452116511,
+      -0.20927701788339773,
+      -0.22506917831516868,
+      -1.7967999999999988,
+      -0.04673802735154833,
+      1.6026570002813847,
+      0.5183557496608201
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.014786274085424237,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.014810804402648536,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.01462317456338799,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.014429184885275809,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.014243653401693535,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.014066584395647619,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.013897980633316542,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.013737843363784195,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.013586172319073192,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.013442965714478172,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.013308220249199282,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.013181931107274641,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.013064091958812946,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.0129546949615251,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.012853730762554581,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.012761188500606868,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.012677055808376162,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.012601318815270296,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.012496670615102429,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.012271933193822832,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.01205561790757853,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.011847732733796718,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.01164828414009697,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.011457277083515321,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.011274715010026746,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": 0.011274715010026746,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      -0.0616334445619951,
+      -0.20819538694134118,
+      -0.22256603650130682,
+      -1.8084202471977253,
+      -0.04645388043082925,
+      1.602813743571841,
+      0.5220673220642141
+    ],
+    "end_q_rad": [
+      0.13591843094446096,
+      -0.21751711674840182,
+      -0.41930714099203514,
+      -2.0847053865680936,
+      -0.09208346718695139,
+      1.8691631702175244,
+      0.5537379619458501
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.011316584474948821,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.011807606180385871,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.012302579620567883,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.012801471164703091,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.013304246913686703,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.013810872702404164,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.01432131410205162,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.014598678721007478,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.014605579319423384,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.01429622918493514,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.013804411355039486,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.013316401022438779,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.012832231251970722,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.012351934848258278,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.011875544353486615,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.011403092045198737,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.010934609934107942,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.010470129761929486,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.010009682999229746,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.009553300843293783,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.009101014216011977,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.008652853761784401,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.008208849845445065,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.007769032550204308,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.007333431675610375,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": 0.007333431675610375,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 15,
+          "geom": "geom_15",
+          "body": "link1",
+          "mesh": "link1_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      0.13332456421885322,
+      -0.21268535158553542,
+      -0.4173858673619338,
+      -2.087622537696924,
+      -0.09178733018117011,
+      1.8645169352838444,
+      0.5533201639579897
+    ],
+    "end_q_rad": [
+      0.1341365098848747,
+      -0.22410638881999062,
+      -0.41732995272226303,
+      -2.095433482268561,
+      -0.09474878043203738,
+      1.8837169352838445,
+      0.5557510514864691
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.007470241996110322,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.00746845490801498,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.007466667891489504,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.007464880946536022,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.007463094073156595,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.007461307271353245,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.007459520541128001,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.0074577338824828865,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.007455947295420012,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.007454160779941404,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.007452374336049006,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.007450587963745009,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.0074488016630314124,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.007447015433910215,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.007445229276383497,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.007443443190453258,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.0074416571761216355,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.0074398712333905714,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.007438085362262176,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.007436299562738474,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.007434513834821493,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.0074327281785133426,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.007430942593815992,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.007429157080731468,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.007427371639261854,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": 0.007427371639261854,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 15,
+          "geom": "geom_15",
+          "body": "link1",
+          "mesh": "link1_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      0.1341253674587741,
+      -0.21929112691782415,
+      -0.4180249734613375,
+      -2.1019001316780743,
+      -0.0950099686585816,
+      1.882303245699403,
+      0.5557187248831181
+    ],
+    "end_q_rad": [
+      -0.22225735050001083,
+      -0.17105012654760085,
+      -0.08606691125082311,
+      -1.6569922229111371,
+      -0.014714007318513057,
+      1.4986726613774213,
+      0.49169684559632854
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.007427959675123441,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.008218497710877043,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.009022658386389465,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.009840264386594244,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.01067113543177009,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.011515088317292504,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.012371936954029411,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.013241492409373723,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.014123562948901852,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 15,
+            "geom": "geom_15",
+            "body": "link1",
+            "mesh": "link1_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.014575740930613727,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.014169559593484732,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.01325189849199368,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.012346974362139329,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.011454987526867659,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.010576135210389526,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.009710611494709448,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.008858607276947317,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.008020310227462385,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.007195904748787981,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.006385571935387273,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.005589489534237074,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.004646799056157057,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.0034233390606926706,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.0022147383564809775,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.0009938430296816958,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": 0.0009938430296816958,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      -0.21757112322642227,
+      -0.16651454703719945,
+      -0.09051808088161045,
+      -1.6690254248316367,
+      -0.01608181136757258,
+      1.5025702080512193,
+      0.4925404227657758
+    ],
+    "end_q_rad": [
+      -0.2110847348470026,
+      -0.15252073455273024,
+      0.4662819191183648,
+      -1.6129443411451296,
+      0.07158762419477192,
+      1.4798320100580291,
+      1.049340422765773
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.0014054756081071926,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.0014283313786997431,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.0014512087654037773,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.0014741077689422175,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.0014970283900247736,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.0015199706293478053,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.0015429344875944884,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.0015659199654345923,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.0015889270635244535,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.0016119557825073072,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.0016350061230130941,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.0016580780856582382,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.001681171671046061,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.001704286879766398,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.001727423712395926,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.001750582169497944,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.0017737622516223461,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.0017969639593057307,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.0018201872930715677,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.0018434322534297274,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.0018666988408769516,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.0018899870558965188,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 0.001913296898958416,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": 0.0019366283705194443,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": 0.001959981471022859,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 0,
+      "fraction": 0.0,
+      "minimum_clearance_m": 0.0014054756081071926,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": null
+  },
+  {
+    "start_q_rad": [
+      -0.2109840106826701,
+      -0.14815294350903824,
+      0.4598087600308226,
+      -1.6198929261362984,
+      0.07015267718335377,
+      1.4789686323720908,
+      1.04200255984941
+    ],
+    "end_q_rad": [
+      -0.23474939448973134,
+      -0.20122677400349187,
+      0.508256958631043,
+      -2.0635031134497224,
+      0.10213670654732339,
+      1.878720542953646,
+      1.033298695529712
+    ],
+    "samples": [
+      {
+        "sample_index": 0,
+        "fraction": 0.0,
+        "minimum_clearance_m": 0.0019799014057934323,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 1,
+        "fraction": 0.041666666666666664,
+        "minimum_clearance_m": 0.0018937797192137566,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 2,
+        "fraction": 0.08333333333333333,
+        "minimum_clearance_m": 0.0018079643984631188,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 3,
+        "fraction": 0.125,
+        "minimum_clearance_m": 0.001722455415784557,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 4,
+        "fraction": 0.16666666666666666,
+        "minimum_clearance_m": 0.001637252740773115,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 5,
+        "fraction": 0.20833333333333331,
+        "minimum_clearance_m": 0.0015523563403771479,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 6,
+        "fraction": 0.25,
+        "minimum_clearance_m": 0.0014677661788995156,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 7,
+        "fraction": 0.29166666666666663,
+        "minimum_clearance_m": 0.001383482217999138,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 8,
+        "fraction": 0.3333333333333333,
+        "minimum_clearance_m": 0.0012995044166919933,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 9,
+        "fraction": 0.375,
+        "minimum_clearance_m": 0.0012146434674646098,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 10,
+        "fraction": 0.41666666666666663,
+        "minimum_clearance_m": 0.0011229992659816666,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 11,
+        "fraction": 0.4583333333333333,
+        "minimum_clearance_m": 0.0010316429652477421,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 12,
+        "fraction": 0.5,
+        "minimum_clearance_m": 0.000940574489145196,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 13,
+        "fraction": 0.5416666666666666,
+        "minimum_clearance_m": 0.0008497937591187277,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 14,
+        "fraction": 0.5833333333333333,
+        "minimum_clearance_m": 0.0007593006941772061,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 15,
+        "fraction": 0.625,
+        "minimum_clearance_m": 0.0006690952108961701,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 16,
+        "fraction": 0.6666666666666666,
+        "minimum_clearance_m": 0.0005791772234189084,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 17,
+        "fraction": 0.7083333333333333,
+        "minimum_clearance_m": 0.0004895466434586548,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 18,
+        "fraction": 0.75,
+        "minimum_clearance_m": 0.0004002033803007232,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 19,
+        "fraction": 0.7916666666666666,
+        "minimum_clearance_m": 0.00031114734080406325,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 20,
+        "fraction": 0.8333333333333333,
+        "minimum_clearance_m": 0.00022237842940350802,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 21,
+        "fraction": 0.875,
+        "minimum_clearance_m": 0.00013389654811168938,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 22,
+        "fraction": 0.9166666666666666,
+        "minimum_clearance_m": 4.57015965209806e-05,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 23,
+        "fraction": 0.9583333333333333,
+        "minimum_clearance_m": -4.2206528194449484e-05,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      },
+      {
+        "sample_index": 24,
+        "fraction": 1.0,
+        "minimum_clearance_m": -0.00012982793127641612,
+        "closest_pair": {
+          "robot_geom": {
+            "geom_id": 17,
+            "geom": "geom_17",
+            "body": "link2",
+            "mesh": "link2_c"
+          },
+          "obstacle": "worktable",
+          "obstacle_geom_id": 1
+        }
+      }
+    ],
+    "minimum": {
+      "sample_index": 24,
+      "fraction": 1.0,
+      "minimum_clearance_m": -0.00012982793127641612,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    },
+    "first_penetration": {
+      "sample_index": 23,
+      "fraction": 0.9583333333333333,
+      "minimum_clearance_m": -4.2206528194449484e-05,
+      "closest_pair": {
+        "robot_geom": {
+          "geom_id": 17,
+          "geom": "geom_17",
+          "body": "link2",
+          "mesh": "link2_c"
+        },
+        "obstacle": "worktable",
+        "obstacle_geom_id": 1
+      }
+    }
+  }
+]

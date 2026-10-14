@@ -1,0 +1,236 @@
+{
+  "tests": [
+    {
+      "method": "mink",
+      "seed": 20261013,
+      "before_success": false,
+      "before_failure": "sampled_path_rejected_lift",
+      "before_final_xy_m": 0.3136170261727993,
+      "before_cube_xyz": [
+        0.17389627484411146,
+        -0.1727692853978095,
+        0.4012219379580446
+      ],
+      "before_lift_peak_z_m": 0.40124583086701077,
+      "before_rejected_phase": "lift",
+      "before_min_path_clearance_m": -0.009967470387028167,
+      "before_ee_errors_m": [
+        0.007681128301556567,
+        0.0030128980630924804,
+        0.005324280501169443,
+        0.16507643886325118
+      ],
+      "before_joint_limit_violations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "after_success": false,
+      "after_failure": "sampled_path_rejected_lift",
+      "after_final_xy_m": 0.3136170261727993,
+      "after_cube_xyz": [
+        0.17389627484411146,
+        -0.1727692853978095,
+        0.4012219379580446
+      ],
+      "after_lift_peak_z_m": 0.40124583086701077,
+      "after_rejected_phase": "lift",
+      "after_path_checks": [
+        {
+          "phase": "approach",
+          "minimum_sampled_clearance_m": 0.002741745291794384,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "descend",
+          "minimum_sampled_clearance_m": 0.0029512463240922437,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "grasp",
+          "minimum_sampled_clearance_m": 0.007528254798281202,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lift",
+          "minimum_sampled_clearance_m": -0.0013134993398073724,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": false
+        }
+      ],
+      "after_ee_errors_m": [
+        0.007681128301556567,
+        0.0030128980630924804,
+        0.005324280501169443,
+        0.16507643886325118
+      ],
+      "after_joint_limit_violations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "after_unexpected_contacts": []
+    },
+    {
+      "method": "qp",
+      "seed": 20261015,
+      "before_success": false,
+      "before_failure": "sampled_path_rejected_lower",
+      "before_final_xy_m": 0.0070217089945348345,
+      "before_cube_xyz": [
+        0.18372242466599356,
+        0.15068628723021218,
+        0.5592262744487237
+      ],
+      "before_lift_peak_z_m": 0.5597105428551095,
+      "before_rejected_phase": "lower",
+      "before_min_path_clearance_m": -0.019455547556979952,
+      "before_ee_errors_m": [
+        0.008009528668708266,
+        0.0028783581902679803,
+        0.005186378714222959,
+        0.008618694132923651,
+        0.007214962629311809,
+        0.15495275021395566
+      ],
+      "before_joint_limit_violations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "after_success": false,
+      "after_failure": "sampled_path_rejected_lower",
+      "after_final_xy_m": 0.0070217089945348345,
+      "after_cube_xyz": [
+        0.18372242466599356,
+        0.15068628723021218,
+        0.5592262744487237
+      ],
+      "after_lift_peak_z_m": 0.5597105428551095,
+      "after_rejected_phase": "lower",
+      "after_path_checks": [
+        {
+          "phase": "approach",
+          "minimum_sampled_clearance_m": 0.011274715010026746,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "descend",
+          "minimum_sampled_clearance_m": 0.007333431675610375,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "grasp",
+          "minimum_sampled_clearance_m": 0.007427371639261854,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lift",
+          "minimum_sampled_clearance_m": 0.0009938430296816958,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "transfer",
+          "minimum_sampled_clearance_m": 0.0014054756081071926,
+          "closest_pair": {
+            "sample_index": 0,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": true
+        },
+        {
+          "phase": "lower",
+          "minimum_sampled_clearance_m": -0.00012982793127641612,
+          "closest_pair": {
+            "sample_index": 24,
+            "geom": null,
+            "obstacle": "worktable"
+          },
+          "samples": 25,
+          "required_clearance_m": 0.0,
+          "accepted": false
+        }
+      ],
+      "after_ee_errors_m": [
+        0.008009528668708266,
+        0.0028783581902679803,
+        0.005186378714222959,
+        0.008618694132923651,
+        0.007214962629311809,
+        0.15495275021395566
+      ],
+      "after_joint_limit_violations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "after_unexpected_contacts": []
+    }
+  ]
+}

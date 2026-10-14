@@ -1,0 +1,21 @@
+{
+  "methods": [
+    "mink"
+  ],
+  "seeds": [
+    20261013
+  ],
+  "matched_conditions": true,
+  "execution_allowance_m": 0.0012140777853289486,
+  "numeric_clearance_slack_m": 1e-06,
+  "calibration_source": "results/retreat_execution_calibration_20261013/summary.json",
+  "success_criterion": {
+    "final_xy_error_lt_m": 0.01,
+    "lift_peak_gt_initial_z_plus_m": 0.045,
+    "final_cube_z_open_interval_m": [
+      0.39,
+      0.49
+    ]
+  },
+  "runtime_measurement": "Fresh FK of actual qpos after each physics step; signed Panda/table-floor geom distance."
+}
