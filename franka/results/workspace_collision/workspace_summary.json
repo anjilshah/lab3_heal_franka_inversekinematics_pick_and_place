@@ -1,0 +1,28 @@
+{
+  "coordinate_frame": "world frame; MuJoCo meters; Panda base origin is model-defined at x=-0.3m",
+  "table_top_z_m": 0.375,
+  "cube_half_extent_m": 0.025,
+  "sampled_endpoint_reachability_only": true,
+  "path_reachability_claimed": false,
+  "grid_shape": [
+    4,
+    4,
+    4
+  ],
+  "position_tolerance_m": 0.02,
+  "orientation_tolerance_rad": 0.15,
+  "counts_by_method": {
+    "dls": {
+      "reachable": 18,
+      "sampled": 64
+    },
+    "mink": {
+      "reachable": 18,
+      "sampled": 64
+    },
+    "qp": {
+      "reachable": 18,
+      "sampled": 64
+    }
+  }
+}

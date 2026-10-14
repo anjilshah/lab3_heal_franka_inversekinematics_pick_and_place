@@ -1,0 +1,172 @@
+{
+  "seed": 20261013,
+  "method": "dls",
+  "success": false,
+  "failure_reason": "ik_lift_max_iterations",
+  "initial_cube_xyz": [
+    0.42,
+    -0.16,
+    0.4
+  ],
+  "final_cube_xyz": [
+    0.4254988571755389,
+    -0.1616620640889259,
+    0.39474468856066514
+  ],
+  "place_target_xy": [
+    0.42,
+    0.16
+  ],
+  "target_error_m": 0.32170906251485243,
+  "lift_peak_z_m": 0.4,
+  "sim_time_s": 5.999999999999561,
+  "ik_solve_time_total_s": 0.013856686000053742,
+  "max_position_residual_m": 0.028786582364286488,
+  "max_orientation_residual_rad": 0.1650226063314661,
+  "solver_status": "max_iterations",
+  "waypoints": [
+    {
+      "method": "dls",
+      "q": [
+        -0.1558982138598216,
+        0.7636407716072623,
+        -0.19879494271679843,
+        -0.4634817646959636,
+        0.1494792132252547,
+        1.3308098598023355,
+        0.5510554840876338
+      ],
+      "status": "converged",
+      "iterations": 17,
+      "backend_iterations": null,
+      "solve_time_s": 0.0024150720000761794,
+      "position_residual_m": 0.019444154761776168,
+      "orientation_residual_rad": 0.11021483290887774,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": null,
+      "phase": "approach",
+      "target_xyz": [
+        0.42,
+        -0.16,
+        0.523
+      ]
+    },
+    {
+      "method": "dls",
+      "q": [
+        -0.1525391541314185,
+        0.8616444255874901,
+        -0.19246493303574308,
+        -0.5496350627889017,
+        0.1462970854417145,
+        1.3598210802993766,
+        0.5464113818257448
+      ],
+      "status": "converged",
+      "iterations": 2,
+      "backend_iterations": null,
+      "solve_time_s": 0.0005271160000575037,
+      "position_residual_m": 0.0030444268625012816,
+      "orientation_residual_rad": 0.04406883924499632,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": null,
+      "phase": "descend",
+      "target_xyz": [
+        0.42,
+        -0.16,
+        0.403
+      ]
+    },
+    {
+      "method": "dls",
+      "q": [
+        -0.15255753070371705,
+        0.8489515648698063,
+        -0.1935679872303818,
+        -0.5374142201490099,
+        0.14597061833622246,
+        1.3640852393679948,
+        0.5465141659705296
+      ],
+      "status": "converged",
+      "iterations": 1,
+      "backend_iterations": null,
+      "solve_time_s": 0.0002873669999416961,
+      "position_residual_m": 0.018027679674015633,
+      "orientation_residual_rad": 0.015062709681581653,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": null,
+      "phase": "grasp",
+      "target_xyz": [
+        0.42,
+        -0.16,
+        0.403
+      ]
+    },
+    {
+      "method": "dls",
+      "q": [
+        -0.20647490604756263,
+        0.7119522214015768,
+        -0.03699679087923516,
+        -0.4669778495046727,
+        0.02707271893768054,
+        1.3437325744256154,
+        0.5757813111027694
+      ],
+      "status": "max_iterations",
+      "iterations": 120,
+      "backend_iterations": null,
+      "solve_time_s": 0.010627130999978363,
+      "position_residual_m": 0.028786582364286488,
+      "orientation_residual_rad": 0.1650226063314661,
+      "joint_limit_violation_rad": 0.0,
+      "velocity_limit_rad_s": null,
+      "phase": "lift",
+      "target_xyz": [
+        0.42,
+        -0.16,
+        0.5630000000000001
+      ]
+    }
+  ],
+  "episode_specs": {
+    "cube_xy": [
+      0.42,
+      -0.16
+    ],
+    "place_xy": [
+      0.42,
+      0.16
+    ],
+    "yaw_rad": -0.03379546654821547
+  },
+  "collision_audit": {
+    "audit_type": "sampled per-stride geom distance plus actual MuJoCo contacts",
+    "sample_stride_simulation_steps": 10,
+    "samples": 300,
+    "minimum_signed_clearance_m_by_category": {
+      "robot-table": 0.03867208386801102,
+      "robot-floor": -3.249454653074524e-05,
+      "arm-cube": 0.10877754949139563,
+      "gripper-cube": -0.002492521614358552,
+      "cube-table": -0.009896861241424249
+    },
+    "expected_contact_pairs": [
+      "cube_geom<->worktable",
+      "geom_69<->cube_geom",
+      "geom_70<->cube_geom",
+      "geom_71<->cube_geom",
+      "geom_72<->cube_geom",
+      "geom_77<->cube_geom",
+      "geom_78<->cube_geom",
+      "geom_79<->cube_geom",
+      "geom_80<->cube_geom"
+    ],
+    "unexpected_contact_pairs": [],
+    "unexpected_contact_count": 0,
+    "deepest_observed_penetration_m": -0.009896861241424249,
+    "expected_contacts": "cube-table support and hand/finger-cube grasp contacts",
+    "limitation": "sampled geometry pairs only; not a certified collision-free path check"
+  }
+}

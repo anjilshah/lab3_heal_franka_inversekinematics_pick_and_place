@@ -1,0 +1,110 @@
+{
+  "controller": "DLS with per-waypoint sampled joint-linear clearance gate",
+  "sample_count_per_segment": 25,
+  "clearance_margin_m": 0.002,
+  "episode": {
+    "seed": 20261013,
+    "method": "dls",
+    "success": false,
+    "failure_reason": "sampled_path_rejected_approach",
+    "initial_cube_xyz": [
+      0.18,
+      -0.16,
+      0.4
+    ],
+    "final_cube_xyz": [
+      0.18,
+      -0.16,
+      0.4
+    ],
+    "place_target_xy": [
+      0.18,
+      0.16
+    ],
+    "target_error_m": 0.32,
+    "lift_peak_z_m": 0.4,
+    "sim_time_s": 0.0,
+    "ik_solve_time_total_s": 0.0008194069999944986,
+    "max_position_residual_m": 0.0019898500270954765,
+    "max_orientation_residual_rad": 0.007195457258793469,
+    "solver_status": "converged",
+    "waypoints": [
+      {
+        "method": "dls",
+        "q": [
+          -0.0973816416860413,
+          -0.1698497089289145,
+          -0.20004857802934722,
+          -1.7550812148998414,
+          -0.03467521460848347,
+          1.5956608482528531,
+          0.5059788259538648
+        ],
+        "status": "converged",
+        "iterations": 5,
+        "backend_iterations": null,
+        "solve_time_s": 0.0008194069999944986,
+        "position_residual_m": 0.0019898500270954765,
+        "orientation_residual_rad": 0.007195457258793469,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "approach",
+        "target_xyz": [
+          0.18,
+          -0.16,
+          0.523
+        ]
+      }
+    ],
+    "path_checks": [
+      {
+        "phase": "approach",
+        "minimum_sampled_clearance_m": 0.0,
+        "closest_pair": {
+          "sample_index": 0,
+          "geom": "cube_geom",
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": false
+      }
+    ],
+    "episode_specs": {
+      "cube_xy": [
+        0.18,
+        -0.16
+      ],
+      "place_xy": [
+        0.18,
+        0.16
+      ],
+      "yaw_rad": -0.03379546654821547
+    }
+  },
+  "rejected_segments": [
+    {
+      "phase": "approach",
+      "minimum_sampled_clearance_m": 0.0,
+      "closest_pair": {
+        "sample_index": 0,
+        "geom": "cube_geom",
+        "obstacle": "worktable"
+      },
+      "samples": 25,
+      "accepted": false
+    }
+  ],
+  "runtime_collision_audit": {
+    "audit_type": "sampled per-stride geom distance plus actual MuJoCo contacts",
+    "sample_stride_simulation_steps": 10,
+    "samples": 0,
+    "minimum_signed_clearance_m_by_category": {},
+    "expected_contact_pairs": [],
+    "unexpected_contact_pairs": [],
+    "unexpected_contact_count": 0,
+    "deepest_observed_penetration_m": 0.0,
+    "expected_contacts": "cube-table support and hand/finger-cube grasp contacts",
+    "limitation": "sampled geometry pairs only; not a certified collision-free path check"
+  },
+  "limitation": "discrete linear joint samples can miss collisions between samples; not a certified planner"
+}

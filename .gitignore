@@ -2,3 +2,7 @@
 __pycache__/
 *.py[cod]
 backups/
+
+__pycache__/
+*.py[cod]
+.mplconfig/

@@ -1,0 +1,15 @@
+<mujoco model="franka_pick_place">
+  <include file="franka/panda.xml"/>
+  <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.81"/>
+  <visual><global offwidth="1280" offheight="900"/><quality shadowsize="2048"/></visual>
+  <worldbody>
+    <light name="key" pos="0.2 -0.5 1.8" dir="0 0 -1" diffuse="0.8 0.8 0.8"/>
+    <geom name="floor" type="plane" size="2 2 0.1" rgba="0.75 0.77 0.8 1"/>
+    <geom name="worktable" type="box" pos="0.15 0 0.35" size="0.38 0.48 0.025" rgba="0.35 0.38 0.42 1"/>
+    <body name="cube" pos="0.18 -0.16 0.415">
+      <freejoint name="cube_free"/>
+      <geom name="cube_geom" type="box" size="0.025 0.025 0.025" mass="0.08" rgba="0.1 0.55 0.85 1" friction="1 0.005 0.0001"/>
+    </body>
+    <site name="place_marker" pos="0.18 0.16 0.39" size="0.035" type="cylinder" rgba="0.95 0.75 0.08 0.45"/>
+  </worldbody>
+</mujoco>

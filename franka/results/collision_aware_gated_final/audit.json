@@ -1,0 +1,373 @@
+{
+  "controller": "DLS with per-waypoint sampled joint-linear clearance gate",
+  "sample_count_per_segment": 25,
+  "clearance_margin_m": 0.002,
+  "episode": {
+    "seed": 20261013,
+    "method": "dls",
+    "success": false,
+    "failure_reason": "placement_tolerance_or_lost_grasp",
+    "initial_cube_xyz": [
+      0.18,
+      -0.16,
+      0.4
+    ],
+    "final_cube_xyz": [
+      0.17757837031780518,
+      0.1589452870125997,
+      0.3998922445797833
+    ],
+    "place_target_xy": [
+      0.18,
+      0.16
+    ],
+    "target_error_m": 0.0026413462104536442,
+    "lift_peak_z_m": 0.4,
+    "sim_time_s": 16.00000000000201,
+    "ik_solve_time_total_s": 0.0037366100000326696,
+    "max_position_residual_m": 0.004114658079795495,
+    "max_orientation_residual_rad": 0.02086260134595625,
+    "solver_status": "converged",
+    "waypoints": [
+      {
+        "method": "dls",
+        "q": [
+          -0.0973816416860413,
+          -0.1698497089289145,
+          -0.20004857802934722,
+          -1.7550812148998414,
+          -0.03467521460848347,
+          1.5956608482528531,
+          0.5059788259538648
+        ],
+        "status": "converged",
+        "iterations": 5,
+        "backend_iterations": null,
+        "solve_time_s": 0.0006650630000422098,
+        "position_residual_m": 0.0019898500270954765,
+        "orientation_residual_rad": 0.007195457258793469,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "approach",
+        "target_xyz": [
+          0.18,
+          -0.16,
+          0.523
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          -0.10070945503691814,
+          -0.17166755919933552,
+          -0.20642984251971036,
+          -2.057597601940321,
+          -0.03682778363024701,
+          1.8830056707129856,
+          0.507428622105243
+        ],
+        "status": "converged",
+        "iterations": 4,
+        "backend_iterations": null,
+        "solve_time_s": 0.0004288650000034977,
+        "position_residual_m": 0.0006930531719483586,
+        "orientation_residual_rad": 0.006298439763672004,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "descend",
+        "target_xyz": [
+          0.18,
+          -0.16,
+          0.403
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          -0.10065106921096975,
+          -0.16621232668122027,
+          -0.2065637236578234,
+          -2.060355854198629,
+          -0.037103171458515896,
+          1.8780788041153873,
+          0.507460299226058
+        ],
+        "status": "converged",
+        "iterations": 1,
+        "backend_iterations": null,
+        "solve_time_s": 0.00011808100020971324,
+        "position_residual_m": 0.004114658079795495,
+        "orientation_residual_rad": 0.019377747539579045,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "grasp",
+        "target_xyz": [
+          0.18,
+          -0.16,
+          0.403
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          -0.09632255893139814,
+          -0.1388612623074999,
+          -0.20205769292002673,
+          -1.618701822582009,
+          -0.02858704843243648,
+          1.4915370104780175,
+          0.5009073795485245
+        ],
+        "status": "converged",
+        "iterations": 5,
+        "backend_iterations": null,
+        "solve_time_s": 0.0005274879999888071,
+        "position_residual_m": 0.0021358371848970445,
+        "orientation_residual_rad": 0.008900036732249617,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "lift",
+        "target_xyz": [
+          0.18,
+          -0.16,
+          0.5630000000000001
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          0.1432014623949608,
+          -0.12693469712079045,
+          0.1598756906426051,
+          -1.6031239798337071,
+          0.022332697095367504,
+          1.4804961566970543,
+          1.0966597845245802
+        ],
+        "status": "converged",
+        "iterations": 6,
+        "backend_iterations": null,
+        "solve_time_s": 0.0006586559998140729,
+        "position_residual_m": 0.0006571480240760448,
+        "orientation_residual_rad": 0.00798324975692881,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "transfer",
+        "target_xyz": [
+          0.18,
+          0.16,
+          0.5630000000000001
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          0.14473755538419847,
+          -0.17460939841945777,
+          0.16529090373156768,
+          -2.060158304392794,
+          0.0300925687019383,
+          1.879984902689154,
+          1.0978565737534893
+        ],
+        "status": "converged",
+        "iterations": 5,
+        "backend_iterations": null,
+        "solve_time_s": 0.0006598110001050372,
+        "position_residual_m": 0.0023035552041167705,
+        "orientation_residual_rad": 0.007769285242616595,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "lower",
+        "target_xyz": [
+          0.18,
+          0.16,
+          0.403
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          0.14471076021511167,
+          -0.16857441358846473,
+          0.16547936831071205,
+          -2.060819986306628,
+          0.029694285774571214,
+          1.8735336242393827,
+          1.0977347104281976
+        ],
+        "status": "converged",
+        "iterations": 1,
+        "backend_iterations": null,
+        "solve_time_s": 0.00018154500003220164,
+        "position_residual_m": 0.003931547852643485,
+        "orientation_residual_rad": 0.02086260134595625,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "release",
+        "target_xyz": [
+          0.18,
+          0.16,
+          0.403
+        ]
+      },
+      {
+        "method": "dls",
+        "q": [
+          0.14132482886626357,
+          -0.16753738351704361,
+          0.1611730403588425,
+          -1.7550374227733943,
+          0.027173862557644368,
+          1.5976293801317958,
+          1.0997602361369172
+        ],
+        "status": "converged",
+        "iterations": 4,
+        "backend_iterations": null,
+        "solve_time_s": 0.0004971009998371301,
+        "position_residual_m": 0.0016091527357932473,
+        "orientation_residual_rad": 0.008014668427444431,
+        "joint_limit_violation_rad": 0.0,
+        "velocity_limit_rad_s": null,
+        "phase": "retreat",
+        "target_xyz": [
+          0.18,
+          0.16,
+          0.523
+        ]
+      }
+    ],
+    "path_checks": [
+      {
+        "phase": "approach",
+        "minimum_sampled_clearance_m": 0.009199776617691557,
+        "closest_pair": {
+          "sample_index": 24,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "descend",
+        "minimum_sampled_clearance_m": 0.00900963089017462,
+        "closest_pair": {
+          "sample_index": 24,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "grasp",
+        "minimum_sampled_clearance_m": 0.009014085609558825,
+        "closest_pair": {
+          "sample_index": 0,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "lift",
+        "minimum_sampled_clearance_m": 0.009016789674246933,
+        "closest_pair": {
+          "sample_index": 0,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "transfer",
+        "minimum_sampled_clearance_m": 0.0069515539842140706,
+        "closest_pair": {
+          "sample_index": 24,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "lower",
+        "minimum_sampled_clearance_m": 0.0068714370283990975,
+        "closest_pair": {
+          "sample_index": 24,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "release",
+        "minimum_sampled_clearance_m": 0.006872833289813058,
+        "closest_pair": {
+          "sample_index": 0,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      },
+      {
+        "phase": "retreat",
+        "minimum_sampled_clearance_m": 0.006872833289821745,
+        "closest_pair": {
+          "sample_index": 0,
+          "geom": null,
+          "obstacle": "worktable"
+        },
+        "samples": 25,
+        "accepted": true
+      }
+    ],
+    "episode_specs": {
+      "cube_xy": [
+        0.18,
+        -0.16
+      ],
+      "place_xy": [
+        0.18,
+        0.16
+      ],
+      "yaw_rad": -0.03379546654821547
+    }
+  },
+  "rejected_segments": [],
+  "runtime_collision_audit": {
+    "audit_type": "sampled per-stride geom distance plus actual MuJoCo contacts",
+    "sample_stride_simulation_steps": 10,
+    "samples": 800,
+    "minimum_signed_clearance_m_by_category": {
+      "robot-table": 0.006872033937883243,
+      "arm-cube": 0.06917683324126445,
+      "robot-floor": 0.1409959322147701,
+      "gripper-cube": -0.0014680138414400498,
+      "cube-table": -0.0025220303886434032
+    },
+    "expected_contact_pairs": [
+      "cube_geom<->worktable",
+      "geom_71<->cube_geom",
+      "geom_72<->cube_geom",
+      "geom_73<->cube_geom",
+      "geom_74<->cube_geom",
+      "geom_79<->cube_geom",
+      "geom_80<->cube_geom",
+      "geom_81<->cube_geom",
+      "geom_82<->cube_geom"
+    ],
+    "unexpected_contact_pairs": [],
+    "unexpected_contact_count": 0,
+    "deepest_observed_penetration_m": -0.0025220303886434032,
+    "expected_contacts": "cube-table support and hand/finger-cube grasp contacts",
+    "limitation": "sampled geometry pairs only; not a certified collision-free path check"
+  },
+  "limitation": "discrete linear joint samples can miss collisions between samples; not a certified planner"
+}
